@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login-Register</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="Login">
+                <div class="Signin">
+                    <h2>Already have an account?</h2>
+                    <button class="signinButton">Sign in</button>
+                </div>
+                <div class="Signup">
+                    <h2>You don't have an account?</h2>
+                    <button class="registerButton">Register</button>
+                </div>
+            </div>
+            <div class="form">
+
+            </div>
+        </div>
+
+        <script>
+            const signinButton = document.querySelector('.signinButton');
+            const registerButton = document.querySelector('.registerButton');
+            const form = document.querySelector('.form');
+            const body = document.querySelector('body');
+
+            registerButton.onclick = function(){
+                form.classList.add('active')
+                body.classList.add('active')
+            }
+            signinButton.onclick = function(){
+                form.classList.remove('active')
+                body.classList.remove('active')
+            }
+        </script>
+    </body>
+</html>
