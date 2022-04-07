@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e9ddc8;
+    transition: 0.5s;
+}
+.container
+{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px; 
+}
+.Login
+{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.2);
+}
+.Login .Signin
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Login .Signin h2
+{
+    color: black;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.Login .Signin button
+{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #a28769;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+.Login .Signup
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Login .Signup h2
+{
+    color: black;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.Login .Signup button
+{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #a28769;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+.form
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+    transition: 0.5s ease-in-out;
+}
+.form.active
+{
+    Left: 50%;
+}
