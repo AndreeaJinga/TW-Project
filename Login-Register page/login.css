@@ -15,6 +15,10 @@ body
     background: #e9ddc8;
     transition: 0.5s;
 }
+body.active
+{
+    background: #faf0e6;
+}
 .container
 {
     position: relative;
@@ -59,6 +63,7 @@ body
     color: black;
     font-size: 16px;
     font-weight: 500;
+    border-radius: 25px;
     border: none;
 }
 .Login .Signup
@@ -86,6 +91,7 @@ body
     color: black;
     font-size: 16px;
     font-weight: 500;
+    border-radius: 25px;
     border: none;
 }
 .form
@@ -102,8 +108,111 @@ body
     align-items: center;
     box-shadow: 0 5px 45px rgba(0,0,0,0.25);
     transition: 0.5s ease-in-out;
+    overflow: hidden;
 }
 .form.active
 {
     Left: 50%;
+}
+.form .form
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+.form .Signin
+{
+    transition-delay: 0.1s;
+}
+.form.active .Signin
+{
+    Left: -100%;
+    transition-delay: 0s;
+}
+.form .Signup
+{
+    Left: 100%;
+    transition-delay: 0s;
+}
+.form.active .Signup
+{
+    Left: 0;
+    transition-delay: 0.25s;
+}
+.form .form form
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form .form form h3
+{
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom:  20px;
+    font-weight: 500;
+}
+.form .form form input
+{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333; 
+}
+.form .form form input[type="submit"]
+{
+    background-color: #a28769;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+}
+.form .form form .forgot
+{
+    color: #333;
+}
+
+@media (max-width: 991px)
+{
+    .container
+    {
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .Login
+    {
+        top: 0;
+        height: 100%;
+    }
+    .form
+    {
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+    .Login .box
+    {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+    .box.Signin
+    {
+        top: 0;
+    }
+    .form.active
+    {
+        left: 0;
+        top: 150px;
+    }
 }
