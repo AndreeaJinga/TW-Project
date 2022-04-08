@@ -167,6 +167,7 @@ body.active
     color: #333;
     margin-bottom:  20px;
     font-weight: 500;
+    align-self: center;
 }
 .form .form form input
 {
@@ -183,12 +184,38 @@ body.active
     border: none;
     border-radius: 25px; 
     color: #fff;
-    max-width: 100px;
+    max-width: 100%;
+    cursor: pointer;
+}
+.form .form form input[type="submit2"]
+{
+    background-color: black;
+    border: none;
+    border-radius: 25px; 
+    color: #faf0e4;
+    text-align: center;
+    max-width: 100%;
     cursor: pointer;
 }
 .form .form form .forgot
 {
+    font-size: 0.8em;
     color: #333;
+    align-self: center;
+}
+.form .form form .terms
+{
+    font-size: 0.8em;
+    color: #333;
+    align-self: center;
+}
+.form .form form h4
+{
+    font-size: 0.8em;
+    color: #333;
+    margin-bottom:  3px;
+    font-weight: 400;
+    align-self: center;
 }
 section
 {
