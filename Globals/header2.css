@@ -1,0 +1,96 @@
+*{
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #E9DDC8;
+}
+
+.navigation{
+    position: relative;
+    /* width: 400px; */
+    width: 100%;
+    height: 80px;
+    background: #A28769;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul{
+    background-color: #A28769;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /* width: 350px; */
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    /* background-color: #A28769; 
+    color: #E9DDC8; */
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    /* width: 400; */
+    text-align: center;
+    font-weight: 500;
+    /* background-color: #009207;
+    color: #9e0020; */
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    /* background-color: #A28769; */
+    color: #E9DDC8;
+}
+
+.navigation ul li:hover a .icon{
+    transform: translateY(-15px);
+    /* transform: translateY(65px); */
+    /* background-color: transparent; */
+}
+
+.navigation ul li a .text{
+    position: absolute;
+    /* background-color: #A28769; */
+    color: #E9DDC8;
+    font-weight: 400;
+    font-size: 0.75em;
+    /* font-size: 0.95em;  here*/
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(15px); 
+    /* transform: translateY(300px); */
+}
+
+.navigation ul li:hover a .text{
+    opacity: 1;
+    /* background-color: transparent; */
+    /* transform: translateY(-20px); HERE*/
+    transform: translateY(20px);
+}
