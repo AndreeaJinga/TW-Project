@@ -6,9 +6,23 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body
+{
+    min-height: 100vh;
+    background: #e9ddc8;
+    transition: 0.5s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.home
+{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+} 
 .btn
 {
-    position: relative; 
+    position: relative;
     margin-right: 10px; 
     margin-top: 20px;
     margin-bottom: 20px;
@@ -22,16 +36,6 @@
     box-shadow: 0 20px 30px rgba(0,0,0,0.2);
     width: 100px;
     height: 20%;
-}
-body
-{
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    background: #e9ddc8;
-    transition: 0.5s;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 .btn:hover 
 {
@@ -52,16 +56,22 @@ body.active
 {
     background: #faf0e4;
 }
+.zone
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
 .container
 {
     position: relative;
-    align-self: center;
     width: 800px;
     height: 500px;
     margin-right: 20px; 
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .Login
 {
@@ -72,6 +82,8 @@ body.active
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: center;
+    align-self: center;
     background: rgba(240, 240, 239, 0.766);
     box-shadow: 0 5px 45px rgba(0,0,0,0.2);
 }
