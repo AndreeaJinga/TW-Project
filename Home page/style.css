@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #faf0e4;
+    background-image: url(cladiri.png);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: top; 
+    background-size: 2500px;
+}
+.RO_map{
+    position:absolute;
+    top: 40%;
+    left: 15%;
+    right: 15%;
+    
+}
+svg path:hover{
+    fill: #A28769;
+    transition: 0.8s;
+    cursor: pointer;
+}
+.welcome{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+.welcome h1{
+    font-size: 3rem;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: textrevelreverse 2s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+.welcome h1:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    background-color: black;
+    animation: textrevel 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.welcome h2{
+    font-size: 3.5rem;
+    transform-origin: right;
+    transform: scaleX(0);
+    animation: textrevelreverse 2s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+.welcome h2:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    background-color: black;
+    animation: textrevel 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+@keyframes textrevel{
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(0);
+    }
+}
+@keyframes textrevelreverse{
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+fieldset{
+    margin: 2rem;
+    padding: 1rem;
+    border: solid 2px rgb(148, 145, 145);
+    border-radius: 20px;
+    min-width: 200px;
+    background-color: white;
+    position:absolute;
+    left: 32%;
+    top: 25%;
+}
+input{
+    padding: 0.4rem;
+    margin-left: 1rem;
+    background-color: #f3ede6;
+    border: solid 2px rgb(148, 145, 145);
+    border-radius: 15px;
+}
+input:last-of-type{
+    padding: 0.7rem;
+    margin-left: 1.5rem;
+    background-color: #A28769;
+    border: solid 2px rgb(148, 145, 145);
+    border-radius: 20px;
+}
+input::placeholder{
+    padding: 0.5rem;
+    color: black;
+    
+}
+
