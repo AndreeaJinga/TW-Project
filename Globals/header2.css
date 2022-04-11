@@ -1,16 +1,22 @@
 *{
-    margin: 10;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 body{
-    display: flex;
+    /* display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    min-height: 100vh;
-    background: #E9DDC8;
+    min-height: 100vh; */
+    background-color: #faf0e4;
+    background-image: url(cladiri.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top; 
+    background-size: 2500px;
+
 }
 
 .navigation{
@@ -22,7 +28,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .navigation ul{
