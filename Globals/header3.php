@@ -3,7 +3,7 @@
         <img src="../Globals/logo-Crop-menuBar.png" alt="Logo" width="173" height="98">
         <ul class="navList">
             <li class="listItem">
-                <a href="#">
+                <a href=".">
                     <span class="icon"> 
                         <ion-icon name="home-outline"></ion-icon> 
                     </span>
@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li class="listItem">
-                <a href="#">
+                <a href="../ContactPage/Contact.php">
                     <span class="icon"> 
                         <ion-icon name="call-outline"></ion-icon> 
                     </span>
@@ -43,11 +43,11 @@
                 </a>
             </li>
             <li class="listItem">
-                <a href="#">
+                <a href="../AccountPage/myAccount.php">
                     <span class="icon"> 
                         <ion-icon name="person-outline"></ion-icon>
                     </span>
-                    <span class="text">Your account</span>
+                    <span class="text">My account</span>
                 </a>
             </li>
         </ul>
