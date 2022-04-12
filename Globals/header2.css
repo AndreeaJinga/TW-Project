@@ -16,7 +16,6 @@ body{
     background-attachment: fixed;
     background-position: top; 
     background-size: 2500px;
-
 }
 
 .navigation{
@@ -26,20 +25,21 @@ body{
     height: 80px;
     background: #A28769;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     /* border-radius: 10px; */
 }
 
-.navigation ul{
+.navList{
     background-color: #A28769;
     display: flex;
     justify-content: space-around;
+    /* align-items: center; */
     width: 100%;
     /* width: 350px; */
 }
 
-.navigation ul li{
+.listItem{
     position: relative;
     list-style: none;
     /* background-color: #A28769; 
@@ -49,7 +49,7 @@ body{
     z-index: 1;
 }
 
-.navigation ul li a{
+.listItem a{
     position: relative;
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@ body{
     color: #9e0020; */
 }
 
-.navigation ul li a .icon{
+.listItem a .icon{
     position: relative;
     display: block;
     line-height: 75px;
@@ -74,13 +74,13 @@ body{
     color: #E9DDC8;
 }
 
-.navigation ul li:hover a .icon{
+.listItem:hover a .icon{
     transform: translateY(-15px);
     /* transform: translateY(65px); */
     /* background-color: transparent; */
 }
 
-.navigation ul li a .text{
+.listItem a .text{
     position: absolute;
     /* background-color: #A28769; */
     color: #E9DDC8;
@@ -94,9 +94,54 @@ body{
     /* transform: translateY(300px); */
 }
 
-.navigation ul li:hover a .text{
+.listItem:hover a .text{
     opacity: 1;
     /* background-color: transparent; */
     /* transform: translateY(-20px); HERE*/
     transform: translateY(20px);
+}
+
+.burgerMenu {
+    display: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.line {
+    height: 2px;
+    width: 35px;
+    margin: 0.5rem 0;
+    background: #E9DDC8;
+    transition: transform 0.75s ease, opacity 0.75s ease;
+}
+.navigation.show .line1 {
+    transform: translate(-10px) rotate(45deg) translate(15px);
+}
+.navigation.show .line2 {
+    opacity: 0;
+}
+.navigation.show .line3 {
+    transform: translate(-10px) rotate(-45deg) translate(15px);
+}
+.navigation.show .navList {
+    transform: translateX(0%);
+}
+
+@media screen and (max-width: 600px) {
+    .burgerMenu {
+        display: block;
+    }
+    .navList {
+        position: fixed;
+        top: 8vh;
+        right: 0;
+        height: 92vh;
+        width: 30%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        /* background: #005582; */
+        transform: translateX(100%);
+        transition: transform 1s ease;
+        /* box-shadow: 0px 1px 5px #0E0805; */
+    }
 }
