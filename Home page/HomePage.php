@@ -21,20 +21,6 @@
         <form action="#", method="post">
             <fieldset>
                <input type="City" placeholder="City">
-             <!--    <select id="City" name="City" >
-                    <option value="" disabled selected hidden>City</option>
-                    <option value="volvo">Abrud</option>
-                    <option value="saab">Adjud</option>
-                    <option value="fiat">Agnita</option>
-                    <option value="audi">Aiud</option>
-                    <option value="audi">Alba Iulia</option>
-                    <option value="audi">Aleșd</option>
-                    <option value="audi">Alexandria</option>
-                    <option value="audi">Amara</option>
-                    <option value="audi">Anina</option>
-                    <option value="audi">Aninoasa</option>
-                    <option value="audi">Arad</option>
-                </select>-->
                 <input type="category" placeholder="Category">
                 <input type="maxPrice" placeholder="Maximum price">
                 <input type="submit" id="submit" value="Search">
