@@ -164,6 +164,8 @@
         <script src="mapScript.js"></script> 
        
     </div>
-    
+    <?php
+        include "../Globals/footer.php"
+    ?>
 </body>
 </html>
