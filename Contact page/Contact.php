@@ -18,8 +18,8 @@
     ?>
 
     <h2>Get in touch</h2>
-    <!-- <div class="contactUs title">
+    <div class="contactUs title">
         
-    </div> -->
+    </div>
 </body>
 </html>
