@@ -21,5 +21,9 @@
     <!-- <div class="contactUs title">
         
     </div> -->
+
+    <?php
+        include "../Globals/footer.php";
+    ?>
 </body>
 </html>
