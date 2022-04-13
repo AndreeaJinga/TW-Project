@@ -36,8 +36,7 @@
                         <li> 2.5 <a href="#constrangeri"> Constrangeri de implementare si design </a> </li>
                         <li> 2.6 <a href="#ipoteze"> Ipoteze si dependente </a> </li>
                     </ul>
-                </li>                      
-                 <!-- TO DO HERE -->
+                </li>
                 <li><a href="#cerinte">Cerinte de interfata externa</a> 
                     <ul dir="auto"> 
                         <li> 3.1 <a href="#interfete"> Interfete cu utilizatorul </a> </li> 
@@ -45,6 +44,19 @@
                         <li> 3.3 <a href="#interfeteSoft"> Interfete software </a> </li> 
                         <li> 3.4 <a href="#interfeteComm"> Interfete de comunicatii </a> </li>
                     </ul>                    
+                </li>
+                <li><a href="#caracteristici">Caracteristicile sistemului</a> 
+                    <ul dir="auto"> 
+                        <li> 4.1 <a href="#home"> Home Page </a> </li> 
+                        <li> 4.2 <a href="#announces"> Announces Page </a> </li> 
+                        <li> 4.3 <a href="#favorites"> Favorites Page </a> </li> 
+                        <li> 4.4 <a href="#blog"> Blog page </a> </li>
+                        <li> 4.5 <a href="#login"> Login Page </a> </li>
+                        <li> 4.6 <a href="#account"> My account </a> </li>
+                        <li> 4.7 <a href="#settings"> Settings </a> </li>
+                        <li> 4.8 <a href="#aboutUs"> About Us </a> </li>
+                        <li> 4.9 <a href="#contact">Contact Page </a> </li>
+                    </ul>
                 </li>
             </ol>
             <dl>
@@ -106,8 +118,8 @@
             <section id="perspectiva" role="doc-perspectiva">
                 <h3>2.1 Perspectiva produsului</h3>
                 <p>   
-                    Produsul nostru este un produs autonom care inglobeaza functionalitatile deja existente pe piata in cadrul altor aplicatii care nu satisfac nevoile cumparatorului.
-                    <img src="./client-serverDiagram.png" alt="Diagrama aplicatiei">
+                    Produsul nostru este unul autonom care inglobeaza functionalitatile deja existente pe piata in cadrul altor aplicatii care nu satisfac nevoile cumparatorului.
+                    <img class="diagram" src="./client-serverDiagram.png" alt="Diagrama aplicatiei">
                 </p>
             </section>
             <section id="functiile" role="doc-functiile">
@@ -155,32 +167,98 @@
             <h2>3. Cerinte de interfata externa</h2>
             <section id="interfete" role="doc-interfete">
                 <h3>3.1 Interfete cu utilizatorul</h3>
-                <p>   
-                    
-                </p>
+                <img class="meniu1" src="./meniu.png" alt="Meniul aplicatiei">
+                <div class="box">
+                    <div class="text">
+                        Principala componenta a interfetei cu care utilizatorul interactioneaza este reprezentata de un meniu cu acces la paginile aplicatiei.
+                        Acestea sunt: Home, Favorites, Announces, Blog, Contact, Your Account. Acest meniu este pozitionat in partea de sus a paginilor pentru a fi la indemana.
+                        De asemenea, pentru o mai buna incadrare in pagina, meniul se redimensioneaza in pozitie verticala in partea laterala a site-ului, atunci cand scade latimea paginii sub un anumit nivel. 
+                    </div>
+                    <img class="meniu2" src="./burgerMeniu.png" alt="Meniul aplicatiei">
+                </div>
             </section>
-            
             <section id="interfeteHard" role="doc-interfeteHard">
                 <h3>3.2 Interfete hardware</h3>
                 <p> 
-                    
+                    Website-ul poate fi vizualizat atat in formatul unui browser, cat si al unui dispozitiv mobil, datorita faptului ca este creat intr-o maniera receptiva.
                 </p>
             </section>
-
             <section id="interfeteSoft" role="doc-interfeteSoft">
                 <h3>3.3 Interfete software</h3>
                 <p> 
-                    
+                    Aplicatia web va realiza conexiuni cu alte site-uri care se ocupa cu anunturile imobiliare pentru a prelua date si a le stoca intr-o baza de date pentru usurinta accesului la datele respective.
+                    Acestea urmeaza sa fie utilizate pentru recreerea anunturilor intr-o forma diferita pe pagina Announces. Pe baza datelor preluate din baza de date, se va realiza si o conexiune cu Google Maps API
+                    pentru a avea acces la o reprezentare fizica pe harta a adresei specificate in anunt. De asemenea, pozitionarea imobilului urmeaza sa fie folosita pentru a obtine date legate de diferite tipuri de poluare 
+                    din zona respectiva, aceste date fiind colectate prin intermediul unei conexiuni cu alte pagini. 
                 </p>
             </section>
-
             <section id="interfeteComm" role="doc-interfeteComm">
                 <h3>3.4 Interfete de comunicatii</h3>
+                <p> 
+                    In cazul in care un client are o solicitare speciala, acestuia ii este pusa la dispozitie o adresa de contact prin care poate lua legatura cu proprietarii site-ului.
+                    Paginile web sunt realizate în limbaj de marcare hipertext și acestea sunt transmise prin protocolul HTTP.
+                </p>
+            </section>
+        </section>
+
+        <section id="caracteristici" role="doc-caracteristici">
+            <h2>4. Caracteristicile sistemului</h2>
+            <section id="home" role="doc-home">
+                <h3>4.1 Home Page </h3>
                 <p> 
                     
                 </p>
             </section>
-            
+            <section id="announces" role="doc-carac2">
+                <h3>4.2 Announces </h3>
+                <p> 
+                    
+                </p>
+            </section>
+            <section id="favorites" role="doc-carac2">
+                <h3>4.3 Favorites </h3>
+                <p> 
+                    
+                </p>
+            </section>
+            <section id="blog" role="doc-carac2">
+                <h3>4.4 Blog </h3>
+                <p> 
+                    
+                </p>
+            </section>
+            <section id="login" role="doc-carac2">
+                <h3>4.5 Login Page </h3>
+                <p> 
+                    
+                </p>
+            </section>
+            <section id="account" role="doc-carac2">
+                <h3>4.6 My account </h3>
+                <p> 
+                    
+                </p>
+            </section>
+            <section id="settings" role="doc-carac2">
+                <h3>4.7 Settings </h3>
+                <p> 
+                    
+                </p>
+            </section>
+            <section id="aboutUs" role="doc-carac2">
+                <h3>4.8 About Us </h3>
+                <p> 
+                    
+                </p>
+            </section>
+            <section id="contact" role="doc-carac2">
+                <h3>4.9 Contact Page </h3>
+                <p> 
+                    
+                </p>
+            </section>
         </section>
+     
+                        
     </body>
   </html>

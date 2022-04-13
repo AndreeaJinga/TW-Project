@@ -14,6 +14,32 @@ body
     overflow-x: hidden;
     overflow-y: scroll;
 }
-/* .class23{
-    word-spacing: ;
-} */
+.diagram
+{
+    position: relative;
+    width: 70%;
+}
+
+#interfete h3
+{
+   width: 100%;
+} 
+#interfete .box
+{
+    display: flex;
+}
+.meniu1
+{
+    position: relative;
+    width: 100%;
+}
+.text
+{
+    justify-self: flex-start;
+}
+.meniu2
+{
+    position: relative;
+    justify-self: flex-end;
+    height:300px;
+}
