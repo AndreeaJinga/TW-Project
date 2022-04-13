@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="HomePage.css">
     <link rel="stylesheet" href="../Globals/header2.css">
-    <title>Document</title>
+    <title>HomePage</title>
 </head>
 <body>
     <?php
