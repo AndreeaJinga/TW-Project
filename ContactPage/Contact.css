@@ -9,7 +9,7 @@
 body
 {
     min-height: 100vh;
-    background: #e9ddc8;
+    background: #f3ede6;
     transition: 0.5s;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -70,9 +70,9 @@ body
     position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 5fr 4fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "form info" "form map";
-    grid-gap: 10px;
+    grid-gap: 25px;
     margin-top: 2%;
 }
 .box h3
@@ -143,6 +143,7 @@ body
     border: 1px solid black;
     max-width: 100%;
     min-width: 100%;
+    height: 180px;    
     margin-bottom: 1%;
 }
 .formBox .row100 .inputBox input
@@ -171,4 +172,92 @@ body
 .formBox .row50 .inputBox ::placeholder
 {
     color: rgb(152, 151, 151);
+}
+.info
+{
+    background: #a28769;
+}
+.info h3
+{
+    color: #fff;
+}
+.info .infoBox div
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+.info .infoBox div span
+{
+    min-width: 50px;
+    height: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5 em;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.info .infoBox div p
+{
+    color: #fff;
+    font-size: 1.1em;
+}
+.info .infoBox div a
+{
+    position: relative;
+    color: #fff;
+    text-decoration: underline;
+}
+.map
+{
+    padding: 1%;
+    background-color: #a28769;
+}
+.map iframe
+{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 991px)
+{
+    .Contact
+    {
+        padding: 20px;
+    }
+    .boxZone
+    {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "form" "info" "map";
+    }
+    .map
+    {
+        min-height: 300px;
+    }
+    .formBox .row50
+    {
+        display:flex;
+        gap: 0;
+        flex-direction: column;
+    }
+    .formBox .row50 .inputBox
+    {
+        width:100%;
+    }
+    .Contact
+    {
+        padding: 30px;
+    }
+    .map
+    {
+        padding:1%;
+        min-height: 300px;
+
+    }
 }
