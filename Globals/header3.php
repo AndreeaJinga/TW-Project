@@ -3,7 +3,7 @@
         <img src="../Globals/logo-Crop-menuBar.png" alt="Logo" width="173" height="98">
         <ul class="navList">
             <li class="listItem">
-                <a href=".">
+                <a href="../HomePage/HomePage.html">
                     <span class="icon"> 
                         <ion-icon name="home-outline"></ion-icon> 
                     </span>
@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li class="listItem">
-                <a href="#">
+                <a href="../">
                     <span class="icon"> 
                         <ion-icon name="heart-outline"></ion-icon> 
                     </span>
@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li class="listItem">
-                <a href="#">
+                <a href="../">
                     <span class="icon"> 
                         <ion-icon name="newspaper-outline"></ion-icon>
                     </span>
@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li class="listItem">
-                <a href="#">
+                <a href="../">
                     <span class="icon"> 
                         <ion-icon name="book-outline"></ion-icon>
                     </span>
@@ -40,6 +40,14 @@
                         <ion-icon name="call-outline"></ion-icon> 
                     </span>
                     <span class="text">Contact</span>
+                </a>
+            </li>
+            <li class="listItem">
+                <a href="../AboutUsPage/aboutUs.html">
+                    <span class="icon"> 
+                        <ion-icon name="people-outline"></ion-icon> 
+                    </span>
+                    <span class="text">About Us</span>
                 </a>
             </li>
             <li class="listItem">
