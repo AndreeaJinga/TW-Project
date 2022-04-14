@@ -24,7 +24,6 @@
                         <li> 1.2 <a href="#conventions"> Conventiile documentelor </a> </li> 
                         <li> 1.3 <a href="#audience"> Publicul vizat si sugestii de lectura </a> </li> 
                         <li> 1.4 <a href="#scope"> Domeniul produsului </a> </li>
-                        <li> 1.5 <a href="#references"> Referinte </a> </li>
                     </ul>
                 </li>
                 <li><a href="#descrierea">Descrierea</a> 
@@ -61,10 +60,8 @@
                 <li><a href="#nonfunctional">Cerinte nefunctionale</a> 
                     <ul dir="auto"> 
                         <li> 5.1 <a href="#performance"> Cerințe de performanță </a> </li> 
-                        <li> 5.2 <a href="#safety"> Cerințe de siguranță </a> </li> 
-                        <li> 5.3 <a href="#security"> Cerințe de securitate </a> </li> 
-                        <li> 5.4 <a href="#software"> Atribute de calitate software </a> </li>
-                        <li> 5.5 <a href="#rules"> Reguli de afaceri </a> </li>
+                        <li> 5.2 <a href="#security"> Cerințe de securitate </a> </li> 
+                        <li> 5.3 <a href="#software"> Atribute de calitate software </a> </li>
                     </ul>
                 </li>
             </ol>
@@ -92,7 +89,7 @@
             <section id="conventions" role="doc-conventions">
                 <h3>1.2 Conventiile documentelor </h3>
                 <p>
-                    Pentru realizarea acestui document s-au folosit urmatoarele conventii:                    
+                    Pentru realizarea acestui document nu au fost folosite conventii tipografice.                    
                 </p>
             </section>
             <section id="audience" role="doc-audience">
@@ -108,17 +105,6 @@
                     Scopul acestui proiect este de a realiza un sistem de centralizare al imobiliarelor puse la vanzare. 
                     El doreste integrarea anunturilor existente pe piata din diverse orase din Romania, pentru a facilita o cautare si alegere mai eficienta a acestora si pentru a obtine un raport calitate-pret cat mai bun.
                   
-                </p>
-            </section>
-            <section id="references" role="doc-references">
-                <h3>1.5 Referinte </h3>
-                <p>
-                    Referintele folosite in cadrul acestui document sunt urmatoarele:
-                    <ul>
-                        <li>
-                            <a href=""> de pus linkuri </a>
-                        </li>
-                    </ul>
                 </p>
             </section>
         </section>
@@ -281,7 +267,7 @@
             <section id="settings" role="doc-carac2">
                 <h3>4.7 Settings </h3>
                 <p> 
-                    Aceasta pagina este nu poate fi accesata din cadrul meniului principal, ea fiind vizibila in momentul selectarii butonului Settings din cadrul paginii My Account.
+                    Aceasta pagina este nu poate fi accesata din cadrul meniului principal, ea fiind vizibila in momentul selectarii butonului Settings din cadrul paginii <a href="#announces">My Account</a>.
                     Rolul acesteia este de a-i permite utilizatorului sa schimbe modul de navigare in cadrul acestui site. 
                     El va putea sa isi aleaga urmatoarele: tema culorilor, avand la dispozitie tema luminoasa si tema intunecata; limba in care este afisat textul de pe pagini, in limba romana sau in linba engleza; acceptul lui privind termenii si conditiile de functionare ale site-ului, in cazul unui dezacord contul lui va fi sters in urma unei atentionati.
                     Tot din cadrul acestei pagini, utilizatorul isi va putea sterge contul si toate datele asociate acestuia.
@@ -310,31 +296,25 @@
             <section id="performance" role="doc-performance">
                 <h3>5.1 Cerinte de performanță </h3>
                 <p> 
-                    
-                </p>
-            </section>
-            <section id="safety" role="doc-safety">
-                <h3>5.2 Cerinte de siguranta </h3>
-                <p> 
-                    
+                    Site-ul nostru functioneaza in stransa legatura cu o baza de date complexa. 
+                    Crawler-ul va fi utilizat o singura data pentru a prelua si introduce anunturile in baza de date, astfel evitandu-se suprascrierea tabelelor cu aceeasi informatie sau verificarea daca acele informatii exista deja in baza de date.
+                    Pe baza datelor stocate se va face popularea paginilor cu anunturi, fara a mai fi nevoie de a accesa o sursa exterioara de informatie. 
                 </p>
             </section>
             <section id="security" role="doc-security">
-                <h3>5.3 Cerinte de securitate </h3>
+                <h3>5.2 Cerinte de securitate </h3>
                 <p> 
-                    
+                    Pentru a garanta siguranta informatiei din conturile utilizatorilor la crearea unui cont este necesara stabilirea unei adrese de email si a unei parole.
+                    Adresa de email va fi asociata unui singur cont, iar parola va avea cateva cerinte minimale de siguranta. 
+                    Pentru a spori securitatea conturilor in cazul unei brese, in baza de date parolele vor fi stocate in mod criptat.
                 </p>
             </section>
             <section id="software" role="doc-software">
-                <h3>5.4 Atribute de calitate software </h3>
+                <h3>5.3 Atribute de calitate</h3>
                 <p> 
-                    
-                </p>
-            </section>
-            <section id="rules" role="doc-rules">
-                <h3>5.5 Reguli de afaceri </h3>
-                <p> 
-                    
+                    Un prim atribut al site-ul este utilitatea acestuia deoarece este prezentat printr-o interfata simpla, usor de navigat, in favoarea utilizatorilor noi sau mai putin frecventi pe platforma.
+                    De asemenea, se remarca prin corectitudine, prin functionalitatea sa, si flexibilitate, fiind adaptabil la noi produse.
+                    Un alt atribut major este eficienta, datorata timpului scurt pe care utilizatorii trebuie sa il investeasca pentru a-si indeplini scopul.
                 </p>
             </section>
         </section>               
