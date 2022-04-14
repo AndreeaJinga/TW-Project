@@ -23,7 +23,7 @@
                     <span class="icon"> 
                         <ion-icon name="newspaper-outline"></ion-icon>
                     </span>
-                    <span class="text">News</span>
+                    <span class="text">Announces</span>
                 </a>
             </li>
             <li class="listItem">
