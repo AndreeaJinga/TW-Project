@@ -83,24 +83,62 @@
     <div class="main">
         <div class="leftSide">
             <div class="upSide">
-                <button class="genInfo">
-                    General Information
-                </button>
-                <button>
-                    Settings
-                </button>
+                <a href="../AccountPage/myAccount.html">
+                    <button class="genInfo">
+                        General Information
+                    </button>
+                </a>
+                <a href="../SettingsPage/settingsPage.html">
+                    <button class="genInfo">
+                        Settings
+                    </button>
+                </a>
             </div>
             <div class="downSide">
-                <button>
-                    Logout
-                </button>
+                <a href="../..">
+                    <button class="genInfo">
+                        Logout
+                    </button>
+                </a>
             </div>
         </div>
         <div class="rightSide">
+            <div class="profilePic">
+                <span class="textPP">Profile picture: </span>
+                <img src="./default-avatar-profile.jpg" alt="avatarPic">
+            </div>
+
+            <div class="formm">
+                <div class="textBoxes">
+                    <span class="text">Username:</span>
+                    <span class="text">Email:</span>
+                    <span class="text"> <a href="#">Our terms and conditions</a> </span>
+                    <span class="text"> Password:</span>
+                </div>
+                <div class="inputBoxes">
+                    <input class="inputTag" type="text" placeholder="Type your new username" autocomplete="given-name"/>
+                    <input class="inputTag" type="text" placeholder="Type your new email" autocomplete="email"/>
+                    <input class="checkTag" type="checkbox" id="switch" /><label for="switch">Toggle</label>
+                    <input class="inputTag" type="password" placeholder="Type your new password"/>
+                    <input class="inputTag" type="password" placeholder="Confirm new password"/>
+                </div>
+            </div>
+
+            <div class="saveChanges">
+                <input class="currentPass" type="password" placeholder="Type your current password"/>
+                <a href="../AccountPage/myAccount.html">
+                    <button class="saveBtn">
+                        Save changes*
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <footer>
+        *You will need to retype your password. If you disclaimed with our terms <br>your account will be deleted.
+    </footer>
 </body>
 </html>
