@@ -215,7 +215,12 @@
             <section id="home" role="doc-home">
                 <h3>4.1 Home Page </h3>
                 <p> 
-                    
+                    Pagina Home reprezinta pagina principala pe care ajunge utilizatorul dupa ce se inregistreaza sau fara a se inregistra daca utilizeaza butonul Home din pagina de login/register.
+                    Odata ajuns pe pagina principala, utilizatorul are optiunea de a schimba pagina pe care se afla utlizand meniul sau sa inceapa cautarile pentru un imobil.
+                    Pentru realizarea cautarilor avem implementate doua metode care urmaresc nivele de detalii diferite.
+                    Prima metoda este cea de cautare in detaliu, care implica cautarea pe baza datelor introduse de utilizator, adica oras, tipul de imobil si un pret maxim pentru o filtrare mai in detaliu a anunturilor.
+                    A doua metoda este cea de cautare rapida, ea implica utilizarea unei harti interactive care permitere alegerea, cu mouse-ul sau utilizand touch screen-ul, a unui judet care va fi utilizat pentru filtarea rezultatelor vazute de utilizator.
+                    Ambele metode de alegere a anunturilor dorite ne redirectioneaza catre pagina <a href="#announces">Announces</a> in care urmeaza sa fie listate aunturile.
                 </p>
             </section>
             <section id="announces" role="doc-carac2">
@@ -224,10 +229,14 @@
                     
                 </p>
             </section>
-            <section id="favorites" role="doc-carac2">
+            <section id="favorites" role="doc-favorites">
                 <h3>4.3 Favorites </h3>
                 <p> 
-                    
+                    Fiecare utilizator inregistrat in aplicatie va putea sa-si salveze anunturile peste care sa vrea sa revina ulterior utilizand pagina Favorites.
+                    In cadrul aceste pagini utilizatorul are acces la o lista cu anuntuti favorite pe care a ales sa le salveze in timpul cautarii de imobiliare facuta in pagina <a href="#announces">Announces</a>.
+                    Din lista respectiva, o sa fie posibila intoarcerea spre pagina de anunturi in care sa poata fi viziualit din nou imobilul mai in detaliu.
+                    In cazul dorintei de a sterge un element din lista, fiecare anunt prezent acolo va avea posibilitatea de a fi eliminat.
+                    Pentru usurinta navigarii prin lista, se va folosi un meniu de filtrare al anunturilor salvate.
                 </p>
             </section>
             <section id="blog" role="doc-carac2">
@@ -254,10 +263,12 @@
                     
                 </p>
             </section>
-            <section id="aboutUs" role="doc-carac2">
+            <section id="aboutUs" role="doc-aboutUs">
                 <h3>4.8 About Us </h3>
                 <p> 
-                    
+                    In cadrul paginii About Us vor fi prezente informatii despre creatorii aplicatie web.
+                    Va fi prezenta o scurta descriere a aplicatiei, care o poza a fiecarui participant la poriect si cateva detalii despre acesta.
+                    De asemenea, aici se va afla si un buton care sa ne redirectioneze catrea pagina documentatiei proiectului, pentru utilizatorii care doresc sa intre mai in detaliu in diferite aspecte ale temei si implementarii aplicatiei.
                 </p>
             </section>
             <section id="contact" role="doc-carac2">
