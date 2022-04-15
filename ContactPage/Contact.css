@@ -32,6 +32,7 @@ body
 {
     color: black;
     font-weight: 500;
+    
 }
 #bg
 {
@@ -62,7 +63,7 @@ body
 {
     padding: 5%;
     background-color: white;
-    box-shadow: 0 5px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 35px rgba(0,0,0,0.4);
     
 }
 .boxZone
@@ -72,7 +73,7 @@ body
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "form info" "form map";
-    grid-gap: 25px;
+    grid-gap: 40px;
     margin-top: 2%;
 }
 .box h3
