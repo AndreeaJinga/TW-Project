@@ -33,38 +33,44 @@ fieldset
     justify-content: center;
     margin: 2rem;
     padding: 1rem;
-    border: solid 2px rgb(148, 145, 145);
+    border: none;
+    font-weight: 500;
     border-radius: 20px;
     background-color: white;
     width: min-content;
-    /* text-align: center; */
+    box-shadow: 0 5px 35px rgba(0,0,0,0.4);
     margin: 80px auto;
-    /* position: absolute;
-    left: 32%; */
-    /* top: 700px; */
 }
 input
 {
     margin-left: 1rem;
     background-color: #f3ede6;
     border: solid 2px rgb(148, 145, 145);
-    border-radius: 15px;
+    padding: 7px;
+    border-radius: 20px;
 }
-input:last-of-type
+input[type="submit"]:hover
 {
+    background-color: black;
+    transition: 0.3s;
+}
+input[type="submit"]
+{
+    color: #f3ede6;
     padding: 0.7rem;
     margin-left: 1.5rem;
     background-color: #A28769;
     border: solid 2px rgb(148, 145, 145);
+    width: 90px;
     border-radius: 20px;
+    cursor: pointer;
 }
 input::placeholder
 {
-    padding: 0.5rem;
+    padding: 8px;
     color: black;
 }
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 991px) {
     input{
         margin-left:0.1rem;
         width: 110px;
