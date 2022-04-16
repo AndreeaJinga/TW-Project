@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rgba property</title>
+        <style>
+            h1 {
+                color: green;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+            div {
+                background: rgb(0, 151, 19);
+                padding: 10px;
+                text-align:justify; 
+            }
+      
+            div.first {
+                /*setting alpha = 0.1*/
+                background: rgba(0, 151, 19, 0.1);
+            }
+      
+            div.second {
+                /*setting alpha = 0.3*/
+                background: rgba(0, 151, 19, 0.3);
+            }
+      
+            div.third {
+                /*setting alpha = 0.6*/
+                background: rgba(0, 151, 19, 0.6);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>GeeksforGeeks</h1>
+        <h2>Using RGBA color values:</h2>
+        <div class="first">
+            <p>This paragraph is shown at 10% opacity.</p></div>
+        <div class="second">
+            <p>This paragraph is shown at 30% opacity.</p></div>
+        <div class="third">
+            <p>This paragraph is shown at 60% opacity.</p></div>
+        <div><p>This is default.</p></div>
+    </body>
+</html>  

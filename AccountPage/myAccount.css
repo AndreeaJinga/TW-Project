@@ -23,11 +23,9 @@
     background-color: #A28769;
     border-radius: 0px 25px 25px 0px;
     margin: 10px;
-    /* background-color: #A28769; */
     cursor: pointer;
     width: 80%;
     height: 40px;
-    /* font-family: Poppins-Medium; */
     font-size: 16px;
     font-weight: 700;
     line-height: 1.2;
@@ -53,11 +51,8 @@ a:hover .genInfo{
     margin-top: 10px;
 }
 .profilePic{
-    /* align-items: center; */
-    /* position: relative; */
     display: flex;
     justify-content: center;
-    margin-top: 15%;
 }
 .textPP{
     align-self: center;
@@ -70,12 +65,13 @@ img{
 .formm{
     display: flex;
     justify-content: space-around;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 .textBoxes{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    margin-left: 20px;
 }
 .text{
     font-weight: 550;
@@ -84,12 +80,14 @@ img{
     /* padding: 15px; */
     margin: 17px;
 }
-
+.invisibleTxt{
+    visibility: hidden;
+}
 .inputBoxes{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 40px;
+    justify-content: space-around;
+    margin-top: 5%;
     margin-left: 25%;
 }
 .inputTag{
