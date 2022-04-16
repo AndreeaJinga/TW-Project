@@ -27,3 +27,51 @@ body
     background-position: bottom;
     z-index: -1;
 }
+fieldset
+{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    padding: 1rem;
+    border: solid 2px rgb(148, 145, 145);
+    border-radius: 20px;
+    background-color: white;
+    width: min-content;
+    /* text-align: center; */
+    margin: 80px auto;
+    /* position: absolute;
+    left: 32%; */
+    /* top: 700px; */
+}
+input
+{
+    margin-left: 1rem;
+    background-color: #f3ede6;
+    border: solid 2px rgb(148, 145, 145);
+    border-radius: 15px;
+}
+input:last-of-type
+{
+    padding: 0.7rem;
+    margin-left: 1.5rem;
+    background-color: #A28769;
+    border: solid 2px rgb(148, 145, 145);
+    border-radius: 20px;
+}
+input::placeholder
+{
+    padding: 0.5rem;
+    color: black;
+}
+
+@media screen and (max-width: 750px) {
+    input{
+        margin-left:0.1rem;
+        width: 110px;
+    }
+    input:last-of-type{
+        margin-left:0.1rem; 
+        width: 70px;
+    }
+    
+}
