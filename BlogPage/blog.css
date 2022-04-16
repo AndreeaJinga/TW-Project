@@ -1,0 +1,22 @@
+.mainFrame{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+.article{
+    border: 3px solid #A28769;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px 25px 25px 25px;
+    /* padding: 20px 100px 20px 100px; */
+    margin: 10px 15% 10px 15%;
+}
+@media screen and (max-width: 1000px) {
+    .article{
+        margin: 10px 5% 10px 5%;
+    }
+}
+.title{
+    background-color: aqua;
+}
