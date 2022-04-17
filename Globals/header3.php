@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li class="listItem">
-                    <a href="../ContactPage/Contact.php">
+                    <a href="../ContactPage/Contact.html">
                         <span class="icon"> 
                             <ion-icon name="call-outline"></ion-icon> 
                         </span>
@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li class="listItem">
-                    <a href="../AccountPage/myAccount.php">
+                    <a href="../AccountPage/myAccount.html">
                         <span class="icon"> 
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
