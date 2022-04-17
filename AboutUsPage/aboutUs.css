@@ -1,0 +1,45 @@
+.documentation{
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
+.docButton{
+    padding: 10px;
+    width: 200px;
+    background-color: #A28769;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    border-color: black;
+}
+a:hover .docButton{
+    background-color: #0E0805;
+    color: #A28769;
+    border-color: white;
+}
+
+.pers{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px black;
+    max-width: fit-content;
+    max-height: fit-content;
+    background-color: white;
+}
+
+.pers p { 
+    padding: 15px;
+    text-align: center;
+}  
+
+.pers img {
+    width: 250px;
+    height: 280px;
+    margin: 15px;
+}
