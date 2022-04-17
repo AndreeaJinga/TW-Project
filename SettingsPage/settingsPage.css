@@ -41,6 +41,26 @@ a:hover .genInfo{
 .downSide{
     margin-top: 30%;
 }
+@media screen and (max-width: 670px) {
+    .leftSide{
+        /* width: 30%; */
+        padding: 10px 5px 10px 5px;
+    }
+    .upSide{
+        margin-bottom: 30%;
+        margin-right: 0;
+        width: 100%;
+    }
+    .genInfo{
+        margin: 5px;
+        width: 95%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .downSide{
+        margin-top: 30%;
+    }
+}
 .rightSide{
     margin-left: 5%;
     display: flex;
@@ -233,4 +253,21 @@ a:hover .saveBtn{
 footer{
     display: flex;
     justify-content: flex-end;
+}
+@media screen and (max-width: 670px) {
+    .theme{
+        padding: 15px 5px 15px 5px;
+        margin: 10px 0px 10px 0px;
+    }
+    .textOption{
+        font-size: 14px;
+    }
+    .saveBtn{
+        margin: 5px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    footer{
+        font-size: 12px;
+    }
 }

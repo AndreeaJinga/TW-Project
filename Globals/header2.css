@@ -126,7 +126,7 @@ body{
     transform: translateX(0%);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
     .burgerMenu {
         display: block;
     }
