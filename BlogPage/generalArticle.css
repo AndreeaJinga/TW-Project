@@ -1,20 +1,14 @@
-.mainFrame{
-    align-self: center;
+/* .mainFrame{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
-}
+} */
 .article{
-    /* border: 3px solid #A28769; */
+    align-self: center;
+    margin-top: 30px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 25px 25px 25px 25px;
-    /* padding: 20px 100px 20px 100px; */
     margin: 10px 15% 10px 15%;
-}
-.article a{
-    text-decoration: none;
-    color: #000;
 }
 @media screen and (max-width: 1000px) {
     .article{
@@ -27,6 +21,13 @@
     background-color: #A28769;
     padding: 5px 10px 5px 10px;
     font-weight: 550;
+}
+.author{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: flex-end;
+    background-color: rgba(162, 135, 105, 0.5)
+
 }
 .articleBody{
     border: 2px solid #A28769;
