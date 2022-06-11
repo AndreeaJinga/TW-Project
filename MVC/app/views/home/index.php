@@ -9,13 +9,28 @@
     <link rel="stylesheet" href="css/globals/header2.css">
 </head>
 <body>
+
+<?php
+        $temp = realpath('resources/header3.php');
+        if($temp != false){
+            echo "fgh"; 
+            include realpath('resources/header3.php');}
+        else{        
+            echo "djsjbsj";
+            include realpath('../../../Public/resources/header3.php');
+}
+
+        // include 'TW-Project/MVC/Public/resources/header3.php';
+        
+        // <!-- include '../../../Public/resources/header3.php';  -->
+    ?>
     
-    <header class="headerClass">
+    <!-- <header class="headerClass">
         <div class="navigation">
             <img src="/resources/logo-Crop-menuBar.png" alt="Logo" width="173" height="98">
             <ul class="navList">
                     <li class="listItem">
-                        <a href="../HomePage/HomePage.html">
+                    <a href="../App/views/home/index.php">
                             <span class="icon"> 
                                 <ion-icon name="home-outline"></ion-icon> 
                             </span>
@@ -88,7 +103,7 @@
                 nav.classList.toggle('show')
             })
         }
-    </script>
+    </script> -->
 
     <div id="bg"></div>
 

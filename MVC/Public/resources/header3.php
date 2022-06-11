@@ -1,14 +1,17 @@
+
 <header class="headerClass">
     <div class="navigation">
-        <img src="../Globals/logo-Crop-menuBar.png" alt="Logo" width="173" height="98">
+        <img src="logo-Crop-menuBar.png" alt="Logo" width="173" height="98">
         <ul class="navList">
                 <li class="listItem">
-                    <a href="../HomePage/HomePage.html">
-                        <span class="icon"> 
-                            <ion-icon name="home-outline"></ion-icon> 
-                        </span>
-                        <span class="text">Home</span>
-                    </a>
+                <?php
+                    $temp = realpath('../App/views/home/index.php');
+                    if($temp == false) {
+                        echo "<a href=\"../home/index.php\"> <span class=\"icon\"> <ion-icon name=\"home-outline\"></ion-icon> </span> <span class=\"text\">Home</span> </a>";
+                    }
+                    else 
+                        echo "<a href=\"../App/views/home/index.php\"> <span class=\"icon\"> <ion-icon name=\"home-outline\"></ion-icon> </span> <span class=\"text\">Home</span> </a>";
+                ?>
                 </li>
                 <li class="listItem">
                     <a href="../Favorites/FavoritesPage.html">
