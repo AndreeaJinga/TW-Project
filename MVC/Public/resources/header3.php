@@ -22,20 +22,23 @@
                     else 
                         echo "<a href=\"../App/views/favorites/index.php\"> <span class=\"icon\"> <ion-icon name=\"heart-outline\"></ion-icon> </span> <span class=\"text\">Favorites</span> </a>";
                 ?>
-                <!-- <a href="../Favorites/FavoritesPage.html">
-                    <span class="icon"> 
-                        <ion-icon name="heart-outline"></ion-icon> 
-                    </span>
-                    <span class="text">Favorites</span>
-                </a> -->
             </li>
             <li class="listItem">
+                <?php
+                    $temp = realpath('../App/views/announces/index.php');
+                    if($temp == false) {
+                        echo "<a href=\"../announces/index.php\"> <span class=\"icon\"> <ion-icon name=\"newspaper-outline\"></ion-icon> </span> <span class=\"text\">Announces</span> </a>";
+                    }
+                    else 
+                        echo "<a href=\"../App/views/announces/index.php\"> <span class=\"icon\"> <ion-icon name=\"newspaper-outline\"></ion-icon> </span> <span class=\"text\">Announces</span> </a>";
+                ?>
+<!--             
                 <a href="../AnnouncesPage/Announces.html">
                     <span class="icon"> 
                         <ion-icon name="newspaper-outline"></ion-icon>
                     </span>
                     <span class="text">Announces</span>
-                </a>
+                </a> -->
             </li>
             <li class="listItem">
                 <a href="../BlogPage/blog.html">
