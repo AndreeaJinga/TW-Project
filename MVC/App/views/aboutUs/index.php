@@ -45,7 +45,7 @@
     </script>
 
     <div class="documentation">
-        <a href="../ScholarlyHTML/Scholarly.html">
+        <a href="scholarly.php">
             <button class="docButton">
                 Documentation
             </button>
