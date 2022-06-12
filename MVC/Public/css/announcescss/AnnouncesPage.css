@@ -42,6 +42,12 @@ fieldset {
     margin: 80px auto;
 }
 
+.fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 input {
     margin-left: 1rem;
     background-color: #f3ede6;
@@ -57,7 +63,7 @@ input[type="submit"]:hover {
 
 input[type="submit"] {
     color: #f3ede6;
-    padding: 0.7rem;
+    /* padding: 0.7rem; */
     margin-left: 1.5rem;
     background-color: #A28769;
     border: solid 2px rgb(148, 145, 145);
@@ -136,7 +142,7 @@ input::placeholder {
     transition-delay: 0.3s;
 }
 
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
     input{
         margin-left:0.1rem;
         width: 110px;
@@ -145,4 +151,31 @@ input::placeholder {
         margin-left:0.1rem; 
         width: 70px;
     }
-}
+} */
+
+@media screen and (max-width: 750px) {
+    .fields { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input{
+        margin: 5px;
+        /* margin-left:0.1rem; */
+        width: 110px;
+        height: 30px;
+    }
+    input:last-of-type{
+        align-self: center;
+        margin-left:0.1rem; 
+        padding-top: 2px;
+        width: 70px;
+    }
+} 
+
+/* @media screen and (max-width: 280px) {
+    .RO_map {
+        margin-top: 150px;
+    }
+} */

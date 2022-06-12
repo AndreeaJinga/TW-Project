@@ -71,6 +71,13 @@ svg path:hover{
         transform: scaleX(1);
     }
 }
+
+.fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 fieldset{
     display: flex;
     justify-content: center;
@@ -113,13 +120,31 @@ input::placeholder{
     z-index: -1;
 }
 @media screen and (max-width: 750px) {
+    .RO_map {
+        margin-top: 120px;
+    }
+    .fields { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
     input{
-        margin-left:0.1rem;
+        margin: 5px;
+        /* margin-left:0.1rem; */
         width: 110px;
+        height: 30px;
     }
     input:last-of-type{
+        align-self: center;
         margin-left:0.1rem; 
+        padding-top: 5.5px;
         width: 70px;
     }
-    
 } 
+
+@media screen and (max-width: 280px) {
+    .RO_map {
+        margin-top: 150px;
+    }
+}

@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/homecss/HomePage.css">
-    <link rel="stylesheet" href="css/globals/header2.css"> -->
     <?php
         $homecss = realpath('../../../Public/css/homecss/HomePage.css');
         if($homecss == false) {
@@ -44,8 +42,8 @@
     </div>
     <div class="form">
         <form action="#" method="post">
-            <fieldset>
-               <input type="text" placeholder="City">
+            <fieldset class="fields">
+                <input type="text" placeholder="City">
                 <input type="text" placeholder="Category">
                 <input type="text" placeholder="Maximum price">
                 <input type="submit" id="submit" value="Search">

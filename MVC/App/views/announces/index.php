@@ -38,20 +38,16 @@
     <div id="bg"></div>
     
     <div class="Announces">
-
-        <div id="search">
-            <div class="form">
-                <form action="#", method="post">
-                    <fieldset>
-                        <input type="City" placeholder="City">
-                        <input type="category" placeholder="Category">
-                        <input type="maxPrice" placeholder="Max price">
-                        <input type="submit" id="submit" value="Search">
-                    </fieldset>
-                </form>
-            </div>
+        <div class="form">
+            <form action="#" method="post">
+                <fieldset class="fields">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="Category">
+                    <input type="text" placeholder="Maximum price">
+                    <input type="submit" id="submit" value="Search">
+                </fieldset>
+            </form>
         </div>
-
         <div class="announces">
             <div class="container">
                 <div class="card">
