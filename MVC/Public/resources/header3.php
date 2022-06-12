@@ -1,7 +1,15 @@
 
 <header class="headerClass">
     <div class="navigation">
-        <img src="./logo-Crop-menuBar.png" alt="Logo" width="173" height="98">
+        <?php   
+            $img = realpath('../../../Public/resources/logo-Crop-menuBar.png');
+            if($img == false) {
+                echo "<img src=\"resources/logo-Crop-menuBar.png\" alt=\"Logo\" width=\"173\" height=\"98\">";
+            }
+            else {
+                echo "<img src=\"../../../Public/resources/logo-Crop-menuBar.png\" alt=\"Logo\" width=\"173\" height=\"98\">";
+            }
+        ?>
         <ul class="navList">
             <li class="listItem">
                 <?php 
