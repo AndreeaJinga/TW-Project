@@ -11,7 +11,7 @@ body{
     align-items: flex-start;
     min-height: 100vh; */
     background-color: #faf0e4;
-    background-image: url(cladiri.png);
+    background-image: url("../../resources/cladiri.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top; 

@@ -33,16 +33,6 @@
             include realpath('../../../Public/resources/header3.php');
         }
     ?>
-    <script>
-        document.addEventListener('DOMContentLoaded', nav)
-        function nav(){
-            const burger = document.querySelector('.burgerMenu');
-            const nav = document.querySelector('.navigation');
-            burger.addEventListener('click', ()=>{
-                nav.classList.toggle('show')
-            })
-        }
-    </script>
 
     <div class="documentation">
         <a href="scholarly.php">
