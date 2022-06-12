@@ -40,21 +40,16 @@
                     else 
                         echo "<a href=\"../App/views/announces/index.php\"> <span class=\"icon\"> <ion-icon name=\"newspaper-outline\"></ion-icon> </span> <span class=\"text\">Announces</span> </a>";
                 ?>
-<!--             
-                <a href="../AnnouncesPage/Announces.html">
-                    <span class="icon"> 
-                        <ion-icon name="newspaper-outline"></ion-icon>
-                    </span>
-                    <span class="text">Announces</span>
-                </a> -->
             </li>
-            <li class="listItem">
-                <a href="../BlogPage/blog.html">
-                    <span class="icon"> 
-                        <ion-icon name="book-outline"></ion-icon>
-                    </span>
-                    <span class="text">Blog</span>
-                </a>
+            <li class="listItem">               
+                <?php
+                    $temp = realpath('../App/views/blog/index.php');
+                    if($temp == false) {
+                        echo "<a href=\"../blog/index.php\"> <span class=\"icon\"> <ion-icon name=\"book-outline\"></ion-icon> </span> <span class=\"text\">Blog</span> </a>";
+                    }
+                    else 
+                        echo "<a href=\"../App/views/blog/index.php\"> <span class=\"icon\"> <ion-icon name=\"book-outline\"></ion-icon> </span> <span class=\"text\">Blog</span> </a>";
+                ?>
             </li>
             <li class="listItem">
                 <a href="../ContactPage/Contact.html">
