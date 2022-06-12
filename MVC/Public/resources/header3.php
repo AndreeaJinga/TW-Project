@@ -65,12 +65,20 @@
                 </a>
             </li>
             <li class="listItem">
-                <a href="../AboutUsPage/aboutUs.html">
+                <?php
+                    $temp = realpath('../App/views/aboutUs/index.php');
+                    if($temp == false) {
+                        echo "<a href=\"../aboutUs/index.php\"> <span class=\"icon\"> <ion-icon name=\"people-outline\"></ion-icon> </span> <span class=\"text\">About Us</span> </a>";
+                    }
+                    else 
+                        echo "<a href=\"../App/views/aboutUs/index.php\"> <span class=\"icon\"> <ion-icon name=\"people-outline\"></ion-icon> </span> <span class=\"text\">About Us</span> </a>";
+                ?>
+                <!-- /*<a href="../AboutUsPage/aboutUs.html">
                     <span class="icon"> 
                         <ion-icon name="people-outline"></ion-icon> 
                     </span>
                     <span class="text">About Us</span>
-                </a>
+                </a>*/ -->
             </li>
             <li class="listItem">
                 <a href="../AccountPage/myAccount.html">

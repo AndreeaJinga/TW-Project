@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/homecss/HomePage.css">
-    <link rel="stylesheet" href="css/globals/header2.css">
     <?php   
         $maincss = realpath('../../../Public/css/favoritescss/FavoritesPage.css');
         if($maincss == false) {
@@ -21,9 +19,16 @@
         }
         else {
             echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
+        }  
+        $mainjs = realpath('../../../Public/js/filtrare.js');
+        if($mainjs == false) {
+            echo "<script src=\"js/filtrare.js\"></script>";
+        }
+        else {
+            echo "<script src=\"../../../Public/js/filtrare.js\"></script>";
         }
     ?>
-    <script src="./filtrare.js"></script>
+    <!-- <script src="./filtrare.js"></script> -->
     <title>Favorites</title>
 </head>
 <body>
@@ -96,7 +101,7 @@
                 </tr>
             </tbody>
         </table>
-        <script>filtration()</script>
+        <script>filtration()</script> 
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
