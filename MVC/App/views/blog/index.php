@@ -33,6 +33,7 @@
             include realpath('../../../Public/resources/header3.php');
         }
     ?>
+    <div id="bg"></div>
 
     <div class="mainFrame">
         <div class="article">

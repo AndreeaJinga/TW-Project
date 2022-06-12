@@ -34,6 +34,8 @@
         }
     ?>
 
+    <div id="bg"></div>
+
     <div class="documentation">
         <a href="scholarly.php">
             <button class="docButton">

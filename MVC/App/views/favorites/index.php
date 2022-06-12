@@ -42,6 +42,7 @@
             include realpath('../../../Public/resources/header3.php');
         }
     ?>
+    <div id="bg"></div>
 
     <div class="tabelSet">
         <table class="favs">

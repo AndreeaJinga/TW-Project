@@ -43,3 +43,16 @@ a:hover .docButton{
     height: 280px;
     margin: 15px;
 }
+#bg
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../resources/cladiri.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+}
