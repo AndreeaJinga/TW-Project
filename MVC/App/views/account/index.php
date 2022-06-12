@@ -49,7 +49,7 @@
                 </a>
             </div>
             <div class="downSide">
-                <a href="../..">
+                <a href="../login/index.php">
                     <button class="genInfo">
                         Logout
                     </button>
