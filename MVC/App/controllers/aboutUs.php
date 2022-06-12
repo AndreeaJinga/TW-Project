@@ -6,4 +6,8 @@ class AboutUs extends Controller
     {
         $this->view('aboutUs/index');
     }
+    public function scholarly()
+    {
+        $this->view('aboutUs/scholarly');
+    }
 }
