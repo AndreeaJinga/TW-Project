@@ -34,9 +34,10 @@
                 include realpath('../../../Public/resources/header3.php');
             }
         ?>
-
+    
+    <div id="bg"></div>
+    
     <div class="Announces">
-        <div id="bg"></div>
 
         <div id="search">
             <div class="form">

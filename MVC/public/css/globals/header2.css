@@ -5,18 +5,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    /* display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-height: 100vh; */
+body{ 
     background-color: #faf0e4;
     background-image: url("../../resources/cladiri.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top; 
     background-size: 2500px;
-}
+} 
 
 .navigation{
     position: relative;

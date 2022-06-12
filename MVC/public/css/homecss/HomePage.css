@@ -1,4 +1,3 @@
-
 .RO_map{
     position: absolute;
     top: 400px;
@@ -81,11 +80,7 @@ fieldset{
     border-radius: 20px;
     background-color: white;
     width: min-content;
-    /* text-align: center; */
     margin: 80px auto;
-    /* position: absolute;
-    left: 32%; */
-    /* top: 700px; */
 }
 input{
     margin-left: 1rem;
@@ -104,7 +99,19 @@ input::placeholder{
     padding: 0.5rem;
     color: black;
 }
-
+#bg
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../resources/cladiri.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+}
 @media screen and (max-width: 750px) {
     input{
         margin-left:0.1rem;
@@ -115,4 +122,4 @@ input::placeholder{
         width: 70px;
     }
     
-}
+} 
