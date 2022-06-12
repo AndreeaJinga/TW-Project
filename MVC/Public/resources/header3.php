@@ -52,12 +52,14 @@
                 ?>
             </li>
             <li class="listItem">
-                <a href="../ContactPage/Contact.html">
-                    <span class="icon"> 
-                        <ion-icon name="call-outline"></ion-icon> 
-                    </span>
-                    <span class="text">Contact</span>
-                </a>
+                <?php
+                    $temp = realpath('../App/views/contact/index.php');
+                    if($temp == false) {
+                        echo "<a href=\"../contact/index.php\"> <span class=\"icon\"> <ion-icon name=\"call-outline\"></ion-icon> </span> <span class=\"text\">Contact</span> </a>";
+                    }
+                    else 
+                        echo "<a href=\"../App/views/contact/index.php\"> <span class=\"icon\"> <ion-icon name=\"call-outline\"></ion-icon> </span> <span class=\"text\">Contact</span> </a>";
+                ?>
             </li>
             <li class="listItem">
                 <?php
@@ -68,20 +70,16 @@
                     else 
                         echo "<a href=\"../App/views/aboutUs/index.php\"> <span class=\"icon\"> <ion-icon name=\"people-outline\"></ion-icon> </span> <span class=\"text\">About Us</span> </a>";
                 ?>
-                <!-- /*<a href="../AboutUsPage/aboutUs.html">
-                    <span class="icon"> 
-                        <ion-icon name="people-outline"></ion-icon> 
-                    </span>
-                    <span class="text">About Us</span>
-                </a>*/ -->
             </li>
             <li class="listItem">
-                <a href="../AccountPage/myAccount.html">
-                    <span class="icon"> 
-                        <ion-icon name="person-outline"></ion-icon>
-                    </span>
-                    <span class="text">My account</span>
-                </a>
+                <?php
+                    $temp = realpath('../App/views/account/index.php');
+                    if($temp == false) {
+                        echo "<a href=\"../account/index.php\"> <span class=\"icon\"> <ion-icon name=\"person-outline\"></ion-icon> </span> <span class=\"text\">My Account</span> </a>";
+                    }
+                    else 
+                        echo "<a href=\"../App/views/account/index.php\"> <span class=\"icon\"> <ion-icon name=\"person-outline\"></ion-icon> </span> <span class=\"text\">My Account</span> </a>";
+                ?>
             </li>
         </ul>
         <div class="burgerMenu">
