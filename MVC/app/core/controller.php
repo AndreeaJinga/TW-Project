@@ -2,8 +2,13 @@
 
 class Controller{
     public function model($model){
-        require_once '../app/models/' . $model . '.php';
-        return new $model();
+        require_once '../models/' . $model . '.php';
+        echo "aici";
+        var_dump($model);
+        $test= new $model;
+        echo "asasd";
+        var_dump($test);
+        return new $model;
     }
 
     public function view($view, $data = [])

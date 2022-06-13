@@ -40,7 +40,7 @@
         <h1>Welcome to</h1>
         <h2>Real Estate!</h2>
     </div>
-    <div class="form">
+    <!-- <div class="form">
         <form action="#" method="post">
             <fieldset class="fields">
                 <input type="text" placeholder="City">
@@ -49,7 +49,24 @@
                 <input type="submit" id="submit" value="Search">
             </fieldset>
         </form>
+    </div> -->
+
+
+
+    <div class="form">
+        <form action="../../controllers/signUpTest.php" method="post">
+            <fieldset class="fields">
+                <input type="text" name="user" placeholder="Username">
+                <input type="password" name="pass" placeholder="Password">
+                <input type="password" name="passrep" placeholder="Repeat Password">
+                <input type="text" name="email" placeholder="Email">
+                <input type="submit" name="submit" value="Search">
+            </fieldset>
+        </form>
     </div>
+
+
+
     <div class="RO_map">
         <!--
         ************* Copyright (c) 2017 Pareto Softare, LLC DBA Simplemaps.com *******************		
