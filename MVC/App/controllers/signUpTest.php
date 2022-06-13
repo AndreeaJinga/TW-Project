@@ -1,6 +1,7 @@
 <?php
 
-require_once("../core/controller.php");
+require_once '../core/controller.php';
+//require_once '../models/DataBase.php';
 /*
 class signUpTest extends Controller{
 
@@ -13,10 +14,10 @@ class signUpTest extends Controller{
             var_dump($user);
     
             try{
-                $contr = new Controller();
-                
-                $db = $contr->model('dataBase');
-                echo "merge";
+                $contr = new Controller;
+                //$db= new DataBase;
+                $db = $contr->model('DataBase');
+                //echo "merge";
                 $db->insertIntoUsers($user,$pass,$passrep,$email);
                 
                 header("location: ../views/home/index.php");
