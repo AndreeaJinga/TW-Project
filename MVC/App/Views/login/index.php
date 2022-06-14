@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="form Signup">
-                        <form>
+                        <form action="../../controllers/signupForm.php" method="post">
                             <h3>Create your account</h3>
                             <input type="text" name="uid" placeholder="Username">
                             <input type="text" name="email" placeholder="Email Addres">

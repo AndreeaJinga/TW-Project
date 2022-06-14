@@ -4,10 +4,9 @@ class Signup extends DataBase {
 
     protected function setUser($uid, $pwd, $email)
     {
-        $stmt = $this->conn->prepare('INSERT INTO users (username, email, password) VALUES (?,?,?);');
+        $stmt = $this->conn->prepare("INSERT INTO users (username, email, password) VALUES (?,?,?)");
         
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-
 
         if($stmt->execute(array($uid, $email, $hashedPwd)))
         {
@@ -20,8 +19,7 @@ class Signup extends DataBase {
 
     protected function checkUser($uid, $email)
     {
-        $stmt = $this->conn->prepare('SELECT username FROM users WHERE username = ? OR email = ?;');
-        
+        $stmt = $this->conn->prepare("SELECT username FROM users WHERE username = ? OR email = ?");
         if($stmt->execute(array($uid, $email)))
         {
             $stmt = null;
