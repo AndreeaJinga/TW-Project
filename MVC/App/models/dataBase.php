@@ -66,7 +66,7 @@ class DataBase{
         if(!$this->getUserStatement->execute(['username'=>$username,'email'=>$username])){
             throw new Exception("Error while checking the DB!");
         }
-        return $this->checkUserStatement->rowCount();
+        return $this->getUserStatement->rowCount();
     }
 
     public function loginUserTable($username,$password){
