@@ -47,8 +47,8 @@ class Login {
                 $user = $this->db->loginSelectStatement->fetchAll(PDO::FETCH_ASSOC);
 
                 session_start();
-                $_SESSION["userid"] = $user[0]["id"];
-                $_SESSION["useruid"] = $user[0]["uid"];
+                $_SESSION['userid'] = $user[0]['id'];
+                $_SESSION['useruid'] = $user[0]['uid'];
             }
         }  
     }

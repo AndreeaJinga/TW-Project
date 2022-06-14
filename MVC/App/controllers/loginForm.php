@@ -18,7 +18,7 @@
         $login->loginUser();
 
         //Going back to front page
-        header("location: ../Views/login/index.php?error=none");
+        header("location: ../Views/account/index.php");
     }
 
 ?>

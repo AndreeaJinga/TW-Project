@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <header class="headerClass">
     <div class="navigation">
         <?php   
@@ -73,12 +75,26 @@
             </li>
             <li class="listItem">
                 <?php
-                    $temp = realpath('../App/views/account/index.php');
-                    if($temp == false) {
-                        echo "<a href=\"../account/index.php\"> <span class=\"icon\"> <ion-icon name=\"person-outline\"></ion-icon> </span> <span class=\"text\">My Account</span> </a>";
+                    if(isset($_SESSION['userid']))
+                    {    
+                        $temp = realpath('../App/views/account/index.php');
+                        if($temp == false) {
+                            echo "<a href=\"../account/index.php\"> <span class=\"icon\"> <ion-icon name=\"person-outline\"></ion-icon> </span> <span class=\"text\">My Account</span> </a>";
+                        }
+                        else 
+                            echo "<a href=\"../App/views/account/index.php\"> <span class=\"icon\"> <ion-icon name=\"person-outline\"></ion-icon> </span> <span class=\"text\">My Account</span> </a>";
+                        //exit();
                     }
-                    else 
-                        echo "<a href=\"../App/views/account/index.php\"> <span class=\"icon\"> <ion-icon name=\"person-outline\"></ion-icon> </span> <span class=\"text\">My Account</span> </a>";
+                    else
+                    {
+                        $temp = realpath('../App/views/login/index.php');
+                        if($temp == false) {
+                            echo "<a href=\"../login/index.php\"> <span class=\"icon\"> <ion-icon name=\"log-in-outline\"></ion-icon> </span> <span class=\"text\">Login</span> </a>";
+                        }
+                        else 
+                            echo "<a href=\"../App/views/login/index.php\"> <span class=\"icon\"> <ion-icon name=\"log-in-outline\"></ion-icon> </span> <span class=\"text\">Login</span> </a>";
+                        //exit();
+                    }
                 ?>
             </li>
         </ul>
