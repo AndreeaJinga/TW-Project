@@ -7,10 +7,14 @@ class DataBase{
     private const userInsert="INSERT INTO users (username, email, password) VALUES (:username,:email,:password)";
     private const houseInsert="INSERT INTO houses (title, price, country,city) VALUES (:title,:price,:country,:city)";
     private const checkUser="SELECT username FROM users WHERE username = :username OR email = :email";
+    private const getUser="SELECT password FROM users WHERE username = :username OR email = :email";
+    private const loginSelect="SELECT * FROM users WHERE username = :username OR email = :email AND password = :password";
     
     public $conn;
     private $userInsertStatement;
     private $checkUserStatement;
+    public $getUserStatement;
+    public $loginSelectStatement;
     private $houseInsertStatement;
 
     public function __construct(){
@@ -20,6 +24,8 @@ class DataBase{
             $this->userInsertStatement=$this->conn->prepare(self::userInsert);
             $this->houseInsertStatement=$this->conn->prepare(self::houseInsert);
             $this->checkUserStatement=$this->conn->prepare(self::checkUser);
+            $this->getUserStatement=$this->conn->prepare(self::getUser);
+            $this->loginSelectStatement=$this->conn->prepare(self::loginSelect);
         }
         catch(PDOException $e){
             echo "Error while connecting to DB!".$e;
@@ -53,6 +59,22 @@ class DataBase{
         if(!$this->houseInsertStatement->execute(array($title,$price,$country,$city))){
             throw new Exception("Error while inserting into DB!");
         }
+    }
+
+    public function getUserTable($username,$password){
+
+        if(!$this->getUserStatement->execute(['username'=>$username,'email'=>$username])){
+            throw new Exception("Error while checking the DB!");
+        }
+        return $this->checkUserStatement->rowCount();
+    }
+
+    public function loginUserTable($username,$password){
+
+        if(!$this->loginSelectStatement->execute(['username'=>$username,'email'=>$username,'password'=>$password])){
+            throw new Exception("Error while checking the DB!");
+        }
+        return $this->loginSelectStatement->rowCount();
     }
 
     public function createDatabase() {

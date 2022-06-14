@@ -57,11 +57,12 @@
                 </div>
                 <div class="form">
                     <div class="form Signin">
-                        <form>
+                        <form action="../../controllers/loginForm.php" method="post">
                             <h3>Sign into your account</h3>
                             <input type="text" name="uid" placeholder="Username">
-                            <input type="password" placeholder="Password">
-                            <a href="../HomePage/HomePage.html"></a><input type="submit" name="submit" value="Login">
+                            <input type="password" name="pwd" placeholder="Password">
+                            <!-- <a href="../HomePage/HomePage.html"></a>-->
+                            <input type="submit" name="submit" value="Login"> 
                             <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><input type="button" value="Login with Google"></a>
                             <a href="https://ro-ro.facebook.com/login.php?next=https%3A%2F%2Fro-ro.facebook.com%2Fprivacy%2Fconsent%2Fuser_cookie_choice%2F%3Fsource%3Dpft_user_cookie_choice"><input type="button" value="Login with Facebook"></a>
                             <a href="#" class="forgot">Forgot Password</a>

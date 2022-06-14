@@ -15,9 +15,6 @@ class Signup {
     {        
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
         $this->db->insertIntoUsers($uid, $email, $hashedPwd);
-        $uid =null;
-        $pwd=null;
-        $email=null;
     }
 
     protected function checkUser($uid, $email)
