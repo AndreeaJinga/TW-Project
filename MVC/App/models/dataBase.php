@@ -7,7 +7,7 @@ class DataBase{
     private const userInsert="INSERT INTO users (username, email, password) VALUES (:username,:email,:password)";
     private const houseInsert="INSERT INTO houses (title, price, country,city) VALUES (:title,:price,:country,:city)";
 
-    private $conn;
+    protected $conn;
     private $userInsertStatement;
     private $houseInsertStatement;
 
