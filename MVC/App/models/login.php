@@ -22,36 +22,35 @@ class Login {
             header("location: ../Views/login/index.php?usernotfound");   
             exit();
         }
-        
-        $pwdHashed =  $this->db->getUserStatement->fetchAll(PDO::FETCH_ASSOC);
-        $checkPass = password_verify($pwd, $pwdHashed[0]["password"]);
+        else{
+            $pwdHashed =  $this->db->getUserStatement->fetchAll(PDO::FETCH_ASSOC);
+            $checkPass = password_verify($pwd, $pwdHashed[0]["password"]);
 
-        if($checkPass == false)
-        {
-            $resultCheck = false; 
-            header("location: ../Views/login/index.php?wrongpass");  
-            exit();
-        }
-
-        elseif($checkPass == true)
-        {
-            $rows2 = $this->db->loginUserTable($uid, $pwd);
-
-            if($rows2 == 0)
+            if($checkPass == false)
             {
                 $resultCheck = false; 
-                header("location: ../Views/login/index.php?usernotfound");   
+                header("location: ../Views/login/index.php?wrongpass");  
                 exit();
             }
 
-            $user = $this->db->loginSelectStatement->fetchAll(PDO::FETCH_ASSOC);
+            else if($checkPass == true)
+            {
+                $rows2 = $this->db->loginUserTable($uid, $pwd);
 
-            session_start();
-            $_SESSION["userid"] = $user[0]["id"];
-            $_SESSION["useruid"] = $user[0]["uid"];
-        }
-        
+                if($rows2 == 0)
+                {
+                    $resultCheck = false;
+                    header("location: ../Views/login/index.php?usernotfound2");   
+                    exit();
+                }
+
+                $user = $this->db->loginSelectStatement->fetchAll(PDO::FETCH_ASSOC);
+
+                session_start();
+                $_SESSION["userid"] = $user[0]["id"];
+                $_SESSION["useruid"] = $user[0]["uid"];
+            }
+        }  
     }
-
 }
 ?>

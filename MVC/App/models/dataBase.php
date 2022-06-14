@@ -74,7 +74,7 @@ class DataBase{
         if(!$this->loginSelectStatement->execute(['username'=>$username,'email'=>$username,'password'=>$password])){
             throw new Exception("Error while checking the DB!");
         }
-        return $this->loginSelectStatement->rowCount();
+        return $this->getUserStatement->rowCount();
     }
 
     public function createDatabase() {
