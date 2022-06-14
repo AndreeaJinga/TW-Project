@@ -1,13 +1,13 @@
 <?php
 
-class SignupContr extends Signup {
+class SignupContr extends Signup{
     
     private $uid;
     private $pwd;
     private $pwdrepeat;
     private $email;
 
-    public function __constructor($uid, $pwd, $pwdrepeat, $email) {
+    public function __construct($uid, $pwd, $pwdrepeat, $email) {
         $this->uid = $uid;
         $this->pwd = $pwd;
         $this->pwdrepeat = $pwdrepeat;
@@ -15,6 +15,7 @@ class SignupContr extends Signup {
     }
 
     public function signupUser() {
+        $this->databaseSetUp();
         if($this->emptyInput() == false)
         {
             header("location: ../Views/login/index.php?error=emptyinput");
@@ -42,6 +43,7 @@ class SignupContr extends Signup {
         }
 
         $this->setUser($this->uid, $this->pwd, $this->email);
+    
     }
 
     private function emptyInput(){

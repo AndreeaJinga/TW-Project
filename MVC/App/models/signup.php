@@ -1,38 +1,35 @@
 <?php
+require_once '../core/controller.php';
+class Signup {
 
-class Signup extends DataBase {
+    private $contr;
+    private $db;
+
+    protected function databaseSetUp()
+    {
+        $this->contr = new Controller;
+        $this->db = $this->contr->model('DataBase');
+    }
 
     protected function setUser($uid, $pwd, $email)
-    {
-        $stmt = $this->conn->prepare("INSERT INTO users (username, email, password) VALUES (?,?,?)");
-        
+    {        
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-
-        if($stmt->execute(array($uid, $email, $hashedPwd)))
-        {
-            $stmt = null;
-            header("location: ../Views/login/index.php?error=stmtfailed");
-            exit();
-        }
-        $stmt = null;
+        $this->db->insertIntoUsers($uid, $email, $hashedPwd);
+        $uid =null;
+        $pwd=null;
+        $email=null;
     }
 
     protected function checkUser($uid, $email)
     {
-        $stmt = $this->conn->prepare("SELECT username FROM users WHERE username = ? OR email = ?");
-        if($stmt->execute(array($uid, $email)))
-        {
-            $stmt = null;
-            header("location: ../Views/login/index.php?error=stmtfailed");
-            exit();
-        }
+        $rows = $this->db->checkUserTable($uid, $email);
 
-        $resultCheck;
-        if($stmt->rowCount() > 0)
-        {
-            $resultCheck = false;    
-        }
-        else{
+         $resultCheck;
+         if($rows > 0)
+         {
+             $resultCheck = false;    
+         }
+         else{
             $resultCheck = true;
         }
 

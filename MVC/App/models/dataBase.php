@@ -6,9 +6,11 @@ class DataBase{
     private const db_name = "twproject";
     private const userInsert="INSERT INTO users (username, email, password) VALUES (:username,:email,:password)";
     private const houseInsert="INSERT INTO houses (title, price, country,city) VALUES (:title,:price,:country,:city)";
-
+    private const checkUser="SELECT username FROM users WHERE username = :username OR email = :email";
+    
     public $conn;
     private $userInsertStatement;
+    private $checkUserStatement;
     private $houseInsertStatement;
 
     public function __construct(){
@@ -17,6 +19,7 @@ class DataBase{
             // $this->createDatabase();
             $this->userInsertStatement=$this->conn->prepare(self::userInsert);
             $this->houseInsertStatement=$this->conn->prepare(self::houseInsert);
+            $this->checkUserStatement=$this->conn->prepare(self::checkUser);
         }
         catch(PDOException $e){
             echo "Error while connecting to DB!".$e;
@@ -35,6 +38,14 @@ class DataBase{
         if(!$this->userInsertStatement->execute(['username'=>$username,'email'=>$email,'password'=>$password])){
             throw new Exception("Error while inserting into DB!");
         }
+    }
+
+    public function checkUserTable($username,$email){
+
+        if(!$this->checkUserStatement->execute(['username'=>$username,'email'=>$email])){
+            throw new Exception("Error while checking the DB!");
+        }
+        return $this->checkUserStatement->rowCount();
     }
 
     public function insertIntoHouses($title,$price,$country,$city){

@@ -4,10 +4,10 @@ class Controller{
     public function model($model){
         require_once "../models/" . $model . ".php";
         echo "aici";
-        var_dump($model);
+        //var_dump($model);
         $test= new DataBase;
         echo "asasd";
-        var_dump($test);
+        //var_dump($test);
         return new $model;
     }
 
