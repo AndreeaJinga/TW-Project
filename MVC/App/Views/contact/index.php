@@ -30,6 +30,52 @@
         ?>
 
         <title>Contact</title>
+
+        <script>
+            function _(id)
+                {
+                    return document.getElementById(id);
+                }
+
+            function submitForm()
+                {
+                    _("mybtn").disabled = true;
+                    _("status").innerHTML = 'Please wait...';
+                    
+                    var formdata = new FormData();
+                    //_("status").innerHTML = 'FormData variable';
+                    formdata.append("p", _("p").value);
+                    formdata.append("n", _("n").value);
+                    formdata.append("t", _("t").value);
+                    formdata.append("e", _("e").value);
+                    formdata.append("m", _("m").value);
+
+                    //_("status").innerHTML = 'Grabbed data';
+
+                    var ajax = new XMLHttpRequest();
+                    //_("status").innerHTML = 'Ajax'
+                    ajax.open ("POST", "contact_parser.php");
+                    //_("status").innerHTML = 'Opened php file';
+                    ajax.onload = function() {
+                    //_("my_form").innerHTML = ajax.responseText;
+                        if(ajax.readyState == 4 && ajax.status == 200)
+                        {
+                            if(ajax.responseText == "succes")
+                            {
+                                //_("my_form").innerHTML = '<h2>Thanks '+_("p").value+', your message has been sent.</h2>';
+                                _("my_form").innerHTML = _("m").value;
+                        
+                            }
+                            else{
+                                _("status").innerHTML = "Error while sending the message. Try again later!";
+                                _("mybtn").disabled = false;
+                        }
+                        }
+                    }
+                    ajax.send(formdata);
+                }
+            </script>
+
     </head>
 
     <body>
@@ -70,7 +116,7 @@
                                 </div>  
                                 <div class="inputBox">
                                     <span>Phone Number</span>
-                                    <input id="t" type="text" placeholder="0798654321">
+                                    <input id="t" type="text" placeholder="0798654321" required>
                                 </div> 
                             </div>
                             <div class="row100">
@@ -83,6 +129,7 @@
                             <div class="row100">
                                 <div class="inputBox">
                                     <input id="mybtn" type="submit" value="Send">
+                                    <span id="status"> </span>
                                 </div>
                             </div>
                         </div>
