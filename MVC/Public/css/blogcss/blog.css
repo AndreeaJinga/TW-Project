@@ -1,3 +1,6 @@
+.body {
+  background: #f3ede6;
+}
 .mainFrame{
   align-self: center;
   display: flex;
@@ -7,7 +10,7 @@
 }
 .article{
   /* border: 3px solid #A28769; */
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(243, 237, 230, 0.8);
   border-radius: 25px 25px 25px 25px;
   /* padding: 20px 100px 20px 100px; */
   margin: 10px 15% 10px 15%;

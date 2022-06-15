@@ -114,7 +114,7 @@
         {
     ?>
         <div class="notConnected">
-            <h3> Pentru a vizualiza preferintele trebuie sa fiti logat. </h3>
+            <h3 class="headerNotConnected"> Pentru a vizualiza preferintele trebuie sa fiti logat. </h3>
         </div>
 
     <?php

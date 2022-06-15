@@ -1,18 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/*
-body{ 
-    background-color: #faf0e4;
-    background-image: url("../../resources/cladiri.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top; 
-    background-size: 2500px;
-} */
 
 .navigation{
     position: relative;

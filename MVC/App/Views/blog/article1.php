@@ -24,6 +24,7 @@
     <title>Blog</title>
 </head>
 <body>
+    <div id="bg"></div>
     <?php
         $temp = realpath('resources/header3.php');
         if($temp != false) {
