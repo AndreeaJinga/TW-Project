@@ -212,6 +212,10 @@ class HouseAnnounce {
         return $this->dataPretPeMetruPatrat;
     }
 
+    public function existsInDatabase(){
+        return false;
+    }
+
     public function insertIntoDatabase() {
         $query = "INSERT INTO announces (title, county, price, description, img_source, property_type,
                                     usable_area, floor, state, built_area, partitioning, orientation, 
