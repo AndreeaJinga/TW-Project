@@ -59,8 +59,8 @@
                     <div class="form Signin">
                         <form action="../../controllers/loginForm.php" method="post">
                             <h3>Sign into your account</h3>
-                            <input type="text" name="uid" placeholder="Username">
-                            <input type="password" name="pwd" placeholder="Password">
+                            <input type="text" name="uid" placeholder="Username or Email" required>
+                            <input type="password" name="pwd" placeholder="Password" required>
                             <!-- <a href="../HomePage/HomePage.html"></a>-->
                             <input type="submit" name="submit" value="Login"> 
                             <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><input type="button" value="Login with Google"></a>
@@ -72,10 +72,10 @@
                     <div class="form Signup">
                         <form action="../../controllers/signupForm.php" method="post">
                             <h3>Create your account</h3>
-                            <input type="text" name="uid" placeholder="Username">
-                            <input type="text" name="email" placeholder="Email Addres">
-                            <input type="password" name="pwd" placeholder="Password">
-                            <input type="password" name="pwdrepeat" placeholder="Confirm Password">
+                            <input type="text" name="uid" placeholder="Username" required>
+                            <input type="email" name="email" placeholder="Email Addres" required>
+                            <input type="password" name="pwd" placeholder="Password" required>
+                            <input type="password" name="pwdrepeat" placeholder="Confirm Password" required>
                             <input type="submit" name="submit" value="Register">
                             <h4>By signing up, you agree to our </h4>
                             <a href="#" class="terms">terms and conditions.</a>

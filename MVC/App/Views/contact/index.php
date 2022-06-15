@@ -51,38 +51,38 @@
             <div class="boxZone">
                 <div class="box form">
                     <h3>Send a message</h3>
-                    <form>
+                    <form id="my_form" onsubmit="submitForm(); return false;">
                         <div class="formBox">
                             <div class="row50">
                                 <div class="inputBox">
                                     <span>First Name</span>
-                                    <input type="text" placeholder="Alisa">
+                                    <input id="p" type="text" placeholder="Alisa" required>
                                 </div>
                                 <div class="inputBox">
                                     <span>Last Name</span>
-                                    <input type="text" placeholder="Stanca">
+                                    <input id="n" type="text" placeholder="Stanca" required>
                                 </div>                                 
                             </div>
                             <div class="row50">
                                 <div class="inputBox">
                                     <span>Email Address</span>
-                                    <input type="email" placeholder="name@yahoo.com">
+                                    <input id="e" type="email" placeholder="name@yahoo.com" required>
                                 </div>  
                                 <div class="inputBox">
                                     <span>Phone Number</span>
-                                    <input type="text" placeholder="0798654321">
+                                    <input id="t" type="text" placeholder="0798654321">
                                 </div> 
                             </div>
                             <div class="row100">
                                 <div class="inputBox">
                                     <span>Message</span>
-                                    <textarea placeholder="What about...?"></textarea>
+                                    <textarea id="m" placeholder="What about...?" required></textarea>
                                 </div>
                             </div>
 
                             <div class="row100">
                                 <div class="inputBox">
-                                    <input type="submit" value="Send">
+                                    <input id="mybtn" type="submit" value="Send">
                                 </div>
                             </div>
                         </div>
