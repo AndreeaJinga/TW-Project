@@ -9,23 +9,27 @@ class DataBase{
     private const checkUser="SELECT username FROM users WHERE username = :username OR email = :email";
     private const getUser="SELECT password FROM users WHERE username = :username OR email = :email";
     private const loginSelect="SELECT * FROM users WHERE username = :username OR email = :email AND password = :password";
-    
+    private const messageInsert="INSERT INTO messages (fname, lname, phone, email, message) VALUES (:fname, :lname, :phone, :email, :message)";
+
+
     public $conn;
     private $userInsertStatement;
     private $checkUserStatement;
     public $getUserStatement;
     public $loginSelectStatement;
     private $houseInsertStatement;
+    private $messageInsertStatement;
 
     public function __construct(){
         try{
             $this->conn = new PDO("mysql:host=" . self::host . ";dbname=" . self::db_name, self::username, self::password);
-            // $this->createDatabase();
+             //$this->createDatabase();
             $this->userInsertStatement=$this->conn->prepare(self::userInsert);
             $this->houseInsertStatement=$this->conn->prepare(self::houseInsert);
             $this->checkUserStatement=$this->conn->prepare(self::checkUser);
             $this->getUserStatement=$this->conn->prepare(self::getUser);
             $this->loginSelectStatement=$this->conn->prepare(self::loginSelect);
+            $this->messageInsertStatement=$this->conn->prepare(self::messageInsert);
         }
         catch(PDOException $e){
             echo "Error while connecting to DB!".$e;
@@ -77,6 +81,14 @@ class DataBase{
         return $this->getUserStatement->rowCount();
     }
 
+    public function messageInsertTable($fname, $lname, $phone, $email, $message){
+
+        if(!$this->messageInsertStatement->execute(['fname'=>$fname,'lname'=>$lname,'phone'=>$phone,'email'=>$email,'message'=>$message])){
+            return false;
+        }
+        return true;
+    }
+
     public function createDatabase() {
         $query1 = "CREATE TABLE `users` (
             `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -113,5 +125,19 @@ class DataBase{
         if(!$query3Stmt->execute()){
             throw new Exception("Error while creating DB!");
         }
+
+        $query4 = "CREATE TABLE `messages` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            `fname` text NOT NULL,
+            `lname` text NOT NULL,
+            `phone` int(11) NOT NULL,
+            `email` text NOT NULL,
+            `message` int(11) NOT NULL,
+            PRIMARY KEY (`id`)
+          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
+      $query4Stmt = $this->conn->prepare($query4);
+      if(!$query4Stmt->execute()){
+          throw new Exception("Error while creating DB!");
+      }
     }
 }
