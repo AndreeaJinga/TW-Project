@@ -21,10 +21,10 @@
             else {
                 echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
             }
+            include 'popupError.php';
         ?>
 
-
-        <title>Login</title>
+<title>Login</title>
         <link rel="stylesheet" type="text/css" href="login.css">
         <link rel="apple-touch-icon" sizes="180x180" href="./Logo/apple-touch-icon.png">
         <link rel="manifest" href="./Logo/site.webmanifest">

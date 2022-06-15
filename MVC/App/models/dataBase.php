@@ -132,12 +132,38 @@ class DataBase{
             `lname` text NOT NULL,
             `phone` int(11) NOT NULL,
             `email` text NOT NULL,
-            `message` int(11) NOT NULL,
+            `message` text NOT NULL,
             PRIMARY KEY (`id`)
           ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
       $query4Stmt = $this->conn->prepare($query4);
       if(!$query4Stmt->execute()){
           throw new Exception("Error while creating DB!");
       }
+
+      $query5 = "CREATE TABLE `announces` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `title` text NOT NULL,
+        `county` text NOT NULL,
+        `price` int(11) NOT NULL,
+        `description` text NOT NULL,
+        `img_source` text NOT NULL,
+        `property_type` text NOT NULL,
+        `usable_area` int(11) DEFAULT NULL,
+        `floor` text DEFAULT NULL,
+        `state` text DEFAULT NULL,
+        `built_area` int(11) DEFAULT NULL,
+        `partitioning` text DEFAULT NULL,
+        `orientation` text DEFAULT NULL,
+        `construction_year` int(11) DEFAULT NULL,
+        `elevator` text DEFAULT NULL,
+        `characteristics` text DEFAULT NULL,
+        `street_neighborhood` text DEFAULT NULL,
+        `rooms` text DEFAULT NULL,
+        PRIMARY KEY (`id`)
+      ) ENGINE=InnoDB AUTO_INCREMENT=426 DEFAULT CHARSET=utf8mb4";
+  $query5Stmt = $this->conn->prepare($query4);
+  if(!$query5Stmt->execute()){
+      throw new Exception("Error while creating DB!");
+  }
     }
 }

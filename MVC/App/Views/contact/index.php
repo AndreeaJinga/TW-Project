@@ -62,8 +62,8 @@
                         {
                             if(ajax.responseText == "succes")
                             {
-                                //_("my_form").innerHTML = '<h2>Thanks '+_("p").value+', your message has been sent.</h2>';
-                                _("my_form").innerHTML = _("m").value;
+                                _("my_form").innerHTML = '<h2>Thanks '+_("p").value+', your message has been sent.</h2>';
+                                //_("my_form").innerHTML = _("m").value;
                         
                             }
                             else{
