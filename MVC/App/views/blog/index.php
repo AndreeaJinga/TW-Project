@@ -39,52 +39,50 @@
         <div class="article">
             <a href="article7.php">
                 <div class="title">
-                    Lorem ipsum
+                Construcția casei mele, coșmar sau bucurie?
                 </div>
                 <div class="articleBody">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dignissimos placeat ullam exercitationem modi repudiandae accusamus obcaecati alias porro deserunt, facere incidunt assumenda magni. Reprehenderit sed repellat provident ea vel!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dignissimos placeat ullam exercitationem modi repudiandae accusamus obcaecati alias porro deserunt, facere incidunt assumenda magni. Reprehenderit sed repellat provident ea vel!
+                Imaginează-ți că ai început construcția locuinței tale de vis. Ești pe șantier. Lângă tine stă echipa de constructori înarmată cu excavatoare, buldozere, camioane, paleți de saci de ciment, cărămidă, bare din fier beton, o mulțime de oameni și echipamente, dar nimeni nu știe de unde și cum să înceapă construcția. 
                 </div>
             </a>
         </div>
         <div class="article">
-            <a href="article7.php">
+            <a href="article1.php">
                 <div class="title">
-                    Lorem ipsum
+                Același spațiu, funcțional variat, amenajare diferită
                 </div>
                 <div class="articleBody">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dignissimos placeat ullam exercitationem modi repudiandae accusamus obcaecati alias porro deserunt, facere incidunt assumenda magni. Reprehenderit sed repellat provident ea vel!
+                Astăzi, ne-am gândit să abordăm o temă mai puțin de design și mai mult de arhitectură de interior, referindu-ne aici la partea funcțională a unui spațiu, compartimentări, diferite structuri interioare și proiectul de mobilare.
                 </div>
             </a>
         </div>
         <div class="article">
-            <a href="article7.php">
+            <a href="article2.php">
                 <div class="title">
-                    Lorem ipsum
+                5 soluții decorative pentru pereți, altele decât varul lavabil
                 </div>
                 <div class="articleBody">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dignissimos placeat ullam exercitationem modi repudiandae accusamus obcaecati alias porro deserunt, facere incidunt assumenda magni. Reprehenderit sed repellat provident ea vel!
+                Dacă în interioarele din casele bunicilor noștri predomina varul în nuanțe de bleo, vernil sau galben pai, în prezent gama finisajelor pentru pereți s-a diversificat din ce în ce mai tare, în ultimii ani, apărând pe piață materiale nu doar ingenioase, dar și foarte rezistente. Inclusiv pereții băilor suportă acum mult mai multe variante de finisare, înlocuind uzuala faianță cu materiale noi, revoluționare.
                 </div>
             </a>
         </div>
         <div class="article">
-            <a href="article7.php">
+            <a href="article3.php">
                 <div class="title">
-                    Lorem ipsum
+                Bun venit în casa mea! – Idei pentru amenajarea holului de la intrare
                 </div>
                 <div class="articleBody">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dignissimos placeat ullam exercitationem modi repudiandae accusamus obcaecati alias porro deserunt, facere incidunt assumenda magni. Reprehenderit sed repellat provident ea vel!
+                Secolul vitezei ne transformă, din păcate, în indivizi mult prea grăbiți, care nu mai au timp să acorde atenție micilor detalii. Petrecem tot mai puțin timp în antecamera ce servește drept cale de acces către încăperile principale ale locuinței noastre.
                 </div>
             </a>
         </div>
         <div class="article">
-            <a href="article7.php">
+            <a href="article4.php">
                 <div class="title">
-                    Lorem ipsum
+                Depozitarea în locuințe
                 </div>
                 <div class="articleBody">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dignissimos placeat ullam exercitationem modi repudiandae accusamus obcaecati alias porro deserunt, facere incidunt assumenda magni. Reprehenderit sed repellat provident ea vel!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dignissimos placeat ullam exercitationem modi repudiandae accusamus obcaecati alias porro deserunt, facere incidunt assumenda magni. Reprehenderit sed repellat provident ea vel!
+                Deseori, în locuințele noastre există foarte multe obiecte care nu ar trebui să se găsească pe mese sau pe rafturi, la vedere, mai ales atunci când sunt utilizate foarte rar. Sunt inestetice și mai mult încurcă pe toți membrii familiei. Și ce ne facem dacă mai avem și o locuință nu foarte spațioasă?
                 </div>
             </a>
         </div>
