@@ -212,6 +212,28 @@ class HouseAnnounce {
     }
 
     public function existsInDatabase(){
+        $query = "SELECT * FROM announces WHERE lower(title) = lower(:title) AND lower(county) = lower(:county) 
+                                AND price = :price AND lower(state) = lower(:statee) 
+                                AND lower(property_type) = lower(:property_type) 
+                                AND construction_year = :construction_year 
+                                AND lower(street_neighborhood) = lower(:street_neighborhood) 
+                                AND lower(rooms) = lower(:rooms)";
+        $statement = $this->db->prepare($query);
+        $statement->bindParam('title', $this->dataTitle, PDO::PARAM_STR);
+        $statement->bindParam('county', $this->dataJudet, PDO::PARAM_STR);
+        $statement->bindParam('price', $this->dataPrice, PDO::PARAM_INT);
+        $statement->bindParam('statee', $this->dataStare, PDO::PARAM_STR);
+        $statement->bindParam('property_type', $this->dataTipProprietate, PDO::PARAM_STR);
+        $statement->bindParam('construction_year', $this->dataAn, PDO::PARAM_INT);
+        $statement->bindParam('street_neighborhood', $this->dataCartier, PDO::PARAM_STR);
+        $statement->bindParam('rooms', $this->dataNrCamere, PDO::PARAM_STR);
+
+        $statement->execute();
+
+        $result1 = $statement->fetchAll();
+        if(count($result1)!=0){
+            return true;
+        }
         return false;
     }
 
