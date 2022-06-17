@@ -52,7 +52,7 @@
             <div class="container">
                 <div class="card">
                     <div class="imgBx">
-                        <img src="img1.png">
+                        <img src="../App/views/announces/img1.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 1</h2>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="img2.png">
+                        <img src="../App/views/announces/img2.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 2</h2>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="img3.png">
+                        <img src="../App/views/announces/img3.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 3</h2>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="img4.png">
+                        <img src="../App/views/announces/img4.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 4</h2>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="img1.png">
+                        <img src="../App/views/announces/img1.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 5</h2>
@@ -97,7 +97,7 @@
                     </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="img2.png">
+                        <img src="../App/views/announces/img2.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 6</h2>

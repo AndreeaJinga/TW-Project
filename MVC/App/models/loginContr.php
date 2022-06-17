@@ -14,7 +14,8 @@ class LoginContr extends Login{
         $this->databaseSetUp();
         if($this->emptyInput() == false)
         {
-            header("location: ../Views/login/index.php?error=emptyinput");
+            // header("location: ../Views/login/index.php?error=emptyinput");
+            header("location: /login?error=emptyinput");
             exit();
         }
         

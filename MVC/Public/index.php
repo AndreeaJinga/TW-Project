@@ -1,7 +1,7 @@
 <?php
-// include 'resources/header3.php';
-require_once '../app/init.php';
 
-$app = new App;
+require_once '../App/init.php';
+
+$app = new App();
 
 ?>

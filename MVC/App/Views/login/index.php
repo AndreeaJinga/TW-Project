@@ -30,7 +30,7 @@
         <link rel="manifest" href="./Logo/site.webmanifest">
     </head>
     <body>
-        <a href="../home/index.php">
+        <a href="home" class="firstA">
             <div class="home">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <button class="btn">

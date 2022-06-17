@@ -18,7 +18,8 @@ class SignupContr extends Signup{
         $this->databaseSetUp();
         if($this->emptyInput() == false)
         {
-            header("location: ../Views/login/index.php?error=emptyinput");
+            // header("location: ../Views/login/index.php?error=emptyinput");
+            header("location: login?error=emptyinput");
             exit();
         }
         if($this->invalidUid() == false)
@@ -28,12 +29,14 @@ class SignupContr extends Signup{
         }
         if($this->invalidEmail() == false)
         {
-            header("location: ../Views/login/index.php?error=email");
+            // header("location: ../Views/login/index.php?error=email");
+            header("location: login?error=email");
             exit();
         }
         if($this->pwdMatch() == false)
         {
-            header("location: ../Views/login/index.php?error=password");
+            // header("location: ../Views/login/index.php?error=password");
+            header("location: login?error=password");
             exit();
         }
         if($this->uidTakenCheck() == false)

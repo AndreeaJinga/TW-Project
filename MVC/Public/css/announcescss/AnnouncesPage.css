@@ -153,7 +153,7 @@ input::placeholder {
     }
 } */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
     .fields { 
         display: flex;
         flex-direction: column;
