@@ -1,7 +1,9 @@
 <?php
-    set_time_limit(30);
+    set_time_limit(120);
     require 'HouseAnnounce.php';
     $counteeeer = 0;
+    $totalNbOfAnnounces = 0;
+    $totalStoria = 0;
     for($i=1; $i<20; $i++) {
         $page = file_get_contents('https://www.olx.ro/d/imobiliare/apartamente-garsoniere-de-vanzare/?page=' . $i);
         $doc = new DOMDocument();
@@ -17,7 +19,9 @@
                 if ($link->hasAttribute('href')) {
                     $myHref = $link->getAttribute('href');
         //                echo "am ajuns aici\n" . "</br>";
+                    $totalNbOfAnnounces = $totalNbOfAnnounces + 1;
                     if (substr_compare($myHref, "https://www.storia.ro", 0, 20) == 0) {
+                        $totalStoria = $totalStoria + 1;
                         $thisHouse = new HouseAnnounce();
 
                         $housePage = file_get_contents($myHref);
@@ -193,6 +197,7 @@
 
                             if(!$thisHouse->existsInDatabase()) {
                                 $thisHouse->insertIntoDatabase();
+
                                 $counteeeer = $counteeeer + 1;
                             }
                         }
@@ -200,7 +205,9 @@
                 }
             }
         }
-        echo "$counteeeer";
+        echo "Numar total de anunturi " . $totalNbOfAnnounces . "</br>";
+        echo "Numar total de anunturi storia " . $totalStoria . "</br>";
+        echo "Numar total de randuri inserate pana acum: " . "$counteeeer" . "</br>";
     }
-
+    echo "Numar randuri inserate total: " . "$counteeeer";
 ?>
