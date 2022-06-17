@@ -9,7 +9,9 @@ class App
     public function __construct()
     {
         // echo "constructor app";
+
         $url = $this->parseUrl();
+        //var_dump($url);
         if($url != null){    
             if (file_exists('../App/controllers/' . $url[0] . '.php')) {
                 $this->controller = $url[0];

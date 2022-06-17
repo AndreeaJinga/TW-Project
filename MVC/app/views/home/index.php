@@ -5,33 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-        $homecss = realpath('../../../Public/css/homecss/HomePage.css');
-        if($homecss == false) {
-            echo "<link rel=\"stylesheet\" href=\"css/homecss/HomePage.css\">";
-        }
-        else {
-            echo "<link rel=\"stylesheet\" href=\"../../../Public/css/homecss/HomePage.css\">";
-        }
-
-        $menucss = realpath('../../../Public/css/globals/header2.css');
-        if($menucss == false) {
-            echo "<link rel=\"stylesheet\" href=\"css/globals/header2.css\">";
-        }
-        else {
-            echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
-        }
-    ?>
+    <link rel="stylesheet" href="css/homecss/HomePage.css">
+    <link rel="stylesheet" href="css/globals/header2.css">
 </head>
 <body>
     <?php
-        $temp = realpath('resources/header3.php');
-        if($temp) {
-            include realpath('resources/header3.php');
-        }
-        else {        
-            include realpath('../../../Public/resources/header3.php');
-        }
+        include realpath('resources/header3.php');
     ?>
 
     <div id="bg"></div>
