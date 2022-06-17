@@ -30,7 +30,6 @@ class HouseAnnounce {
     public function __construct()
     {
         $this->db = new PDO("mysql:host=" . self::host . ";dbname=" . self::db_name, self::username, self::password);
-
     }
 
     public function setDataImg($dataImg)

@@ -1,3 +1,6 @@
+body {
+    background: #f3ede6;
+}
 .documentation{
     display: flex;
     justify-content: center;

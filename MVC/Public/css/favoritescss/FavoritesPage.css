@@ -81,8 +81,8 @@ td:last-child {
   border-radius: 25px;
   margin: 100px 50px;
   padding: 50px;
-  border: 2px solid #A28769;
-  background-color: rgba(243, 237, 230, 0.8);
+  border: 3.5px solid #A28769;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .headerNotConnected {
