@@ -4,43 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php   
-        $maincss = realpath('../../../Public/css/favoritescss/FavoritesPage.css');
-        if($maincss == false) {
-            echo "<link rel=\"stylesheet\" href=\"css/favoritescss/FavoritesPage.css\">";
-        }
-        else {
-            echo "<link rel=\"stylesheet\" href=\"../../../Public/css/favoritescss/FavoritesPage.css\">";
-        }
-        
-        $menucss = realpath('../../../Public/css/globals/header2.css');
-        if($menucss == false) {
-            echo "<link rel=\"stylesheet\" href=\"css/globals/header2.css\">";
-        }
-        else {
-            echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
-        }  
-        $mainjs = realpath('../../../Public/js/filtrare.js');
-        if($mainjs == false) {
-            echo "<script src=\"js/filtrare.js\"></script>";
-        }
-        else {
-            echo "<script src=\"../../../Public/js/filtrare.js\"></script>";
-        }
-    ?>
+    <link rel="stylesheet" href="css/favoritescss/FavoritesPage.css">
+    <link rel="stylesheet" href="css/globals/header2.css">
+    <script src="js/filtrare.js"></script>
     <!-- <script src="./filtrare.js"></script> -->
     <title>Favorites</title>
 </head>
 <body>
     
     <?php
-        $temp = realpath('resources/header3.php');
-        if($temp != false) {
-            include realpath('resources/header3.php');
-        }
-        else {        
-            include realpath('../../../Public/resources/header3.php');
-        }
+        include realpath('resources/header3.php');
     ?>
     <div id="bg"></div>
 
