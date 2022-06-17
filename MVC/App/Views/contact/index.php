@@ -10,8 +10,24 @@
         <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
         <link rel="manifest" href="./site.webmanifest">
-        <link rel="stylesheet" href="css/contactcss/Contact.css">
-        <link rel="stylesheet" href="css/globals/header2.css">
+        
+        <?php   
+        $maincss = realpath('../../../Public/css/contactcss/Contact.css');
+        if($maincss == false) {
+            echo "<link rel=\"stylesheet\" href=\"css/contactcss/Contact.css\">";
+        }
+        else {
+            echo "<link rel=\"stylesheet\" href=\"../../../Public/css/contactcss/Contact.css\">";
+        }
+        
+        $menucss = realpath('../../../Public/css/globals/header2.css');
+        if($menucss == false) {
+            echo "<link rel=\"stylesheet\" href=\"css/globals/header2.css\">";
+        }
+        else {
+            echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
+        }
+        ?>
 
         <title>Contact</title>
 

@@ -8,19 +8,16 @@ class App
 
     public function __construct()
     {
-        // echo "constructor app";
-
         $url = $this->parseUrl();
-        //var_dump($url);
         if($url != null){    
-            if (file_exists('../App/controllers/' . $url[0] . '.php')) {
+            if (file_exists('../app/controllers/' . $url[0] . '.php')) {
                 $this->controller = $url[0];
                 unset($url[0]);
             }
         }
         //var_dump($url[1]);
 
-        require_once '../App/controllers/' . $this->controller . '.php';
+        require_once '../app/controllers/' . $this->controller . '.php';
 
         $this->controller=new $this->controller;
 

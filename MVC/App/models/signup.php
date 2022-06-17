@@ -1,5 +1,5 @@
 <?php
-require_once '../core/Controller.php';
+require_once '../core/controller.php';
 class Signup {
 
     private $contr;

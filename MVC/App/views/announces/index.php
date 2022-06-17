@@ -4,14 +4,35 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/globals/header2.css">
-        <link rel="stylesheet" href="css/announcescss/AnnouncesPage.css">
+        <?php   
+            $maincss = realpath('../../../Public/css/announcescss/AnnouncesPage.css');
+            if($maincss == false) {
+                echo "<link rel=\"stylesheet\" href=\"css/announcescss/AnnouncesPage.css\">";
+            }
+            else {
+                echo "<link rel=\"stylesheet\" href=\"../../../Public/css/announcescss/AnnouncesPage.css\">";
+            }
+            
+            $menucss = realpath('../../../Public/css/globals/header2.css');
+            if($menucss == false) {
+                echo "<link rel=\"stylesheet\" href=\"css/globals/header2.css\">";
+            }
+            else {
+                echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
+            }
+        ?>
         <title>Announces</title>
     </head>
 
     <body>
         <?php
-            include realpath('resources/header3.php');
+            $temp = realpath('resources/header3.php');
+            if($temp != false) {
+                include realpath('resources/header3.php');
+            }
+            else {        
+                include realpath('../../../Public/resources/header3.php');
+            }
         ?>
     
     <div id="bg"></div>
@@ -31,7 +52,7 @@
             <div class="container">
                 <div class="card">
                     <div class="imgBx">
-                        <img src="../App/views/announces/img1.png">
+                        <img src="img1.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 1</h2>
@@ -40,7 +61,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="../App/views/announces/img2.png">
+                        <img src="img2.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 2</h2>
@@ -49,7 +70,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="../App/views/announces/img3.png">
+                        <img src="img3.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 3</h2>
@@ -58,7 +79,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="../App/views/announces/img4.png">
+                        <img src="img4.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 4</h2>
@@ -67,7 +88,7 @@
                 </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="../App/views/announces/img1.png">
+                        <img src="img1.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 5</h2>
@@ -76,7 +97,7 @@
                     </div>
                 <div class="card">
                     <div class="imgBx">
-                        <img src="../App/views/announces/img2.png">
+                        <img src="img2.png">
                     </div>
                     <div class="content">
                         <h2>Anunt 6</h2>

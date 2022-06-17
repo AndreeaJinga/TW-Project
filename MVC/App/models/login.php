@@ -1,5 +1,5 @@
 <?php
-require_once '../core/Controller.php';
+require_once '../core/controller.php';
 class Login {
 
     private $contr;
@@ -19,8 +19,7 @@ class Login {
         if($rows == 0)
         {
             $resultCheck = false; 
-            // header("location: ../Views/login/index.php?usernotfound");
-            header("location: login?usernotfound");   
+            header("location: ../Views/login/index.php?usernotfound");   
             exit();
         }
         else{
@@ -30,8 +29,7 @@ class Login {
             if($checkPass == false)
             {
                 $resultCheck = false; 
-                // header("location: ../Views/login/index.php?wrongpass");
-                header("location: login?wrongpass");  
+                header("location: ../Views/login/index.php?wrongpass");  
                 exit();
             }
 
@@ -42,8 +40,7 @@ class Login {
                 if($rows2 == 0)
                 {
                     $resultCheck = false;
-                    // header("location: ../Views/login/index.php?usernotfound2");
-                    header("location: login?usernotfound2");   
+                    header("location: ../Views/login/index.php?usernotfound2");   
                     exit();
                 }
 
