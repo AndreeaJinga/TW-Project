@@ -38,5 +38,33 @@
         echo "<p class='detail'>Vânt: ".$wind." km</p>";
         echo "<p class='detail'>Ploaie în ultimele 3h: ".$rain." mm</p>";
     }
+
+    function getLat($city)
+    {
+        if($city == 'Bucuresti')
+            $city = 'Ilfov';
+        $api_key = 'a765045daccb5573d3d4c6479854ced3';
+        $api_uri = 'https://api.openweathermap.org/data/2.5/weather?q='.$city.'&appid='.$api_key.'';
+
+        //echo "$api_uri";
+        $coord = json_decode(file_get_contents($api_uri), true);
+
+        $lat =  $coord['coord']['lat'];
+        return $lat;
+    }
+
+    function getLong($city)
+    {
+        if($city == 'Bucuresti')
+            $city = 'Ilfov';
+        $api_key = 'a765045daccb5573d3d4c6479854ced3';
+        $api_uri = 'https://api.openweathermap.org/data/2.5/weather?q='.$city.'&appid='.$api_key.'';
+
+        //echo "$api_uri";
+        $coord = json_decode(file_get_contents($api_uri), true);
+
+        $long =  $coord['coord']['lon'];
+        return $long;
+    }
     
 ?>
