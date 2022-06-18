@@ -77,7 +77,21 @@
             </table>
             <script>filtration()</script>
             <script>
+                function ajax_delete(varId){
+                    var xhr = new XMLHttpRequest();
+                    var vars="id="+varId;
+                    xhr.open("POST","../../models/favoritesDeleteAjax.php",true);
+                    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                    xhr.onreadystatechange=function (){
+                        if(xhr.readyState == 4 && xhr.status == 200) {
 
+                            var return_data = xhr.responseText;
+                            document.getElementById("tableBody").innerHTML = return_data;
+                        }
+                    }
+                    xhr.send(vars);
+                    document.getElementById("tableBody").innerHTML="Loading data...";
+                }
             </script>
         </div>
     <?php
