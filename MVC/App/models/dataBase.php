@@ -11,6 +11,7 @@ class DataBase{
     private const loginSelect="SELECT * FROM users WHERE username = :username OR email = :email AND password = :password";
     private const messageInsert="INSERT INTO messages (fname, lname, phone, email, message) VALUES (:fname, :lname, :phone, :email, :message)";
     private const updateInfo="UPDATE users SET username = :newUsername, email = :newEmail, password = :newPassword WHERE username = :username";
+    private const deleteAccount="DELETE FROM users WHERE id = :id";
 
 
     public $conn;
@@ -21,6 +22,7 @@ class DataBase{
     private $houseInsertStatement;
     private $messageInsertStatement;
     private $updateInfoStatement;
+    private $deleteAccountStatement;
 
     public function __construct(){
         try{
@@ -33,6 +35,7 @@ class DataBase{
             $this->loginSelectStatement=$this->conn->prepare(self::loginSelect);
             $this->messageInsertStatement=$this->conn->prepare(self::messageInsert);
             $this->updateInfoStatement=$this->conn->prepare(self::updateInfo);
+            $this->deleteAccountStatement=$this->conn->prepare(self::deleteAccount);
         }
         catch(PDOException $e){
             echo "Error while connecting to DB!".$e;
@@ -104,6 +107,14 @@ class DataBase{
     public function updateUserTable($newUsername, $newEmail, $newPassword, $username){
 
         if(!$this->updateInfoStatement->execute(['newUsername'=>$newUsername,'newEmail'=>$newEmail,'newPassword'=>$newPassword,'username'=>$username])){
+            return false;
+        }
+        return true;
+    }
+
+    public function deleteUser($id){
+
+        if(!$this->deleteAccountStatement->execute(['id'=>$id])){
             return false;
         }
         return true;

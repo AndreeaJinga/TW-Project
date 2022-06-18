@@ -5,7 +5,7 @@ class UpdateAccount {
     private $contr;
     private $db;
 
-    protected function databaseSetUp()
+    public function databaseSetUp()
     {
         $this->contr = new Controller;
         $this->db = $this->contr->model('DataBase');
@@ -38,8 +38,15 @@ class UpdateAccount {
                 $hashedPwd = password_hash($newPassword, PASSWORD_DEFAULT);
                 $this->db->updateUserTable($newUsername, $newEmail, $hashedPwd, $username);
             }  
-        }           
+        } 
         
+        
+        
+    }
+
+    public function deleteAccount($id)
+    {
+        $this->db->deleteUser($id);
     }
 
     protected function checkUser($uid, $email)

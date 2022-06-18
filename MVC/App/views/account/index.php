@@ -86,9 +86,15 @@
                         <input class="currentPass" type="text" name="currentUid" placeholder="Type your current username" required/>
                         <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current password" required/>
                         <input class="saveBtn" type="submit" name="submit" value="Save changes">
-                        <input class="closeBtn" type="submit" name="close" value="Close Account">
+                        <!-- <input class="closeBtn" type="submit" name="close" value="Close Account"> -->
                     </div>
                 </form>
+
+            <div class="saveChanges">
+                <form action="../../controllers/deleteAccount.php" method="post">
+                    <input class="closeBtn" type="submit" name="close" value="Close Account">
+                </form>
+            </div>
                 
             </div>
         </div>
