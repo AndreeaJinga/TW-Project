@@ -13,6 +13,7 @@ class DataBase{
     private const updateInfo="UPDATE users SET username = :newUsername, email = :newEmail, password = :newPassword WHERE username = :username";
     private const deleteAccount="DELETE FROM users WHERE id = :id";
     private const selectAnnounce="SELECT * FROM announces LIMIT 15";
+    private const favoritesInsert="INSERT INTO favorites (userid, houseid) VALUES (:userid,:houseid)";
 
 
     public $conn;
@@ -25,6 +26,7 @@ class DataBase{
     private $updateInfoStatement;
     private $deleteAccountStatement;
     private $selectAnnounceStatement;
+    private $insertFavoriteStatement;
 
     public function __construct(){
         try{
@@ -39,6 +41,7 @@ class DataBase{
             $this->updateInfoStatement=$this->conn->prepare(self::updateInfo);
             $this->deleteAccountStatement=$this->conn->prepare(self::deleteAccount);
             $this->selectAnnounceStatement=$this->conn->prepare(self::selectAnnounce);
+            $this->insertFavoriteStatement=$this->conn->prepare(self::favoritesInsert);
         }
         catch(PDOException $e){
             echo "Error while connecting to DB!".$e;
@@ -130,6 +133,13 @@ class DataBase{
         }
         //var_dump($this->selectAnnounceStatement->fetchAll());
         return $this->selectAnnounceStatement->fetchAll();
+    }
+
+    public function insertFavoriteTable($userid,$houseid){
+
+        if(!$this->insertFavoriteStatement->execute(['userid'=>$userid,'houseid'=>$houseid])){
+            throw new Exception("Error while inserting into DB!");
+        }
     }
 
     public function createDatabase() {
