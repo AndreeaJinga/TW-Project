@@ -34,7 +34,8 @@ include realpath('../../../Public/resources/header3.php');
 
 <h1>Announces resulted:</h1>
 
-<div class="announces" id="announces">
+<div class="announces">
+    <div class="container" id="container">
 <?php
     require_once "../../models/formSearch.php";
     $form=new FormSearch();
@@ -61,6 +62,7 @@ include realpath('../../../Public/resources/header3.php');
         }
     }
 ?>
+    </div>
 </div>
 <script>
     function ajax_post(){
@@ -78,11 +80,11 @@ include realpath('../../../Public/resources/header3.php');
             if(xhr.readyState == 4 && xhr.status == 200) {
 
                 var return_data = xhr.responseText;
-                document.getElementById("announces").innerHTML = return_data;
+                document.getElementById("container").innerHTML = return_data;
             }
         }
         xhr.send(vars);
-        document.getElementById("announces").innerHTML="Loading data...";
+        document.getElementById("container").innerHTML="Loading data...";
     }
 </script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
