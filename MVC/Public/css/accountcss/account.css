@@ -45,11 +45,11 @@
   font-weight: 500;
   margin-bottom: 10px;
 }
-a{
+a {
   text-decoration: none;
   color: #0E0805;
 }
-a:hover .genInfo{
+.genInfo:hover {
   background-color: #0E0805;
   color: #faf0e4;
 }
@@ -57,107 +57,113 @@ a:hover .genInfo{
   margin-top: 30%;
 }
 @media screen and (max-width: 670px) {
-  .leftSide{
+  .leftSide {
       /* width: 30%; */
       padding: 10px 5px 10px 5px;
   }
-  .upSide{
+  .upSide {
       margin-bottom: 30%;
       margin-right: 0;
       width: 100%;
   }
-  .genInfo{
+  .genInfo {
       margin: 5px;
       width: 95%;
       font-size: 14px;
       font-weight: 500;
   }
-  .downSide{
+  .downSide {
       margin-top: 30%;
   }
 }
-.rightSide{
+.rightSide {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-left: 5%;
   margin-top: 10px;
 }
-.profilePic{
+.profilePic {
   display: flex;
   justify-content: center;
 }
-.textPP{
+.textTitle {
   align-self: center;
+  text-align: center;
+  font-size: 1.75rem;
   font-weight: 550;
   margin-right: 5%;
 }
-img{
+img {
   width: 250px;
+  border-radius: 20px;
 }
-.formm{
-  display: flex;
-  justify-content: space-around;
+.formm {
   margin-top: 5%;
 }
-.textBoxes{
+.modifications {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: aquamarine; */
+}
+.textBoxes {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 20px;
+  margin-top: 5%;
 }
-.text{
-  font-weight: 550;
-  margin-right: 5%;
+.text {
   width: 100%;
-  /* padding: 15px; */
-  margin: 17px;
+  margin-right: 5%;
+  font-size: 1.25rem;
+  font-weight: 550;
 }
-.invisibleTxt{
+.invisibleTxt {
   visibility: hidden;
 }
-.inputBoxes{
+.inputBoxes {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-top: 5%;
-  margin-left: 25%;
 }
-.inputTag{
-  /* padding: 15px; */
-  font-size: 12px;
+.inputTag {
+  font-size: 15px;
   background-color: #faf0e4;
   border: 3px solid #A28769;
   border-radius: 25px 25px 25px 25px;
+  padding: 4px 10px;
   margin: 15px;
   height: 40px;
+  width: 250px;
 }
 
-.saveChanges{
+.saveChanges {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.currentPass{
-  font-size: 12px;
+.currentPass {
+  font-size: 15px;
   background-color: #faf0e4;
   border: 3px solid #A28769;
   border-radius: 25px 25px 25px 25px;
+  padding: 4px 10px;
   height: 40px;
-  width: 60%;
-  margin-left: 10px;
+  width: 250px;
+  margin: 10px;
 }
-.deleteAccount{
+/* .deleteAccount {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.saveBtn{
+} */
+.saveBtn {
   position: relative;
   background-color: #A28769;
   border-radius: 25px 25px 25px 25px;
   margin: 10px;
-  /* background-color: #A28769; */
   cursor: pointer;
   width: 250px;
   height: 40px;
@@ -166,19 +172,28 @@ img{
   font-weight: 700;
   line-height: 1.2;
   border: none;
-  cursor: pointer;
 }
-a{
-  text-decoration: none;
-  color: #0E0805;
-}
-a:hover .saveBtn{
+.saveBtn:hover {
   background-color: #0E0805;
   color: #faf0e4;
 }
-footer{
-  display: flex;
-  justify-content: flex-end;
+.closeBtn {
+  position: relative;
+  background-color: #A28769;
+  border-radius: 25px 25px 25px 25px;
+  margin: 10px;
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+  /* font-family: Poppins-Medium; */
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  border: none;
+}
+.closeBtn:hover {
+  background-color: #0E0805;
+  color: #faf0e4;
 }
 @media screen and (max-width: 670px) {
   .rightSide{
@@ -211,12 +226,15 @@ footer{
       font-size: 14px;
       font-weight: 500;
   }
+  .closeBtn{
+      margin: 5px;
+      font-size: 14px;
+  }
 }
-.smallerWidth {
+/* .smallerWidth {
   width: 250px;
-}
-#bg
-{
+} */
+#bg {
     position: fixed;
     left: 0;
     bottom: 0;
