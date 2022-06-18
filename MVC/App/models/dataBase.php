@@ -46,7 +46,10 @@ class DataBase{
     public function customQuery($query){
         $select=$this->conn->prepare($query);
         $select->execute();
-        return $select->fetchAll();
+        $result=$select->fetchAll();
+        echo "result is:\n";
+        //var_dump( $result);
+        return $result;
     }
 
     public function insertIntoUsers($username,$email,$password){
