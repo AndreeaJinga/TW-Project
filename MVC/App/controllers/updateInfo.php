@@ -9,12 +9,12 @@
         $pwdrepeat = $_POST["pwdrepeat"];
         $email = $_POST["email"];
         $currpwd = $_POST["currentPwd"];
+        $curruid = $_POST["currentUid"];
 
         //Instatiate SignupContr class
         include "../models/dataBase.php";
-        //include "../models/signup.php"
-        // include "../models/signup.php";
-        // include "../models/signupContr.php";
+        include "../models/updateAccount.php"
+        include "../models/updateAccountContr.php";
        
         // $signup = new SignupContr($uid, $pwd, $pwdrepeat, $email);
         

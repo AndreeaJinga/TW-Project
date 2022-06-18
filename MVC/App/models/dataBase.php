@@ -10,6 +10,7 @@ class DataBase{
     private const getUser="SELECT password FROM users WHERE username = :username OR email = :email";
     private const loginSelect="SELECT * FROM users WHERE username = :username OR email = :email AND password = :password";
     private const messageInsert="INSERT INTO messages (fname, lname, phone, email, message) VALUES (:fname, :lname, :phone, :email, :message)";
+    private const updateInfo="UPDATE users SET username = :newUsername, email = :newEmail , password = :newPassword WHERE password = :password AND username = :username";
 
 
     public $conn;
@@ -19,6 +20,7 @@ class DataBase{
     public $loginSelectStatement;
     private $houseInsertStatement;
     private $messageInsertStatement;
+    private $updateInfoStatement;
 
     public function __construct(){
         try{
@@ -30,6 +32,7 @@ class DataBase{
             $this->getUserStatement=$this->conn->prepare(self::getUser);
             $this->loginSelectStatement=$this->conn->prepare(self::loginSelect);
             $this->messageInsertStatement=$this->conn->prepare(self::messageInsert);
+            $this->updateInfoStatement=$this->conn->prepare(self::updateInfo);
         }
         catch(PDOException $e){
             echo "Error while connecting to DB!".$e;
@@ -93,6 +96,14 @@ class DataBase{
     public function messageInsertTable($fname, $lname, $phone, $email, $message){
 
         if(!$this->messageInsertStatement->execute(['fname'=>$fname,'lname'=>$lname,'phone'=>$phone,'email'=>$email,'message'=>$message])){
+            return false;
+        }
+        return true;
+    }
+
+    public function updateUser($newUsername, $newEmail, $newPassword, $password, $username){
+
+        if(!$this->updateInfoStatement->execute(['newUsername'=>$newUsername,'newEmail'=>$newEmail,'newPassword'=>$newPassword,'password'=>$password,'username'=>$username])){
             return false;
         }
         return true;
