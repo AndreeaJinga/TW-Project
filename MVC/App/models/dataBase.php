@@ -43,6 +43,12 @@ class DataBase{
         $this->conn=null;
     }
 
+    public function customQuery($query){
+        $select=$this->conn->prepare($query);
+        $select->execute();
+        return $select->fetchAll();
+    }
+
     public function insertIntoUsers($username,$email,$password){
 
         if(!$this->userInsertStatement->execute(['username'=>$username,'email'=>$email,'password'=>$password])){

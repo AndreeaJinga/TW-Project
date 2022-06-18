@@ -39,12 +39,15 @@
     
     <div class="Announces">
         <div class="form">
-            <form action="#" method="post">
+            <form action="formSearch.php" method="post">
                 <fieldset class="fields">
-                    <input type="text" placeholder="City">
-                    <input type="text" placeholder="Category">
-                    <input type="text" placeholder="Maximum price">
-                    <input type="submit" id="submit" value="Search">
+                    <input type="text" name="county" placeholder="County">
+                    <input type="text" name="property_type" placeholder="Category">
+                    <input type="text" name="minPrice" placeholder="Min price">
+                    <input type="text" name="maxPrice" placeholder="Max price">
+                    <input type="text" name="usableArea" placeholder="Usable Area">
+                    <input type="text" name="partitioning" placeholder="Partitioning">
+                    <input type="submit" name="submit-data" value="Search">
                 </fieldset>
             </form>
         </div>

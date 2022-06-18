@@ -142,16 +142,26 @@ input::placeholder {
     transition-delay: 0.3s;
 }
 
-/* @media screen and (max-width: 991px) {
+@media screen and (max-width: 1500px) {
+    .fields {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
     input{
-        margin-left:0.1rem;
-        width: 110px;
+        margin: 5px;
+        /* margin-left:0.1rem; */
+        width: 200px;
+        height: 40px;
     }
     input:last-of-type{
-        margin-left:0.1rem; 
-        width: 70px;
+        align-self: center;
+        margin-left:0.1rem;
+        padding-top: 2px;
+        width: 180px;
     }
-} */
+}
 
 @media screen and (max-width: 750px) {
     .fields { 

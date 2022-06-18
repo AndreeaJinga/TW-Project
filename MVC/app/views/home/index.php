@@ -66,33 +66,8 @@
                      echo "</fieldset>";
                  echo "</form>";
              }
-             /*echo "<form action="../../controllers/signUpTest.php" method="post">"
-    
-                <fieldset class="fields">
-                    <input type="text" placeholder="City">
-                    <input type="text" placeholder="Category">
-                    <input type="text" placeholder="Maximum price">
-                    <input type="submit" id="submit-data" value="Search">
-                </fieldset>
-            </form>*/
          ?>
     </div>
-
-
-
-<!--    <div class="form">-->
-<!--        <form action="../../controllers/signUpTest.php" method="post">-->
-<!--            <fieldset class="fields">-->
-<!--                <input type="text" name="user" placeholder="Username">-->
-<!--                <input type="password" name="pass" placeholder="Password">-->
-<!--                <input type="password" name="passrep" placeholder="Repeat Password">-->
-<!--                <input type="text" name="email" placeholder="Email">-->
-<!--                <input type="submit" name="submit" value="Search">-->
-<!--            </fieldset>-->
-<!--        </form>-->
-<!--    </div>-->
-
-
 
     <div class="RO_map">
         <!--
