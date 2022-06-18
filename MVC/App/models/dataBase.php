@@ -15,6 +15,7 @@ class DataBase{
     private const selectAnnounce="SELECT * FROM announces LIMIT 15";
     private const favoritesInsert="INSERT INTO favorites (userid, houseid) VALUES (:userid,:houseid)";
     private const deleteFavorite="DELETE FROM favorites WHERE userid = :userid AND houseid=:houseid";
+    private const deleteUserFav="DELETE FROM favorites WHERE userid = :userid";
 
     public $conn;
     private $userInsertStatement;
@@ -28,6 +29,7 @@ class DataBase{
     private $selectAnnounceStatement;
     private $insertFavoriteStatement;
     private $deleteFavoriteStatement;
+    private $deleteUserFavStatement;
 
     public function __construct(){
         try{
@@ -44,6 +46,7 @@ class DataBase{
             $this->selectAnnounceStatement=$this->conn->prepare(self::selectAnnounce);
             $this->insertFavoriteStatement=$this->conn->prepare(self::favoritesInsert);
             $this->deleteFavoriteStatement=$this->conn->prepare(self::deleteFavorite);
+            $this->deleteUserFavStatement=$this->conn->prepare(self::deleteUserFav);
         }
         catch(PDOException $e){
             throw $e;
@@ -64,6 +67,12 @@ class DataBase{
         //echo "result is:\n";
         //var_dump( $result);
         return $result;
+    }
+
+    public function deleteUserFavorites($userid){
+        if(!$this->deleteUserFavStatement->execute(['userid'=>$userid])){
+            throw new Exception("Error while deleting into favorites!");
+        }
     }
 
     public function deleteFromFavorites($userid,$houseid){

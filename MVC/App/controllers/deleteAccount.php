@@ -10,6 +10,7 @@
         $delete = new UpdateAccount();
         $delete->databaseSetUp();
         $delete->deleteAccount($_SESSION['userid']);
+        $delete->deleteFavorites($_SESSION['userid']);
 
         session_unset();
         session_destroy();
