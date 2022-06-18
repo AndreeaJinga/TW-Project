@@ -16,19 +16,23 @@ include realpath('../../../Public/resources/header3.php');
 
 <div class="announces">
 <?php
-require_once '../../models/dataBase.php';
+require_once '../../models/countrySearch.php';
+$countyS=new CountrySearch();
+/*
 $db = new DataBase();
 $county=$db->conn->prepare("SELECT * FROM announces WHERE county = :county");
 $county->execute(['county'=>$_GET['county']]);
-$result1=$county->fetchAll();
+$result1=$county->fetchAll();*/
+$result1=$countyS->getResults($_GET['county']);
 if(count($result1)!=0){
-    foreach ($result1 as &$value1) {
+    foreach ($result1 as &$value) {
         echo "<div class='announce'>
-        <h2>" . $value1['id'] . "</h2>
-        <p>Price:" . $value1['price'] . "</p>
-        <p>Price:" . $value1['property_type'] . "</p>
-        <p>Country:" . $value1['county'] . "</p>
-         </div>";
+                <img src='".$value['img_source']."' alt='img_announce'>
+                <h3>" . $value['property_type'] . "</h3>
+                <p>Price:" . $value['price'] . "</p>
+                <p>Usable Area:" . $value['usable_area'] . "</p>
+                <p>Country:" . $value['county'] . "</p>
+             </div>";
     }
 }
 else{

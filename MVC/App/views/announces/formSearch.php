@@ -19,16 +19,14 @@ include realpath('../../../Public/resources/header3.php');
 <?php
     require_once "../../models/formSearch.php";
     $form=new FormSearch();
-    $result=$form->getResults($_POST);
-    //var_dump($result);
-    if($result==null){
+    $result=$form->getResults();
+    if(count($result)==0){
         echo "<p>No results were found!</p>";
     }
     else{
         foreach ($result as &$value) {
             echo "<div class='announce'>
                 <img src='".$value['img_source']."' alt='img_announce'>
-                <p>".$value['img_source']."</p>
                 <h3>" . $value['property_type'] . "</h3>
                 <p>Price:" . $value['price'] . "</p>
                 <p>Usable Area:" . $value['usable_area'] . "</p>
