@@ -43,20 +43,20 @@
 
      <div class="form">
          <?php
-             $formPhp = realpath('formSearch.php');
+             $formPhp = realpath('../announces/formSearch.php');
              if($formPhp){
-                 echo "<form action=\"formSearch.php\" method=\"post\">";
+                 echo "<form action=\"../announces/formSearch.php\" method=\"post\">";
                      echo "<fieldset class=\"fields\">";
                          //echo "<input type=\"text\" name=\"city\" placeholder=\"City\">";
                          echo "<input type=\"text\" name=\"property_type\" placeholder=\"Category\">";
                          echo "<input type=\"text\" name=\"minPrice\" placeholder=\"Min price\">";
                          echo "<input type=\"text\" name=\"maxPrice\" placeholder=\"Max price\">";
-                         echo "<input type=\"submit\" name=\"submit-data\" value=\"Search\">";
+                         echo "<input type=\"submit\" name=\"submit-data2\" value=\"Search\">";
                      echo "</fieldset>";
                  echo "</form>";
              }
              else{
-                 echo "<form action=\"../App/views/home/formSearch.php\" method=\"post\">";
+                 echo "<form action=\"../App/views/announces/formSearch.php\" method=\"post\">";
                      echo "<fieldset class=\"fields\">";
                          //echo "<input type=\"text\" name=\"city\" placeholder=\"City\">";
                          echo "<input type=\"text\" name=\"property_type\" placeholder=\"Category\">";

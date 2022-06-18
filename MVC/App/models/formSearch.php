@@ -4,7 +4,26 @@ class FormSearch{
         require_once "dataBase.php";
         //var_dump($_POST);
         $query=null;
-        if(isset($_POST['submit-data'])) {
+        if(isset($_POST['submit-data2'])){
+            //echo "<h1> FROM HOME</h1>";
+            if($_POST['property_type']!=null) {
+                $query = $query . " property_type = '" . $_POST['property_type']."'";
+            }
+            if ($_POST['minPrice'] != null) {
+                if ($query != null) {
+                    $query = $query . " AND";
+                }
+                $query = $query . " price >= " . $_POST['minPrice'];
+            }
+            if ($_POST['maxPrice'] != null) {
+                if ($query != null) {
+                    $query = $query . " AND";
+                }
+                $query = $query . " price <= " . $_POST['maxPrice'];
+            }
+        }
+        else if(isset($_POST['submit-data'])) {
+            //echo "<h1> FROM ANN</h1>";
             if ($_POST['property_type'] != null) {
                 $query = $query . " property_type = '" . $_POST['property_type']."'";
             }

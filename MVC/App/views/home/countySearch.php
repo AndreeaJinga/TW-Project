@@ -18,11 +18,6 @@ include realpath('../../../Public/resources/header3.php');
 <?php
 require_once '../../models/countrySearch.php';
 $countyS=new CountrySearch();
-/*
-$db = new DataBase();
-$county=$db->conn->prepare("SELECT * FROM announces WHERE county = :county");
-$county->execute(['county'=>$_GET['county']]);
-$result1=$county->fetchAll();*/
 $result1=$countyS->getResults($_GET['county']);
 if(count($result1)!=0){
     foreach ($result1 as &$value) {
@@ -32,6 +27,7 @@ if(count($result1)!=0){
                 <p>Price:" . $value['price'] . "</p>
                 <p>Usable Area:" . $value['usable_area'] . "</p>
                 <p>Country:" . $value['county'] . "</p>
+                <a href='detailedAnnounce.php?id=".$value['id']."'> Detailes</a>
              </div>";
     }
 }

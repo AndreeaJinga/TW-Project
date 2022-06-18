@@ -13,6 +13,21 @@
 include realpath('../../../Public/resources/header3.php');
 ?>
 <div id="bg"></div>
+
+<div class="form">
+    <form action="formSearch.php" method="post">
+        <fieldset class="fields">
+            <input type="text" name="county" placeholder="County">
+            <input type="text" name="property_type" placeholder="Category">
+            <input type="text" name="minPrice" placeholder="Min price">
+            <input type="text" name="maxPrice" placeholder="Max price">
+            <input type="text" name="usableArea" placeholder="Usable Area">
+            <input type="text" name="partitioning" placeholder="Partitioning">
+            <input type="submit" name="submit-data" value="Search">
+        </fieldset>
+    </form>
+</div>
+
 <h1>Announces resulted:</h1>
 
 <div class="announces">
@@ -31,6 +46,7 @@ include realpath('../../../Public/resources/header3.php');
                 <p>Price:" . $value['price'] . "</p>
                 <p>Usable Area:" . $value['usable_area'] . "</p>
                 <p>Country:" . $value['county'] . "</p>
+                <a href='../home/detailedAnnounce.php?id=".$value['id']."'> Detailes</a>
              </div>";
         }
     }

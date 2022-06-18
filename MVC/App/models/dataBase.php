@@ -47,7 +47,7 @@ class DataBase{
         $select=$this->conn->prepare($query);
         $select->execute();
         $result=$select->fetchAll();
-        echo "result is:\n";
+        //echo "result is:\n";
         //var_dump( $result);
         return $result;
     }
