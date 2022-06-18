@@ -1,5 +1,11 @@
 <?php
 class FormSearch{
+    function countyResults($inputCounty){
+        require_once "dataBase.php";
+        $query="'".$inputCounty."'";
+        $db=new DataBase();
+        return $db->customQuery("SELECT * FROM announces WHERE county=".$query);
+    }
     function getResults(){
         require_once "dataBase.php";
         //var_dump($_POST);

@@ -39,7 +39,11 @@ include realpath('../../../Public/resources/header3.php');
 <?php
     require_once "../../models/formSearch.php";
     $form=new FormSearch();
-    $result=$form->getResults();
+    if(isset($_GET['county'])){
+        $result=$form->countyResults($_GET['county']);
+    }else{
+        $result=$form->getResults();
+    }
     if(count($result)==0){
         echo "<div class=\"notConnected\">
                     <h3 class=\"headerNotConnected\"> No result were found! </h3>
