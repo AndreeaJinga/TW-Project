@@ -12,6 +12,7 @@ class DataBase{
     private const messageInsert="INSERT INTO messages (fname, lname, phone, email, message) VALUES (:fname, :lname, :phone, :email, :message)";
     private const updateInfo="UPDATE users SET username = :newUsername, email = :newEmail, password = :newPassword WHERE username = :username";
     private const deleteAccount="DELETE FROM users WHERE id = :id";
+    private const selectAnnounce="SELECT * FROM announces LIMIT 15";
 
 
     public $conn;
@@ -23,6 +24,7 @@ class DataBase{
     private $messageInsertStatement;
     private $updateInfoStatement;
     private $deleteAccountStatement;
+    private $selectAnnounceStatement;
 
     public function __construct(){
         try{
@@ -36,6 +38,7 @@ class DataBase{
             $this->messageInsertStatement=$this->conn->prepare(self::messageInsert);
             $this->updateInfoStatement=$this->conn->prepare(self::updateInfo);
             $this->deleteAccountStatement=$this->conn->prepare(self::deleteAccount);
+            $this->selectAnnounceStatement=$this->conn->prepare(self::selectAnnounce);
         }
         catch(PDOException $e){
             echo "Error while connecting to DB!".$e;
@@ -118,6 +121,15 @@ class DataBase{
             return false;
         }
         return true;
+    }
+
+    public function selectAnnounceTable(){
+
+        if(!$this->selectAnnounceStatement->execute()){
+            throw new Exception("Error while selecting from DB!");
+        }
+        //var_dump($this->selectAnnounceStatement->fetchAll());
+        return $this->selectAnnounceStatement->fetchAll();
     }
 
     public function createDatabase() {

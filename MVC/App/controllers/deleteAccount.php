@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    echo "aici";
+
     if(isset($_SESSION['userid']))
     {
         include "../models/dataBase.php";

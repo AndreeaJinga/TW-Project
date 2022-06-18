@@ -57,10 +57,10 @@ include realpath('../../../Public/resources/header3.php');
                             </div>
                             <div class=\"content\">
                                 <h2>" . $value['property_type'] . "</h2>
-                            <p>Price: " . $value['price'] . "</p>
-                            <p>Usable Area: " . $value['usable_area'] . "</p>
-                            <p>Country: " . $value['county'] . "</p>
-                            <a href='../home/detailedAnnounce.php?id=".$value['id']."' class='detailBtn'> Detailes</a>
+                                <p>Price: " . $value['price'] . "</p>
+                                <p>Usable Area: " . $value['usable_area'] . "</p>
+                                <p>Country: " . $value['county'] . "</p>
+                                <a href='../home/detailedAnnounce.php?id=".$value['id']."' class='detailBtn'> Detailes</a>
                             </div>
                          </div>";
         }

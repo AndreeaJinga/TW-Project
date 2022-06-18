@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../Public/css/announcescss/FormSearch.css">
         <?php   
             $maincss = realpath('../../../Public/css/announcescss/AnnouncesPage.css');
             if($maincss == false) {
@@ -20,6 +21,7 @@
             else {
                 echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
             }
+            
         ?>
         <title>Announces</title>
     </head>
@@ -53,7 +55,7 @@
         </div>
         <div class="announces">
             <div class="container">
-                <div class="card">
+                <!-- <div class="card">
                     <div class="imgBx">
                         <img src="img1.png">
                     </div>
@@ -106,7 +108,28 @@
                         <h2>Anunt 6</h2>
                         <p>Pret: 1000000$ <br>Suprafata 120 m2 <br>Oras: Galati</p>
                     </div>
-                </div>
+                </div> -->
+
+                <?php
+                    include '../../models/getAnnounce.php';
+                    $announces = new GetAnnounce();
+                    $result = $announces->getAnnounces();
+                        foreach ($result as &$value) {
+                            echo "<div class='card'>
+                                            <div class=\"imgBx\">
+                                                <img src='".$value['img_source']."' alt='img_announce'>
+                                            </div>
+                                            <div class=\"content\">
+                                                <h2>" . $value['property_type'] . "</h2>
+                                            <p>Price: " . $value['price'] . "</p>
+                                            <p>Usable Area: " . $value['usable_area'] . "</p>
+                                            <p>Country: " . $value['county'] . "</p>
+                                            <a href='../home/detailedAnnounce.php?id=".$value['id']."' class='detailBtn'> Detailes</a>
+                                            </div>
+                                        </div>";
+                        }
+                    
+                ?>
             </div>
         </div>
     </div>
