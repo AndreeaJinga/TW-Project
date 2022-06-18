@@ -21,7 +21,7 @@ $countyS=new CountrySearch();
 $result1=$countyS->getResults($_GET['county']);
 if(count($result1)!=0){
     foreach ($result1 as &$value) {
-        echo "<div class='announce'>
+        echo "<div class='card'>
                 <img src='".$value['img_source']."' alt='img_announce'>
                 <h3>" . $value['property_type'] . "</h3>
                 <p>Price:" . $value['price'] . "</p>
