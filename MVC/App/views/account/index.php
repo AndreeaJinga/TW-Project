@@ -65,26 +65,27 @@
 
             <div class="formm">
                 <form action="../../controllers/updateInfo.php" method="post">
-                    <!-- <div class="textBoxes"> -->
-                        <!-- <span class="text">Update your account info</span> -->
-                        <h2>Update your account info</h2>
-                        <!-- <span class="text">Email:</span>
-                        <span class="text"> Password:</span> -->
+                    <div class="textBoxes">
+                        <span class="text">Update your account info</span>
+                        <!-- <h2>Update your account info</h2> -->
+                        <span class="text">Email:</span>
+                        <span class="text"> Password:</span>
                         <!-- <span class="invisibleTxt">Ignore</span> -->
-                    <!-- </div> -->
-                    <!-- <div class="inputBoxes"> -->
+                    </div>
+                    <div class="inputBoxes">
                         <input class="inputTag" type="text" name="uid" placeholder="Type your new username" autocomplete="given-name" required>
                         <input class="inputTag" type="text"  name="email" placeholder="Type your new email" autocomplete="email" required>
                         <input class="inputTag" type="password" name="pwd" placeholder="Type your new password" required>
                         <input class="inputTag" type="password" name="pwdrepeat" placeholder="Confirm new password" required>
-                    <!-- </div> -->
+                    </div>
                 
 
-                   <!-- <div class="saveChanges"> -->
-                        <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current password" required/>
-                        <input class="saveBtn" type="submit" name="submit" value="Save changes">
-                    <!-- </div> -->
                 </form>
+                <div class="saveChanges">
+                    <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current username" required/>
+                    <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current password" required/>
+                    <input class="saveBtn" type="submit" name="submit" value="Save changes">
+                </div>
             </div>
                 
             <div class="deleteAccount">
