@@ -30,6 +30,8 @@
                     echo "<p class='detail'>Pretul: " . $value['price'] . "</p>";
                     echo "<p class='detail'>Judetul: " . $value['county'] . "</p>";
                     echo "<p class='detail'>Suprafata utila: " . $value['usable_area'] . "</p>";
+//                    echo ""
+                    echo "<input type='submit'></input>";
                 echo "</div>";
             echo "</div>";
 
@@ -57,6 +59,23 @@
     }
 ?>
 
+    <div  id='map'  style='height:380px;margin: 30px;'>
+        <link  rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"  />
+        <script  src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+
+        <script>
+            var  OSM_URL  =  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            var  OSM_ATTRIB  =  '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
+            var  osmLayer  =  L.tileLayer(OSM_URL,  {attribution:  OSM_ATTRIB});
+
+            var  WAQI_URL    =  "https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=65638e8f26dd0b2c54a55cb1993ce0002b2a37c1";
+            var  WAQI_ATTR  =  'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';
+            var  waqiLayer  =  L.tileLayer(WAQI_URL,  {attribution:  WAQI_ATTR});
+
+            var  map  =  L.map('map').setView([51.505,  -0.09],  11);
+            map.addLayer(osmLayer).addLayer(waqiLayer);
+        </script>
+    </div>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

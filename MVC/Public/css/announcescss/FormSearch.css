@@ -186,6 +186,23 @@ input::placeholder {
     }
 }
 
+.detailBtn {
+    padding: 2px 4px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    background-color: #A28769;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #0E0805;
+}
+.detailBtn:hover {
+    background-color: #0E0805;
+    color: #faf0e4;
+}
+.bigTitle {
+    text-align: center;
+}
+
 /* @media screen and (max-width: 280px) {
     .RO_map {
         margin-top: 150px;

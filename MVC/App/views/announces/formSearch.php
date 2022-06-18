@@ -32,7 +32,7 @@ include realpath('../../../Public/resources/header3.php');
 <!--    </form>-->
 </div>
 
-<h1>Announces resulted:</h1>
+<h1 class="bigTitle">Announces resulted:</h1>
 
 <div class="announces">
     <div class="container" id="container">
@@ -56,7 +56,7 @@ include realpath('../../../Public/resources/header3.php');
                             <p>Price: " . $value['price'] . "</p>
                             <p>Usable Area: " . $value['usable_area'] . "</p>
                             <p>Country: " . $value['county'] . "</p>
-                            <a href='../home/detailedAnnounce.php?id=".$value['id']."'> Detailes</a>
+                            <a href='../home/detailedAnnounce.php?id=".$value['id']."' class='detailBtn'> Detailes</a>
                             </div>
                          </div>";
         }

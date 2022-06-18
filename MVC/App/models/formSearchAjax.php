@@ -51,7 +51,7 @@
                             <p>Price: " . $value['price'] . "</p>
                             <p>Usable Area: " . $value['usable_area'] . "</p>
                             <p>Country: " . $value['county'] . "</p>
-                            <a href='../home/detailedAnnounce.php?id=".$value['id']."'> Detailes</a>
+                            <a href='../home/detailedAnnounce.php?id=".$value['id']."' class='detailBtn'> Detailes</a>
                             </div>
                          </div>";
         }
