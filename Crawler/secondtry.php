@@ -1,5 +1,5 @@
 <?php
-    set_time_limit(120);
+    set_time_limit(30);
     require 'HouseAnnounce.php';
     $counteeeer = 0;
     $totalNbOfAnnounces = 0;
@@ -11,7 +11,7 @@
         $xpath = new DOMXPath($doc);
 
         $nodeList = $xpath->query("//div[@data-cy='l-card']");
-        echo "am aj\n";
+//        echo "am aj\n";
 
         foreach ($nodeList as $node) {
             $links = $node->getElementsByTagname('a');
@@ -33,9 +33,9 @@
                         $imgNodeList = $xpathHouse->query("//picture/source[1]");
                         foreach ($imgNodeList as $imgNode) {
                             if ($imgNode->hasAttribute('srcset')) {
-        //                            echo "am ajuns aici2" . "</br>";
-                                $dataImg = $imgNode->getAttribute('srcset');
-                                $dataImg = substr($dataImg, 0, strpos($dataImg, "/image"));
+                                $dataImg = $imgNode->getAttribute('src');
+                                echo "$dataImg" . "</br>";
+//                                $dataImg = substr($dataImg, 0, strpos($dataImg, "/image"));
                                 $thisHouse->setDataImg($dataImg);
                             }
                         }

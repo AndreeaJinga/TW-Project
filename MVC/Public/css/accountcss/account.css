@@ -134,6 +134,11 @@ img{
   width: 60%;
   margin-left: 10px;
 }
+.deleteAccount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .saveBtn{
   position: relative;
   background-color: #A28769;
@@ -141,7 +146,7 @@ img{
   margin: 10px;
   /* background-color: #A28769; */
   cursor: pointer;
-  width: 60%;
+  width: 250px;
   height: 40px;
   /* font-family: Poppins-Medium; */
   font-size: 16px;
@@ -154,7 +159,7 @@ a{
   text-decoration: none;
   color: #0E0805;
 }
-a:hover .genInfo{
+a:hover .saveBtn{
   background-color: #0E0805;
   color: #faf0e4;
 }
@@ -194,7 +199,9 @@ footer{
       font-weight: 500;
   }
 }
-
+.smallerWidth {
+  width: 250px;
+}
 #bg
 {
     position: fixed;

@@ -80,9 +80,16 @@
 
             <div class="saveChanges">
                 <input class="currentPass" type="password" placeholder="Type your current password"/>
-                <a href="../AccountPage/myAccount.html">
+                <a href="../AccountPage/myAccount.html" class="smallerWidth">
                     <button class="saveBtn">
                         Save changes*
+                    </button>
+                </a>
+            </div>
+            <div class="deleteAccount">
+                <a href="../LoginPage/login.html" class="smallerWidth">
+                    <button class="saveBtn">
+                        Close Account*
                     </button>
                 </a>
             </div>
