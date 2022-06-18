@@ -89,15 +89,6 @@
                     </div>
                 </form>
             </div>
-                
-            <!-- <div class="deleteAccount">
-
-                <a href="../LoginPage/login.html" class="smallerWidth">
-                    <button class="saveBtn">
-                        Close Account
-                    </button>
-                </a>
-            </div> -->
         </div>
     </div>
 
