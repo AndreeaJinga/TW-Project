@@ -15,7 +15,6 @@ class DataBase{
     private const selectAnnounce="SELECT * FROM announces LIMIT 15";
     private const favoritesInsert="INSERT INTO favorites (userid, houseid) VALUES (:userid,:houseid)";
 
-
     public $conn;
     private $userInsertStatement;
     private $checkUserStatement;
@@ -127,7 +126,6 @@ class DataBase{
     }
 
     public function selectAnnounceTable(){
-
         if(!$this->selectAnnounceStatement->execute()){
             throw new Exception("Error while selecting from DB!");
         }
@@ -136,7 +134,6 @@ class DataBase{
     }
 
     public function insertFavoriteTable($userid,$houseid){
-
         if(!$this->insertFavoriteStatement->execute(['userid'=>$userid,'houseid'=>$houseid])){
             throw new Exception("Error while inserting into DB!");
         }

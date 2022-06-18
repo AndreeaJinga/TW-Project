@@ -30,9 +30,13 @@
                     echo "<p class='detail'>Pretul: " . $value['price'] . "</p>";
                     echo "<p class='detail'>Judetul: " . $value['county'] . "</p>";
                     echo "<p class='detail'>Suprafata utila: " . $value['usable_area'] . "</p>";
-//                    echo ""
-                    echo "<input type='submit'></input>";
-                echo "</div>";
+
+//                    echo "<form action='../../models/addFavoriteAnnounce.php?id=' . $idd . ' method='post'>
+//                            <input id='mybtn' type='submit' value='Love' class='loveBtn'>
+//                        </form>";
+                    $idd = $_GET['id'];
+                    echo "<button type=\"button\" id=\"adding\" onclick=\"addingToFavs('$idd');\" class='loveBtn'><ion-icon name=\"heart-outline\"></ion-icon></button>";
+                    echo "</div>";
             echo "</div>";
 
             echo "<div class='bottomPage'>";
@@ -43,13 +47,17 @@
                     echo "<p class='detail'>Proprietatea este la etajul " . $value['floor'] . ".</p>";
                     echo "<p class='detail'>A fost construita in anul " . $value['construction_year'] . ".</p>";
 
-                    if ($value['elevator'] == 'da')
+                    if ($value['elevator'] == 'da') {
                         echo "<p class='detail'>In aceasta proprietate exista lift.</p>";
-                    else
+                    }
+                    else {
                         echo "<p class='detail'>In aceasta proprietate nu exista lift.</p>";
+                    }
                     echo "<p class='detail'>Alte caracteristici utile: " . $value['characteristics'] . "</p>";
                 echo "</div>";
             echo "</div>";
+
+            echo "<div id='ceva'></div>";
 
             echo "<div class='bottomPage'>";
                 echo "<h2> Scurta descriere oferita de proprietar: </h2>";
@@ -78,4 +86,24 @@
     </div>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        function addingToFavs(announceID){
+            var xhr = new XMLHttpRequest();
+            var vars="announceID="+announceID;
+
+            xhr.open("POST","../../models/addFavoriteAnnounce.php",true);
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xhr.onreadystatechange=function (){
+                if(xhr.readyState == 4 && xhr.status == 200) {
+
+                    var return_data = xhr.responseText;
+                    document.getElementById("ceva").innerHTML = return_data;
+                }
+            }
+            xhr.send(vars);
+            // document.getElementById("ceva").innerHTML="Loading data...";
+        }
+    </script>
+
 </body>

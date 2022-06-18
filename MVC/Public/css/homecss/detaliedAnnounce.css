@@ -52,6 +52,24 @@
     border: 5px solid #A28769;
     border-radius: 20px;
 }
+.loveBtn {
+    width: 65px;
+    height: 60px;
+    padding: 2px;
+    font-size: 1.5rem;
+    font-weight: 550;
+    background-color: #A28769;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #0E0805;
+    text-align: center;
+    /*margin-right: 10px;*/
+    margin-left: 85%;
+}
+.loveBtn:hover {
+    background-color: #0E0805;
+    color: #faf0e4;
+}
 .bottomPage {
     margin: 50px 100px;
     background: #faf0e4;
