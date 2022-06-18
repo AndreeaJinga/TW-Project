@@ -45,7 +45,6 @@ class UpdateAccountContr extends UpdateAccount{
              header("location: ../Views/account/index.php?error=uidoremailtaken");
              exit();
         }
-
         $this->updateUserAccount($this->uid, $this->email, $this->pwd, $this->currpwd, $this->curruid);
     
     }

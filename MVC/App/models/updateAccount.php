@@ -12,8 +12,34 @@ class UpdateAccount {
     }
 
     protected function updateUserAccount($newUsername, $newEmail, $newPassword, $password, $username)
-    {        
-        $this->db->updateUserTable($newUsername, $newEmail, $newPassword, $password, $username);
+    {  
+        $rows = $this->db->getUserTable($username, $password);
+
+        $resultCheck;
+        if($rows == 0)
+        {
+            $resultCheck = false; 
+            header("location: ../Views/account/index.php?usernotfound");  
+            exit();
+        }
+        else{
+            $pwdHashed =  $this->db->getUserStatement->fetchAll(PDO::FETCH_ASSOC);
+            $checkPass = password_verify($password, $pwdHashed[0]["password"]);
+
+            if($checkPass == false)
+            {
+                $resultCheck = false;
+                header("location: ../Views/account/index.php?wrongpass");  
+                exit();
+            }
+
+            else if($checkPass == true)
+            {
+                $hashedPwd = password_hash($newPassword, PASSWORD_DEFAULT);
+                $this->db->updateUserTable($newUsername, $newEmail, $hashedPwd, $username);
+            }  
+        }           
+        
     }
 
     protected function checkUser($uid, $email)

@@ -11,6 +11,13 @@
         $currpwd = $_POST["currentPwd"];
         $curruid = $_POST["currentUid"];
 
+        // var_dump($uid);
+        // var_dump($pwd);
+        // var_dump($pwdrepeat);
+        // var_dump($email);
+        // var_dump($currpwd);
+        // var_dump($curruid);
+
         //Instatiate SignupContr class
         include "../models/dataBase.php";
         include "../models/updateAccount.php";
