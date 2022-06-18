@@ -10,7 +10,7 @@ foreach ($resultFav as $value) {
     foreach($resultAnn as $res){
         $annID=$res['id'];
         $code=$code. "<tr>
-                            <td>".$res['id']."</td>
+                            <td><a href='../home/detailedAnnounce.php?id=".$res['id']."' class='anc' </a>$annID</td>
                             <td>".$res['county']."</td>
                             <td>".$res['property_type']."</td>
                             <td class='price'>".$res['price']."</td>
