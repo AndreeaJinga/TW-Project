@@ -10,7 +10,7 @@ class DataBase{
     private const getUser="SELECT password FROM users WHERE username = :username OR email = :email";
     private const loginSelect="SELECT * FROM users WHERE username = :username OR email = :email AND password = :password";
     private const messageInsert="INSERT INTO messages (fname, lname, phone, email, message) VALUES (:fname, :lname, :phone, :email, :message)";
-    private const updateInfo="UPDATE users SET username = :newUsername, email = :newEmail, password = :newPassword WHERE password = :password AND username = :username";
+    private const updateInfo="UPDATE users SET username = :newUsername, email = :newEmail, password = :newPassword WHERE username = :username";
 
 
     public $conn;
@@ -101,9 +101,9 @@ class DataBase{
         return true;
     }
 
-    public function updateUserTable($newUsername, $newEmail, $newPassword, $password, $username){
+    public function updateUserTable($newUsername, $newEmail, $newPassword, $username){
 
-        if(!$this->updateInfoStatement->execute(['newUsername'=>$newUsername,'newEmail'=>$newEmail,'newPassword'=>$newPassword,'password'=>$password,'username'=>$username])){
+        if(!$this->updateInfoStatement->execute(['newUsername'=>$newUsername,'newEmail'=>$newEmail,'newPassword'=>$newPassword,'username'=>$username])){
             return false;
         }
         return true;
