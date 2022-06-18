@@ -78,14 +78,15 @@
                         <input class="inputTag" type="password" name="pwd" placeholder="Type your new password" required>
                         <input class="inputTag" type="password" name="pwdrepeat" placeholder="Confirm new password" required>
                     </div>
-                
+                    
+                    <div class="saveChanges">
+                        <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current username" required/>
+                        <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current password" required/>
+                        <input class="saveBtn" type="submit" name="submit" value="Save changes">
+                    </div>
 
                 </form>
-                <div class="saveChanges">
-                    <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current username" required/>
-                    <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current password" required/>
-                    <input class="saveBtn" type="submit" name="submit" value="Save changes">
-                </div>
+                
             </div>
                 
             <div class="deleteAccount">
