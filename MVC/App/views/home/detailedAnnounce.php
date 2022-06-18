@@ -30,13 +30,12 @@
                     echo "<p class='detail'>Pretul: " . $value['price'] . "</p>";
                     echo "<p class='detail'>Judetul: " . $value['county'] . "</p>";
                     echo "<p class='detail'>Suprafata utila: " . $value['usable_area'] . "</p>";
-
-//                    echo "<form action='../../models/addFavoriteAnnounce.php?id=' . $idd . ' method='post'>
-//                            <input id='mybtn' type='submit' value='Love' class='loveBtn'>
-//                        </form>";
                     $idd = $_GET['id'];
-                    echo "<button type=\"button\" id=\"adding\" onclick=\"addingToFavs('$idd');\" class='loveBtn'><ion-icon name=\"heart-outline\"></ion-icon></button>";
+                    echo "<div class='favs'>";
+                        echo "<button type=\"button\" id=\"adding\" onclick=\"addingToFavs('$idd');\" class='loveBtn'><ion-icon name=\"heart-outline\"></ion-icon></button>";
+                        echo "<div id='favsID' class='favsID'></div>";
                     echo "</div>";
+                echo "</div>";
             echo "</div>";
 
             echo "<div class='bottomPage'>";
@@ -56,8 +55,6 @@
                     echo "<p class='detail'>Alte caracteristici utile: " . $value['characteristics'] . "</p>";
                 echo "</div>";
             echo "</div>";
-
-            echo "<div id='ceva'></div>";
 
             echo "<div class='bottomPage'>";
                 echo "<h2> Scurta descriere oferita de proprietar: </h2>";
@@ -98,7 +95,7 @@
                 if(xhr.readyState == 4 && xhr.status == 200) {
 
                     var return_data = xhr.responseText;
-                    document.getElementById("ceva").innerHTML = return_data;
+                    document.getElementById("favsID").innerHTML = return_data;
                 }
             }
             xhr.send(vars);

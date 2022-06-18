@@ -52,7 +52,15 @@
     border: 5px solid #A28769;
     border-radius: 20px;
 }
+.favs {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 10px;
+}
 .loveBtn {
+    /* display: fixed; */
     width: 65px;
     height: 60px;
     padding: 2px;
@@ -63,12 +71,18 @@
     border-radius: 5px;
     color: #0E0805;
     text-align: center;
-    /*margin-right: 10px;*/
-    margin-left: 85%;
+    /* margin-left: 85%; */
 }
 .loveBtn:hover {
     background-color: #0E0805;
     color: #faf0e4;
+}
+.favsID {
+    padding: 5px;
+    font-weight: 550;
+    font-family: serif;
+    font-size: 1rem;
+    text-align: center;
 }
 .bottomPage {
     margin: 50px 100px;
