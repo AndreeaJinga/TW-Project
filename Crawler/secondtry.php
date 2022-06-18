@@ -32,9 +32,10 @@
                         //sursa imaginii
                         $imgNodeList = $xpathHouse->query("//picture/source[1]");
                         foreach ($imgNodeList as $imgNode) {
+                            // if ($imgNode->hasAttribute('src')) {
                             if ($imgNode->hasAttribute('srcset')) {
-                                $dataImg = $imgNode->getAttribute('src');
-                                echo "$dataImg" . "</br>";
+                                    $dataImg = $imgNode->getAttribute('srcset');
+                                echo "aici: " . "$dataImg" . "</br>";
 //                                $dataImg = substr($dataImg, 0, strpos($dataImg, "/image"));
                                 $thisHouse->setDataImg($dataImg);
                             }
