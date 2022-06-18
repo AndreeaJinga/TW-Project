@@ -57,6 +57,14 @@
             echo "</div>";
 
             echo "<div class='bottomPage'>";
+                echo "<h2> Detalii despre vreme: </h2>";
+                echo "<div>";
+                    include '../../models/mapWeather.php';
+                    weatherDetails($value['county']);
+                echo "</div>";
+            echo "</div>";
+
+            echo "<div class='bottomPage'>";
                 echo "<h2> Scurta descriere oferita de proprietar: </h2>";
                 echo "<p class='detail'>" . $value['description'] . "</p>";
             echo "</div>";
