@@ -105,6 +105,11 @@ input:last-of-type{
     border: solid 2px rgb(148, 145, 145);
     border-radius: 20px;
 }
+input:last-of-type:hover {
+    background-color: black;
+    transition: 0.3s;
+    color: #f3ede6;
+}
 input::placeholder{
     padding: 0.5rem;
     color: black;

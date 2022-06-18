@@ -56,12 +56,12 @@ input {
     border-radius: 20px;
 }
 
-input[type="submit"]:hover {
+button {
     background-color: black;
     transition: 0.3s;
 }
 
-input[type="submit"] {
+button {
     color: #f3ede6;
     /* padding: 0.7rem; */
     margin-left: 1.5rem;
@@ -155,7 +155,7 @@ input::placeholder {
         width: 200px;
         height: 40px;
     }
-    input:last-of-type{
+    button{
         align-self: center;
         margin-left:0.1rem;
         padding-top: 2px;
@@ -176,7 +176,7 @@ input::placeholder {
         width: 110px;
         height: 30px;
     }
-    input:last-of-type{
+    button{
         align-self: center;
         margin-left:0.1rem;
         padding-top: 2px;
