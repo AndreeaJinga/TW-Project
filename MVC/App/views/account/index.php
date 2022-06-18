@@ -64,32 +64,33 @@
             </div>
 
             <div class="formm">
-                <div class="textBoxes">
-                    <span class="text">Username:</span>
-                    <span class="text">Email:</span>
-                    <span class="text"> Password:</span>
-                    <span class="invisibleTxt">Ignore</span>
-                </div>
-                <div class="inputBoxes">
-                    <input class="inputTag" type="text" placeholder="Type your new username" autocomplete="given-name"/>
-                    <input class="inputTag" type="text" placeholder="Type your new email" autocomplete="email"/>
-                    <input class="inputTag" type="password" placeholder="Type your new password"/>
-                    <input class="inputTag" type="password" placeholder="Confirm new password"/>
-                </div>
-            </div>
+                <form action="../../controllers/updateInfo.php" method="post">
+                    <!-- <div class="textBoxes"> -->
+                        <!-- <span class="text">Update your account info</span> -->
+                        <h2>Update your account info</h2>
+                        <!-- <span class="text">Email:</span>
+                        <span class="text"> Password:</span> -->
+                        <!-- <span class="invisibleTxt">Ignore</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="inputBoxes"> -->
+                        <input class="inputTag" type="text" name="uid" placeholder="Type your new username" autocomplete="given-name" required>
+                        <input class="inputTag" type="text"  name="email" placeholder="Type your new email" autocomplete="email" required>
+                        <input class="inputTag" type="password" name="pwd" placeholder="Type your new password" required>
+                        <input class="inputTag" type="password" name="pwdrepeat" placeholder="Confirm new password" required>
+                    <!-- </div> -->
+                
 
-            <div class="saveChanges">
-                <input class="currentPass" type="password" placeholder="Type your current password"/>
-                <a href="../AccountPage/myAccount.html" class="smallerWidth">
-                    <button class="saveBtn">
-                        Save changes*
-                    </button>
-                </a>
+                   <!-- <div class="saveChanges"> -->
+                        <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current password" required/>
+                        <input class="saveBtn" type="submit" name="submit" value="Save changes">
+                    <!-- </div> -->
+                </form>
             </div>
+                
             <div class="deleteAccount">
                 <a href="../LoginPage/login.html" class="smallerWidth">
                     <button class="saveBtn">
-                        Close Account*
+                        Close Account
                     </button>
                 </a>
             </div>

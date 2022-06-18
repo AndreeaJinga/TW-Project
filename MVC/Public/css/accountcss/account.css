@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 .main{
   /* height: 95%; */
   /* height: 900px; */
@@ -31,6 +39,13 @@
   line-height: 1.2;
   border: none;
   cursor: pointer;
+}
+.formm form h2
+{
+  color: black;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 a{
   text-decoration: none;
@@ -112,7 +127,7 @@ img{
 }
 .inputTag{
   /* padding: 15px; */
-  font-size: 17px;
+  font-size: 12px;
   background-color: #faf0e4;
   border: 3px solid #A28769;
   border-radius: 25px 25px 25px 25px;
@@ -126,7 +141,7 @@ img{
   justify-content: center;
 }
 .currentPass{
-  font-size: 17px;
+  font-size: 12px;
   background-color: #faf0e4;
   border: 3px solid #A28769;
   border-radius: 25px 25px 25px 25px;
