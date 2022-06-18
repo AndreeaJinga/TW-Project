@@ -1,7 +1,8 @@
 <?php
 class FormSearch{
-    function getResults($array){
+    function getResults(){
         require_once "dataBase.php";
+        //var_dump($_POST);
         $query=null;
         if(isset($_POST['submit-data'])) {
             if ($_POST['property_type'] != null) {
@@ -38,11 +39,17 @@ class FormSearch{
                 $query = $query . " partitioning = '" . $_POST['partitioning']."'";
             }
         }
+        //echo "acolo";
+        $result=array();
         if($query!=null){
             $db=new DataBase();
-            return $db->customQuery("SELECT * FROM announces WHERE".$query);
+            /*echo "aici";
+            var_dump($query);*/
+            $result=$db->customQuery("SELECT * FROM announces WHERE".$query);
+            //var_dump( $result);
+            return $result;
         }
-        return null;
+        return $result;
     }
 }
 ?>
