@@ -13,16 +13,16 @@
 
         //Instatiate SignupContr class
         include "../models/dataBase.php";
-        include "../models/updateAccount.php"
+        include "../models/updateAccount.php";
         include "../models/updateAccountContr.php";
        
-        // $signup = new SignupContr($uid, $pwd, $pwdrepeat, $email);
+        $update = new UpdateAccountContr($uid, $pwd, $pwdrepeat, $email, $currpwd, $curruid);
         
         //Running error handlers and user signup
-        // $signup->signupUser();
+        $update->updateUser();
 
         //Going back to front page
-        header("location: ../Views/login/index.php?error=none");
+        header("location: ../Views/account/index.php?error=none");
     }
 
 ?>

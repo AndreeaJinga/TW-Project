@@ -20,6 +20,7 @@
         else {
             echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
         }
+        include 'updatePopupError.php';
     ?>
     <title>Account</title>
 </head>
@@ -88,6 +89,7 @@
                         <input class="closeBtn" type="submit" name="close" value="Close Account">
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>
