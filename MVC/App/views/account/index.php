@@ -20,6 +20,7 @@
         else {
             echo "<link rel=\"stylesheet\" href=\"../../../Public/css/globals/header2.css\">";
         }
+        include 'updatePopupError.php';
     ?>
     <title>Account</title>
 </head>
@@ -58,49 +59,42 @@
         </div>
         <div class="rightSide">
             <div class="profilePic">
-                <span class="textPP">Profile picture: </span>
+                <span class="textTitle">Update your account information</span>
                 <img src="../../../Public/resources/default-avatar-profile.jpg" alt="avatarPic">
                 <!-- <img src="./default-avatar-profile.jpg" alt="avatarPic"> -->
             </div>
-
+            
             <div class="formm">
                 <form action="../../controllers/updateInfo.php" method="post">
-                    <!-- <div class="textBoxes"> -->
-                        <!-- <span class="text">Update your account info</span> -->
-                        <h2>Update your account info</h2>
-                        <!-- <span class="text">Email:</span>
-                        <span class="text"> Password:</span> -->
-                        <!-- <span class="invisibleTxt">Ignore</span> -->
-                    <!-- </div> -->
-                    <!-- <div class="inputBoxes"> -->
-                        <input class="inputTag" type="text" name="uid" placeholder="Type your new username" autocomplete="given-name" required>
-                        <input class="inputTag" type="text"  name="email" placeholder="Type your new email" autocomplete="email" required>
-                        <input class="inputTag" type="password" name="pwd" placeholder="Type your new password" required>
-                        <input class="inputTag" type="password" name="pwdrepeat" placeholder="Confirm new password" required>
-                    <!-- </div> -->
-                
+                    <div class="modifications">
+                        <div class="textBoxes">
+                            <!-- <h2>Update your account info</h2> -->
+                            <span class="text">Username:</span>
+                            <span class="text">Email:</span>
+                            <span class="text"> Password:</span>
+                            <span class="invisibleTxt">Ignore</span>
+                        </div>
+                        <div class="inputBoxes">
+                            <input class="inputTag" type="text" name="uid" placeholder="Type your new username" autocomplete="given-name" required>
+                            <input class="inputTag" type="text"  name="email" placeholder="Type your new email" autocomplete="email" required>
+                            <input class="inputTag" type="password" name="pwd" placeholder="Type your new password" required>
+                            <input class="inputTag" type="password" name="pwdrepeat" placeholder="Confirm new password" required>
+                        </div>
+                    </div>
 
-                   <!-- <div class="saveChanges"> -->
+                    <div class="saveChanges">
+                        <input class="currentPass" type="text" name="currentUid" placeholder="Type your current username" required/>
                         <input class="currentPass" type="password" name="currentPwd" placeholder="Type your current password" required/>
                         <input class="saveBtn" type="submit" name="submit" value="Save changes">
-                    <!-- </div> -->
+                        <input class="closeBtn" type="submit" name="close" value="Close Account">
+                    </div>
                 </form>
-            </div>
                 
-            <div class="deleteAccount">
-                <a href="../LoginPage/login.html" class="smallerWidth">
-                    <button class="saveBtn">
-                        Close Account
-                    </button>
-                </a>
             </div>
         </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <footer>
-        *You will need to retype your actual password<br>to save any changes.
-    </footer>
 </body>
 </html>
