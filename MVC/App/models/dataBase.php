@@ -16,6 +16,7 @@ class DataBase{
     private const favoritesInsert="INSERT INTO favorites (userid, houseid) VALUES (:userid,:houseid)";
     private const deleteFavorite="DELETE FROM favorites WHERE userid = :userid AND houseid=:houseid";
     private const deleteUserFav="DELETE FROM favorites WHERE userid = :userid";
+    private const deleteAnnouncement="DELETE FROM announces WHERE id = :id";
 
     public $conn;
     private $userInsertStatement;
@@ -30,6 +31,7 @@ class DataBase{
     private $insertFavoriteStatement;
     private $deleteFavoriteStatement;
     private $deleteUserFavStatement;
+    private $deleteAnnouncementStatement;
 
     public function __construct(){
         try{
@@ -47,6 +49,7 @@ class DataBase{
             $this->insertFavoriteStatement=$this->conn->prepare(self::favoritesInsert);
             $this->deleteFavoriteStatement=$this->conn->prepare(self::deleteFavorite);
             $this->deleteUserFavStatement=$this->conn->prepare(self::deleteUserFav);
+            $this->deleteAnnouncementStatement=$this->conn->prepare(self::deleteAnnouncement);
         }
         catch(PDOException $e){
             throw $e;
@@ -69,9 +72,21 @@ class DataBase{
         return $result;
     }
 
+    public function deleteAnnouncement($annID){
+        //echo $annID;
+        if(count($this->customQuery("SELECT * FROM announces WHERE id=".$annID))==0){
+            return false;
+        }
+        if(!$this->deleteAnnouncementStatement->execute(['id'=>$annID])){
+            echo"Error while deleting from announces!";
+            return false;
+        }
+        return true;
+    }
+
     public function deleteUserFavorites($userid){
         if(!$this->deleteUserFavStatement->execute(['userid'=>$userid])){
-            throw new Exception("Error while deleting into favorites!");
+            throw new Exception("Error while deleting from favorites!");
         }
     }
 

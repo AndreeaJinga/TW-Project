@@ -106,7 +106,10 @@
         echo "</div>";
     }
 ?>
-
+    <!-- Copyright https://aqicn.org/city/romania/ openSource AirQuality API
+    the attribution to the World Air Quality Index project 
+    as well as the EPA providing the data (using the map service to show 
+    data from a specicic location or source). -->
     <div  id='map'  class="map">
         <link  rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"  />
         <script  src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
