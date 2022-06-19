@@ -6,6 +6,9 @@
         if($city == 'Bucuresti')
             $city = 'Ilfov';
         $api_key = 'a765045daccb5573d3d4c6479854ced3';
+
+        /* Copyright https://openweathermap.org/current openSource */
+
         $api_uri = 'https://api.openweathermap.org/data/2.5/weather?q='.$city.'&appid='.$api_key.'';
 
         //echo "$api_uri";
