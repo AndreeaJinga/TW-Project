@@ -57,6 +57,16 @@
             echo "</div>";
 
             echo "<div class='bottomPage'>";
+                echo "<h2> Detalii despre vreme: </h2>";
+                echo "<div>";
+                    include '../../models/mapWeather.php';
+                    weatherDetails($value['county']);
+                    $lat = getLat($value['county']);
+                    $long = getLong($value['county']);
+                echo "</div>";
+            echo "</div>";
+
+            echo "<div class='bottomPage'>";
                 echo "<h2> Scurta descriere oferita de proprietar: </h2>";
                 echo "<p class='detail'>" . $value['description'] . "</p>";
             echo "</div>";
@@ -67,7 +77,6 @@
     <div  id='map'  class="map">
         <link  rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"  />
         <script  src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-
         <script>
             var  OSM_URL  =  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var  OSM_ATTRIB  =  '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
@@ -77,7 +86,9 @@
             var  WAQI_ATTR  =  'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';
             var  waqiLayer  =  L.tileLayer(WAQI_URL,  {attribution:  WAQI_ATTR});
 
-            var  map  =  L.map('map').setView([51.505,  -0.09],  11);
+            var latlng = L.latLng(<?php echo getLat($value['county']); ?>, <?php echo getLong($value['county']); ?> ); 
+            var  map  =  L.map('map').setView(latlng,  11);
+            //map.flyTo(latlng);
             map.addLayer(osmLayer).addLayer(waqiLayer);
         </script>
     </div>

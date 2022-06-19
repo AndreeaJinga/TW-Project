@@ -64,5 +64,10 @@ class UpdateAccount {
 
         return $resultCheck;
     }
+
+    public function deleteFavorites($id)
+    {
+        $this->db->deleteUserFavorites($id);
+    }
 }
 ?>
