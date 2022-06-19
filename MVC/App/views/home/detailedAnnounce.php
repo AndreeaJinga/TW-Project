@@ -63,6 +63,7 @@
                     weatherDetails($value['county']);
                     $lat = getLat($value['county']);
                     $long = getLong($value['county']);
+                    //getCity($lat,$long);
                 echo "</div>";
             echo "</div>";
 

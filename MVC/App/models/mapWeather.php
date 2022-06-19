@@ -66,5 +66,18 @@
         $long =  $coord['coord']['lon'];
         return $long;
     }
+
+    function getCity($lat, $long)
+    {
+        $api_key = 'a765045daccb5573d3d4c6479854ced3';
+        $api_uri = 'http://api.openweathermap.org/geo/1.0/reverse?lat='.$lat.'&lon='.$long.'&limit=4&appid='.$api_key.'';
+
+        $coord_data = json_decode(file_get_contents($api_uri), true);
+
+        $city = $coord_data[0]['local_names']['ro'];
+
+        echo "<p class='detail'>Oras by coord: ".$city."</p>";
+             
+    }
     
 ?>
