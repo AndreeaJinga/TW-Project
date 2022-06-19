@@ -20,9 +20,9 @@ class Signup {
     protected function checkUser($uid, $email)
     {
         $rows = $this->db->checkUserTable($uid, $email);
-
+        $rowsAdmin = $this->db->checkUserTable('admin', 'real.estateproj@yahoo.com');
          $resultCheck;
-         if($rows > 0)
+         if($rows > 0 || $rowsAdmin > 0)
          {
              $resultCheck = false;    
          }
