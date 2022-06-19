@@ -9,20 +9,25 @@
 </head>
 <body>
 <div id="bg"></div>
-<div class="deleteUser">
+<div class="box">
+    <p class="textDelete"> Delete an user by id</p>
     <fieldset class="fields">
         <input type="text" id="userID" placeholder="UserID">
-        <button type="button" id="deleteUser" onclick="ajax_deleteUser();">Search</button>
+        <button type="button" id="deleteUser" onclick="ajax_deleteUser();">Delete</button>
     </fieldset>
 </div>
-<div class="deleteAnnouncement">
+<div class="box">
+    <p class="textDelete"> Delete an announce by id</p>
+</div>
+<div class="lastTry">
     <fieldset class="fields">
         <input type="text" id="annID" placeholder="AnnID">
-        <button type="button" id="deleteAnnouncement" onclick="ajax_deleteAnnouncement();">Search</button>
+        <button type="button" id="deleteAnnouncement" onclick="ajax_deleteAnnouncement();">Delete</button>
     </fieldset>
 </div>
-<div id="result">
-
+<div id="result"></div>
+<div class="box">
+    <a href="../MVC/App/views/login/index.php" class="exitBtn">Exit AdminMode</a>
 </div>
 <script>
     function ajax_deleteUser(){

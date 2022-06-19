@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 30px;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -17,40 +17,78 @@
     background-position: bottom;
     z-index: -1;
 }
-input {
-    margin-left: 1rem;
-    background-color: #f3ede6;
-    border: solid 2px rgb(148, 145, 145);
-    padding: 7px;
-    border-radius: 20px;
+.box {
+    text-align: center;
+    /* align-items: center;
+    align-self: center; */
 }
-
-button {
-    background-color: black;
-    transition: 0.3s;
+.textDelete {
+    font-weight: 700;
+    font-size: 2rem;
 }
-
-button {
-    color: #f3ede6;
-    /* padding: 0.7rem; */
-    margin-left: 1.5rem;
-    background-color: #A28769;
-    border: solid 2px rgb(148, 145, 145);
-    width: 90px;
-    border-radius: 20px;
-    cursor: pointer;
+.lastTry {
+    align-self: center;
 }
 fieldset {
     display: flex;
     justify-content: center;
-    margin: 2rem;
-    padding: 1rem;
+    /* margin: 0 2rem; */
+    /* padding: 1rem; */
     border: none;
     font-weight: 500;
     border-radius: 20px;
     background-color: white;
     width: min-content;
     box-shadow: 0 5px 35px rgba(0,0,0,0.4);
-    margin: 80px auto;
+    margin: 30px auto;
     flex-direction: row;
+}
+input {
+    /* margin-left: 1rem; */
+    background-color: #f3ede6;
+    border: solid 2px rgb(148, 145, 145);
+    padding: 7px;
+    border-radius: 20px;
+}
+button {
+    color: #f3ede6;
+    /* padding: 0.7rem; */
+    /* margin-left: 1.5rem; */
+    background-color: #A28769;
+    border: solid 2px rgb(148, 145, 145);
+    width: 90px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: black;
+    transition: 0.3s;
+}
+.exitBtn {
+    margin: 40px;
+    padding: 15px;
+    color: #f3ede6;
+    background-color: #A28769;
+    border: solid 2px rgb(148, 145, 145);
+    width: 80px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.exitBtn:hover {
+    background-color: black;
+    transition: 0.3s;
+}
+.resultText{
+    /* align-self: center;
+    width: 50%; */
+    padding: 10px;
+    background: #f3ede6;
+    opacity: 0.8;
+    border-radius: 20px;
+    border: 4px solid #A28769;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
 }
