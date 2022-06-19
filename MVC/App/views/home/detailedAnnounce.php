@@ -64,7 +64,7 @@
     }
 ?>
 
-    <div  id='map'  style='height:380px;margin: 30px;'>
+    <div  id='map'  class="map">
         <link  rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"  />
         <script  src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 
