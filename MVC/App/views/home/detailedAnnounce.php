@@ -26,15 +26,32 @@
             echo "<div class='centerPage'>";
                 echo "<img src='" . $value['img_source'] . "' alt='img_announce'>";
                 echo "<div class='shortDetails'>";
-                    echo "<p class='detail'>Tipul proprietatii: " . $value['property_type'] . "</p>";
-                    echo "<p class='detail'>Pretul: " . $value['price'] . "</p>";
-                    echo "<p class='detail'>Judetul: " . $value['county'] . "</p>";
-                    echo "<p class='detail'>Suprafata utila: " . $value['usable_area'] . "</p>";
-                    $idd = $_GET['id'];
-                    echo "<div class='favs'>";
-                        echo "<button type=\"button\" id=\"adding\" onclick=\"addingToFavs('$idd');\" class='loveBtn'><ion-icon name=\"heart-outline\"></ion-icon></button>";
-                        echo "<div id='favsID' class='favsID'></div>";
+                    echo "<div class='upperPart'>";
+                        echo "<p class='detail'>Tipul proprietatii: " . $value['property_type'] . "</p>";
+                        echo "<p class='detail'>Pretul: " . $value['price'] . " &euro;</p>";
+                        echo "<p class='detail'>Judetul: " . $value['county'] . "</p>";
+                        echo "<p class='detail'>Suprafata utila: " . $value['usable_area'] . " m<sup>2</sup></p>";
+                        $idd = $_GET['id'];
+                        echo "<div class='favs'>";
+                            echo "<button type=\"button\" id=\"adding\" onclick=\"addingToFavs('$idd');\" class='loveBtn'><ion-icon name=\"heart-outline\"></ion-icon></button>";
+                            echo "<div id='favsID' class='favsID'></div>";
+                        echo "</div>";
                     echo "</div>";
+                    // $result = functieCalcul();
+                    $result = 0;
+                    $price = 0;
+                    echo "<div class='pretMetru'>";
+                        if($result == 1) {
+                            echo "<p class='green'>Pretul pe metru patrat pentru acest apartament este " . $price . "</p>";
+                        }
+                        else if($result == 0){
+                            echo "<p class='yellow'>Pretul pe metru patrat pentru acest apartament este " . $price . "</p>";    
+                        }
+                        else{
+                            echo "<p class='red'>Pretul pe metru patrat pentru acest apartament este " . $price . "</p>";
+                        }
+                        echo "<p class='squares'><span class='greenSquare'>Sub media orasului</span><span class='yellowSquare'>In media orasului</span><span class='redSquare'>Peste media orasului</span></p>";
+                    echo "</div>";    
                 echo "</div>";
             echo "</div>";
 
