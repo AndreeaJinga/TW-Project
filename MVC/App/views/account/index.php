@@ -43,11 +43,11 @@
                         General Information
                     </button>
                 </a>
-                <a href="../account/settingsPage.php">
+                <!-- <a href="../account/settingsPage.php">
                     <button class="genInfo">
                         Settings
                     </button>
-                </a>
+                </a> -->
             </div>
             <div class="downSide">
                 <a href="../../controllers/logout.php">
