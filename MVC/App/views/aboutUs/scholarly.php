@@ -122,7 +122,7 @@
                     Produsul nostru este unul autonom care inglobeaza functionalitatile 
                     deja existente pe piata in cadrul altor aplicatii care nu satisfac 
                     nevoile cumparatorului.
-                    <img class="diagram" src="../../../Public/resources/client-serverDiagram.svg" alt="Diagrama aplicatiei">
+                    <img class="diagram2" src="../../../Public/resources/C4DiagramPng.png" alt="Diagrama C4">
                 </p>
             </section>
             <section id="functiile" role="doc-functiile">
@@ -135,6 +135,7 @@
                     reprezentata de lista de favorite in cadrul careia cumparatorul isi 
                     poate salva apartamentele de care este interesat pentru a le putea 
                     accesa cu usurinta in viitorul apropiat.
+                    <img class="diagram" src="../../../Public/resources/client-serverDiagram.svg" alt="Diagrama aplicatiei">
                 </p>
             </section>
             <section id="clasele" role="doc-clasele">

@@ -43,11 +43,11 @@ fieldset {
     flex-direction: row;
 }
 
-/*.fields {*/
+/* .fields {*/
 /*    display: flex;*/
 /*    flex-direction: row;*/
 /*    justify-content: center;*/
-/*}*/
+/*} */
 
 input {
     margin-left: 1rem;
