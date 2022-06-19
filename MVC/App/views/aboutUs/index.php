@@ -79,7 +79,14 @@
                 echo "<img src=\"../../../Public/resources/Alisa.jpg\" alt=\"Alisa.jpg\">";
             }
             ?>
-            <p>Alisa Stanca is a second year student at the Faculty of Informatics in Iasi. </p>
+            <p> Hi, I am Alisa Stanca! <br>
+                I am a student in the 2<sup>nd</sup> year, soon in the 3<sup>rd</sup> year, <br>at the Computer Science Faculty in Iasi. <br>
+                Some of the things I really enjoy doing are travelling and <br>spending time with my family and friends. <br>
+                I have a sister and a few friends, not many, but they are great. <br>
+                I also love good music and good food.<br>
+                The things I do the most are learning and coding.<br>
+                I hope it is worth it!
+            </p>
         </div> 
     </div>
 
