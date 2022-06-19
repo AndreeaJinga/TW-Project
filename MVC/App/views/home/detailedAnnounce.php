@@ -24,7 +24,7 @@
             echo "</div>";
 
             echo "<div class='centerPage'>";
-                echo "<img src='" . $value['img_source'] . "' alt='img_announce'>";
+                echo "<img src='" . $value['img_source'] . "' alt='img_announce' draggable='false'>";
                 echo "<div class='shortDetails'>";
                     echo "<div class='upperPart'>";
                         echo "<p class='detail'>Tipul proprietatii: " . $value['property_type'] . "</p>";
@@ -42,29 +42,31 @@
                     $stmt = $db->customQuery("SELECT avg(price/usable_area) as medie FROM announces WHERE county='".$value['county']."'");
                     foreach ($stmt as &$val) {
                         $cityAvg = round(floatval($val['medie']),2);
-                        echo $cityAvg;
+                        // echo $cityAvg;
                     }
                     
-                    if($cityAvg < $price)
+                    if($cityAvg + 100 <= $price)
                         $result = -1;
-                    else if($cityAvg == $price)
-                        $result = 0;
-                    else $result = 1;
+                    else if($cityAvg -100 >= $price )
+                        $result = 1;
+                    else $result = 0;
                     //$result = 0;
                     
-                    echo "<div class='pretMetru'>";
-                        if($result == 1) {
-                            echo "<p class='green'>Pretul pe metru patrat pentru acest apartament este " . $price . " &euro;.</p>";
-                        }
-                        else if($result == 0){
-                            echo "<p class='yellow'>Pretul pe metru patrat pentru acest apartament este " . $price . " &euro;.</p>";    
-                        }
-                        else{
-                            echo "<p class='red'>Pretul pe metru patrat pentru acest apartament este " . $price . " &euro;.</p>";
-                        }
-                        echo "<p class='oras'>Media oorasului este de ". $cityAvg ." &euro;.</p>";
-                        echo "<p class='squares'><span class='greenSquare'>Sub media orasului</span><span class='yellowSquare'>In media orasului</span><span class='redSquare'>Peste media orasului</span></p>";
-                    echo "</div>";    
+                    if($result == 1) {
+                        echo "<div class='pretMetru green'>";
+                            echo "<p class='boldtext'>Pretul pe metru patrat pentru acest apartament este <strong>" . $price . " &euro;</strong>.</p>";
+                    }
+                    else if($result == 0){
+                        echo "<div class='pretMetru yellow'>";
+                            echo "<p class='boldtext'>Pretul pe metru patrat pentru acest apartament este " . $price . " &euro;.</p>";    
+                    }
+                    else{
+                        echo "<div class='pretMetru red'>";
+                            echo "<p class='boldtext'>Pretul pe metru patrat pentru acest apartament este " . $price . " &euro;.</p>";
+                    }
+                            echo "<p class='boldtext'>Media orasului este de ". $cityAvg ." &euro;.</p>";
+                            echo "<p class='squares'><span class='square green'>Sub media orasului</span><span class='square yellow'>In media orasului</span><span class='square red'>Peste media orasului</span></p>";
+                        echo "</div>";    
                 echo "</div>";
             echo "</div>";
 
