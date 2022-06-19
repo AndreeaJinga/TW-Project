@@ -122,7 +122,7 @@
                     Produsul nostru este unul autonom care inglobeaza functionalitatile 
                     deja existente pe piata in cadrul altor aplicatii care nu satisfac 
                     nevoile cumparatorului.
-                    <img class="diagram" src="../../../Public/resources/client-serverDiagram.png" alt="Diagrama aplicatiei">
+                    <img class="diagram" src="../../../Public/resources/client-serverDiagram.svg" alt="Diagrama aplicatiei">
                 </p>
             </section>
             <section id="functiile" role="doc-functiile">
@@ -203,12 +203,12 @@
                         este reprezentata de un meniu cu acces la paginile aplicatiei.
                         Acestea sunt: 
                         <ul class="list31">
-                            <li>Home;</li>                                                   
-                            <li>Favorites;</li>
-                            <li>Announces;</li> 
-                            <li>Blog;</li>
-                            <li>Contact;</li>
-                            <li>Your Account.</li> 
+                            <li>Home</li>                                                   
+                            <li>Favorites</li>
+                            <li>Announces</li> 
+                            <li>Blog</li>
+                            <li>Contact</li>
+                            <li>Login/Your Account</li> 
                         </ul>
                         Acest meniu este pozitionat in partea de sus a paginilor pentru a fi la indemana.
                         De asemenea, pentru o mai buna incadrare in pagina, meniul se redimensioneaza 
@@ -235,11 +235,10 @@
                     usurinta accesului la datele respective.
                     Acestea urmeaza sa fie utilizate pentru recreerea anunturilor intr-o forma diferita 
                     pe pagina Announces. Pe baza datelor preluate din baza de date, se va realiza si 
-                    o conexiune cu Google Maps API pentru a avea acces la o reprezentare fizica pe 
-                    harta a adresei specificate in anunt. De asemenea, pozitionarea imobilului urmeaza 
-                    sa fie folosita pentru a obtine date legate de diferite tipuri de poluare 
-                    din zona respectiva, aceste date fiind colectate prin intermediul unei conexiuni 
-                    cu alte pagini. 
+                    o conexiune cu World Air Quality Index pentru a avea acces la o reprezentare fizica pe 
+                    harta a adresei specificate in anunț, împreună cu nivelul de poluare al zonei respective. De asemenea, pozitionarea imobilului este folosita 
+                    pentru a obtine date legate de vreme și alte date meteorologice din zona respectiva, cum ar fi temperatura minima, temperatura maxima, precipitatii, viteza vantului.
+                    Aceste date sunt colectate prin intermediul unui Open Weather Map API. 
                 </p>
             </section>
             <section id="interfeteComm" role="doc-interfeteComm">
@@ -247,7 +246,8 @@
                 <p> 
                     In cazul in care un client are o solicitare speciala, acestuia ii este pusa 
                     la dispozitie o adresa de contact prin care poate lua legatura cu 
-                    proprietarii site-ului.
+                    proprietarii site-ului. De asemenea, utilizatorul poate trimite un mesaj către aceștia 
+                    completand formularul din pagina de Contact.
                 </p>
             </section>
         </section>
@@ -277,22 +277,28 @@
             <section id="announces" role="doc-carac2">
                 <h3>4.2 Announces </h3>
                 <p> 
-                    In aceasta pagina se pot gasi anunturi despre imobiliare de vanzare, fiecare anunt fiind insotit de cateva detalii, cum ar fi: suprafata, pret, oras, adresa, date de contact, starea cladirii si facilitati.
-                    Pentru filtrarea anunturilor dupa interesele si preferitele utilizatorului, pozitionata in partea de sus a paginii se afla bara de cautare unde se poate seta orasul, tipul de imobil si pretul maxim.
+                    In aceasta pagina se pot gasi anunturi despre imobiliare de vanzare. Selectarea unui anunt conduce catre o pagina pe care se afla cateva detalii, cum ar fi: 
+                    suprafata, pret, oras, adresa, starea cladirii, anul de constructie, caracterictici utile, o scurta descriere oferita de proprietar si o imagine a imobiliarului.
+                    Pagina dispune de o harta cu nivelul de poluare al zonei în care se află imobiliarul respectiv, detalii despre vreme și o comparatie a pretului pe metru patrat cu media din județul respectiv. 
+                    Pentru filtrarea anunturilor dupa interesele si preferitele utilizatorului, pozitionata in partea de sus a paginii se afla bara de cautare unde se poate seta județul, tipul de imobil, 
+                    pretul minim, pretul maxim, suprafata utila si tipul de compartimentare.
+                    Totodata, exista si posibiliatea de adaugare a unui anunt la lista de favorite, însoțita de unul dintre mesajele: "Anuntul a fost adaugat in lista de favorite.", "Anuntul se afla deja in lista de favorite." 
+                    si "Trebuie sa fii logat pentru a adauga anuntul in lista de favorite.".
                 </p>
             </section>
             <section id="favorites" role="doc-favorites">
                 <h3>4.3 Favorites </h3>
                 <p> 
                     Fiecare utilizator inregistrat in aplicatie va putea sa-si salveze anunturile 
-                    peste care sa vrea sa revina ulterior utilizand pagina Favorites.
-                    In cadrul aceste pagini utilizatorul are acces la o lista cu anunturi favorite pe 
+                    peste care sa vrea sa revina ulterior utilizand pagina Favorites. 
+                    In cadrul acestei pagini utilizatorul, deja logat, are acces la o lista cu anunturi favorite pe 
                     care a ales sa le salveze in timpul cautarii de imobiliare facuta in pagina <a href="#announces">Announces</a>.
                     Din lista respectiva, o sa fie posibila intoarcerea spre pagina de anunturi in care 
                     sa poata fi vizualizat din nou imobilul mai in detaliu.
                     In cazul dorintei de a sterge un element din lista, fiecare anunt prezent acolo va 
                     avea posibilitatea de a fi eliminat.
                     Pentru usurinta navigarii prin lista, se va folosi un meniu de filtrare al anunturilor salvate.
+                    <img class="fav" src="../../../Public/resources/favoritesTable.png" alt="Favorites">
                 </p>
             </section>
             <section id="blog" role="doc-blog">
@@ -303,8 +309,6 @@
                     specialisti in domeniu. 
                     Interesul acestei pagini este de a ajuta cumparatorul sa isi cunoasca nevoile pentru 
                     a-si alege locuinta cat mai potrivita.
-                    Articolele vor fi organizate cronologic, astfel cele mai recente vor fi cel mai usor 
-                    de accesat. 
                     Dupa selectarea unui articol, utilizatorul va fi redirectionat catre o pagina dedicata
                     articolului in care il va putea citi in intregime, dar in cadrul careia vor aparea si 
                     unele detalii in plus, cum ar fi autorul articolului si categoria din care face parte.
@@ -315,42 +319,24 @@
                 <p> 
                     O pagina ce poate fi accesata atat de persoanele care au deja un cont pe platforma, cat si de cele care nu au, este cea de logare/inregistrare. 
                     In functie de intentia pe care utilizatorul o are, ii sunt puse la dispozitie doua formulare. 
-                    In formularul destinat celor ce detin deja un cont campurile de completat sunt: username si parola, cu o functionalitate speciala de resetare a parolei in cazul in care aceasta a fost uitata.
-                    Totodata, exista posibilitatea de conectare prin intermediul API Google sau Facebook.  
-                    Datele necesare pentru inregistrarea pe site-ul nostru web sunt username, adresa de email si parola (confirmare parola). Atunci cand utilizatorul se inregistreaza cu acest cont nou, el accepta implicit politica de prelucrare a datelor. 
-                    Acesti termeni si conditii se afla intr-o alta pagina ce poate fi vizitata accesand linkul pozitionat sub formular.
+                    In formularul destinat celor ce detin deja un cont campurile de completat sunt: username sau email si parola. Dupa conectare, utilizatorul este redirectionat catre pagina <a href="#account">My Account</a>. 
+                    Datele necesare pentru inregistrarea pe site-ul nostru web sunt username, adresa de email si parola (confirmare parola). 
+                    Pentru cazurile în care parola si confirmarea parolei nu coincid, username-ul sau email-ul de conectare introdus nu exista in baza de date, parola de logare nu este valida, 
+                    username-ul de la inscrierea pe site este deja folosit de alt utilizator si alte situatii, vor fi afisate pe ecran mesaje de eroare.
                     In cadrul paginii, in coltul din stanga sus, se afla un buton care ofera posibilitatea de intoarcere catre pagina <a href="#home">Home</a>.
+                    <img class="users" src="../../../Public/resources/usersTable.png" alt="Users">
                 </p>
             </section>
             <section id="account" role="doc-account">
                 <h3>4.6 My account</h3>
                 <p> 
-                    Pagina My Account este accesibila din cadrul meniului principal, utilizatorul fiind 
+                    Pagina My Account este accesibila din cadrul meniului principal doar daca utilizatorul este logat deja, el fiind 
                     redirectionat pe aceasta dupa apasarea ultimului buton din meniu.
                     In cadrul acesteia, clientul isi poate vizualiza si personaliza datele legate de 
-                    contul lui. Spre exemplu, isi poate vedea si schimba numele de utilizator sau adresa 
-                    de email si isi poate reseta parola. 
-                    De asemenea, tot din cadrul acestei pagini, utilizatorul isi va putea incarca si 
-                    schimba poza de profil asociata lui, aceasta optiune adaugand o nota de personalitate 
-                    contului acestuia.
+                    contul lui. Spre exemplu, isi poate schimba numele de utilizator sau adresa 
+                    de email si isi poate reseta parola. De asemenea, el isi poate sterge contul la care este conectat in momentul respectiv.
                     La finalul navigarii clientului pe site-ul nostru, el se va putea deconecta prin 
                     intermediul butonului de Logout ce se gaseste in partea de jos a acestei pagini. 
-                </p>
-            </section>
-            <section id="settings" role="doc-settings">
-                <h3>4.7 Settings </h3>
-                <p> 
-                    Aceasta pagina este nu poate fi accesata din cadrul meniului principal, ea fiind 
-                    vizibila in momentul selectarii butonului Settings din cadrul paginii <a href="#announces">My Account</a>.
-                    Rolul acesteia este de a-i permite utilizatorului sa schimbe modul de navigare in 
-                    cadrul acestui site. 
-                    El va putea sa isi aleaga urmatoarele: tema culorilor, avand la dispozitie tema 
-                    luminoasa si tema intunecata; limba in care este afisat textul de pe pagini, 
-                    in limba romana sau in linba engleza; acceptul lui privind termenii si conditiile 
-                    de functionare ale site-ului, in cazul unui dezacord contul lui va fi sters in urma 
-                    unei atentionari.
-                    Tot din cadrul acestei pagini, utilizatorul isi va putea sterge contul si toate 
-                    datele asociate acestuia.
                 </p>
             </section>
             <section id="aboutUs" role="doc-aboutUs">
@@ -367,6 +353,8 @@
                     O alta pagina cu care pot interactiona toti vizitatorii site-ului este cea de contact. 
                     Aici, pe langa informatiile legate de adresa de email oficiala a platformei "Real Estate" si locatia sediului, insotita de o harta care faciliteaza vizualizarea adresei, se afla si un formular pentru trimiterea unui mesaj direct catre echipa site-ului web.
                     Formularul cuprinde urmatoarele campuri: nume, prenume, adresa de email, un numar de telefon pentru a putea fi contactat ulterior, si mesajul ce se doreste a fi trimis.
+                    Dupa trimiterea unui mesaj, utilizatorului i se va afisa pe ecran un mesaj de succes (sau eroare).
+                    <img class="msg" src="../../../Public/resources/messagesTable.png" alt="Messages">
                 </p>
             </section>
         </section>
@@ -377,12 +365,14 @@
                 <h3>5.1 Cerinte de performanță </h3>
                 <p> 
                     Site-ul nostru functioneaza in stransa legatura cu o baza de date complexa. 
-                    Crawler-ul va fi utilizat o singura data pentru a prelua si introduce anunturile in 
-                    baza de date, astfel evitandu-se suprascrierea tabelelor cu aceeasi informatie sau 
-                    verificarea daca acele informatii exista deja in baza de date.
+                    Crawler-ul va fi utilizat pentru a prelua si introduce anunturile in 
+                    baza de date, verificandu-se daca acele informatii exista deja in baza de date si 
+                    evitandu-se suprascrierea tabelelor cu aceeasi informatie.
                     Pe baza datelor stocate se va face popularea paginilor cu anunturi, fara a mai fi 
                     nevoie de a accesa o sursa exterioara de informatie. 
                 </p>
+                <img class="ann1" src="../../../Public/resources/announcesDatabase1.png" alt="Anunturi">
+                <img class="ann1" src="../../../Public/resources/announcesDatabase2.png" alt="Anunturi">
             </section>
             <section id="security" role="doc-security">
                 <h3>5.2 Cerinte de securitate </h3>
