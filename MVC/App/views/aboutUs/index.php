@@ -55,7 +55,12 @@
             }
             ?>
             <!-- <img src="Andreea.jpg" alt="Andreea.jpg"> -->
-            <p>Andreea Jinga is a second year student at the Faculty of Informatics in Iasi. </p>
+            <p> Hi, I am Andreea Jinga! <br>
+                I am a student in the 2<sup>nd</sup> year, soon in the 3<sup>rd</sup> year, <br>at the Computer Science Faculty in Iasi. <br>
+                Some of the things I really enjoy doing are riding my bike and reading, <br>drinking tea and hanging out with my friends. <br>
+                I like to spend time in the nature and hike on mountains.<br>
+                I love learning new things about how our IT world is made. 
+            </p>
         </div> 
         <div class="pers">
         <?php
@@ -67,7 +72,12 @@
                 echo "<img src=\"../../../Public/resources/Andrei.jpg\" alt=\"Andrei.jpg\">";
             }
             ?>
-            <p>Andrei Popescu is a second year student at the Faculty of Informatics in Iasi. </p>
+            <p>Hi, I am Popescu Andrei! <br>
+                I am a student in the 2<sup>nd</sup> year at the Computer Science Faculty in Iasi. <br>
+                Some of my hobbies are cinematography, video games,<br> and any aspects related to these two. <br>
+                Usually, when I am not spending time on this hobbies, <br>
+                I enjoy learning and watching different types of tutorials<br> for the subjects I practice in college.
+            </p>
         </div> 
         <div class="pers">
         <?php

@@ -35,7 +35,7 @@
                             // if ($imgNode->hasAttribute('src')) {
                             if ($imgNode->hasAttribute('srcset')) {
                                     $dataImg = $imgNode->getAttribute('srcset');
-                                echo "aici: " . "$dataImg" . "</br>";
+//                                echo "aici: " . "$dataImg" . "</br>";
 //                                $dataImg = substr($dataImg, 0, strpos($dataImg, "/image"));
                                 $thisHouse->setDataImg($dataImg);
                             }
